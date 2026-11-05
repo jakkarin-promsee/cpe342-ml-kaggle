@@ -39,4 +39,21 @@ The combined HGB with noise removed is second overall but does not beat the orig
 
 Removing the three `random_metric_*` columns documented as noise increased HGB validation macro F₁ by **0.00290** at matched baseline settings. The small random search did not improve HGB on the holdout. The winner's permutation importance is led by `loyalty_tier` (drop **0.2195**), `engagement_level` (**0.0657**), and `vip_tier` (**0.0335**), followed by login recency, playtime, and spending. Importance describes this fitted model's reliance on columns, not causation.
 
-**Next:** Compare shortlisted original and combined HGB models on repeated development folds, review Social and Whale errors, and test stronger handling of categorical features. Do not refit on all labels or produce a final Task 2 submission until the model choice is more stable.
+The next Round 1 question was whether stronger categorical learners would show the same original-versus-combined feature effect. Round 2 below tests that question.
+
+## Round 2 boosted-tree comparison
+
+LightGBM, CatBoost, and XGBoost were trained on the **same 83,200 development / 20,800 validation rows** as Round 1. Every pair removes the three documented `random_metric_*` noise columns and keeps model settings fixed between original and combined. LightGBM uses ordinal-encoded native categorical splits, CatBoost uses string categorical inputs, and XGBoost uses the Round 1 one-hot Pipeline. These are initial family baselines, not tuned searches.
+
+| Family | Original macro F₁ | Combined macro F₁ | Combined − original |
+| --- | ---: | ---: | ---: |
+| HGB (Round 1) | 0.74944 | 0.74808 | −0.00137 |
+| LightGBM | 0.74851 | 0.74685 | −0.00166 |
+| CatBoost | **0.75025** | 0.74923 | −0.00102 |
+| XGBoost | 0.74805 | 0.74679 | −0.00126 |
+
+All four families favor the original features at these settings on this holdout. CatBoost original leads HGB original by only **0.00081** macro F₁. Its class F₁ is Casual **0.8209**, Grinder **0.7408**, Social **0.7089**, Whale **0.7304**; relative to HGB it gains on Grinder and Whale but loses on Social. This is a small, model-dependent tradeoff, not yet a stable winner.
+
+The leading CatBoost model's validation permutation importance is led by `loyalty_tier` (macro F₁ drop **0.2245**), `engagement_level` (**0.0744**), and `vip_tier` (**0.0264**), followed closely by average monthly spending, login recency, and total playtime. It relies on the same tier signals that dominated the earlier HGB. These importances describe the fitted model, not causal effects.
+
+**Next:** Paired multi-fold validation of CatBoost and HGB on the original dataset, with Social and Whale F₁ and variance reported. Check when `loyalty_tier` and `engagement_level` become available, and run an ablation if their timing is uncertain. Avoid further selection on the same held-out rows.
