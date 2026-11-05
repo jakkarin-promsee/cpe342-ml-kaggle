@@ -56,4 +56,28 @@ All four families favor the original features at these settings on this holdout.
 
 The leading CatBoost model's validation permutation importance is led by `loyalty_tier` (macro F₁ drop **0.2245**), `engagement_level` (**0.0744**), and `vip_tier` (**0.0264**), followed closely by average monthly spending, login recency, and total playtime. It relies on the same tier signals that dominated the earlier HGB. These importances describe the fitted model, not causal effects.
 
-**Next:** Paired multi-fold validation of CatBoost and HGB on the original dataset, with Social and Whale F₁ and variance reported. Check when `loyalty_tier` and `engagement_level` become available, and run an ablation if their timing is uncertain. Avoid further selection on the same held-out rows.
+The Round 2 comparison raised a feature-availability question for the two dominant tiers. Round 3 below measures how strongly the leading models depend on them before multi-fold validation.
+
+## Round 3 tier ablation and feature audit
+
+The datacard calls `loyalty_tier` a spending-based tier and `engagement_level` an engagement classification, but provides no creation time. Their high permutation importance prompted a controlled retrain: remove each tier separately, then both, while retaining the Round 2 settings, the original stratified 80/20 rows, and the noise-column removal. The combined dataset was also tried without both tiers. Macro F₁:
+
+| Available features | HGB | CatBoost |
+| --- | ---: | ---: |
+| Original, both tiers | 0.74944 | **0.75025** |
+| No `loyalty_tier` | 0.64839 | 0.65255 |
+| No `engagement_level` | 0.71125 | 0.71809 |
+| Neither tier, original | 0.61262 | 0.62544 |
+| Neither tier, combined | 0.61259 | 0.62212 |
+
+Removing `loyalty_tier` costs about **0.10** macro F₁ in both families; removing `engagement_level` costs **0.03–0.04**. Removing both costs **0.12–0.14**. The 14 engineered behavior features do not recover the no-tier performance: HGB changes by **−0.00003** and CatBoost by **−0.00332** when moving from original to combined. In CatBoost, Social F₁ falls from **0.7089** with both tiers to **0.4906** without them. This is evidence of strong predictive reliance, **not proof of target leakage**.
+
+The no-tier CatBoost permutation ranking shifts to `vip_tier` (macro F₁ drop **0.0741**), `spending_frequency` (**0.0495**), `avg_monthly_spending` (**0.0443**), `days_since_last_login` (**0.0345**), and `total_spending_thb` (**0.0319**). `vip_tier` is another derived spending-related tier and should be included in the provenance audit. Raw spending, recency, social, and competitive inputs remain available but do not encode the removed tiers as strongly at these settings.
+
+### What to do before final k-fold validation
+
+1. **Establish the prediction cutoff and feature lineage.** Ask when `loyalty_tier`, `engagement_level`, and `vip_tier` were computed, which observations they use, and whether they exist when a new player's segment must be predicted. The [scikit-learn leakage guidance](https://scikit-learn.org/stable/common_pitfalls) defines unavailable-at-prediction information as leakage; a high score or a large ablation drop alone cannot answer the timing question.
+2. **Choose the allowed feature set before further selection.** If the tiers are available at the prediction cutoff, keep the original CatBoost and HGB as the main multi-fold candidates. If they are unavailable, exclude them and treat **0.62544** CatBoost as the current two-tier-free baseline, then also audit/ablate `vip_tier` and other inferred fields. Do not use Test to infer or reconstruct any tiers.
+3. **Avoid another broad ratio sweep for now.** The combined dataset already tests RFM-style spending/recency, play intensity, social, and ranked interactions, motivated by [freemium-game RFM research](https://scholar.smu.edu/datasciencereview/vol6/iss2/1/) and [competitive behavior modeling](https://arxiv.org/abs/2112.04379); it did not help with or without tiers. A narrower next test would remove groups of raw spending, social, and competitive features within development data to see which family explains remaining Social/Whale errors. [Correlated-feature guidance](https://scikit-learn.org/stable/auto_examples/inspection/plot_permutation_importance_multicollinear.html) explains why group ablations can be more informative than single-column permutation rankings.
+
+The holdout has already supported several model decisions. Once the allowed feature set is fixed, run paired stratified folds for the shortlisted configurations and report per-fold macro and per-class F₁; do not claim stability from these holdout deltas.
