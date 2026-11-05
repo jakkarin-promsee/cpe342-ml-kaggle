@@ -211,3 +211,23 @@ Compared three finalists on the same **3-fold × 2-repeat** outer CV splits. For
 The pruned variant drops `account_age_days_missing`, `reports_received_missing`, `avg_session_length_min_missing`, `aiming_smoothness_missing`, `aim_precision_observed`, `missing_feature_count`, and `map_knowledge`, chosen from the low end of the previous winner's permutation-importance ranking. Its paired gain over full LightGBM combined averaged **0.00054** macro F₂ and occurred in 4 of 6 folds. This is a small exploratory gain, not strong evidence that all seven features are harmful.
 
 The highest-mean procedure was retrained on all **90,816 labeled rows** with inner-CV threshold tuning. It was saved as `t1_lgbm_combined_pruned_cv6_full_v1` with threshold **0.400**. The `macro_F2_outer_cv6` evaluation card records the six-fold procedure estimate (**0.77733**), not a validation score measured on that full-data model. `src/task1/submission/t1_round3_full_v1.csv` contains 25,889 predictions and a predicted cheater rate of **38.41%**. Test was used only for prediction and format checks.
+
+## Round 4: should Task 1 receive more work?
+
+Collected out-of-fold predictions for pruned LightGBM (38 features) and original LightGBM (31 features) on the same six Round 3 outer folds. Each model's decision threshold was selected by inner CV. The first three folds cover all 90,816 accounts once; the second repeat covers them again, so the six scores are correlated rather than independent confirmations. The OOF scores match the saved Round 3 fold scores.
+
+| Fold | Pruned LightGBM | Fixed 50/50 blend | Blend minus pruned |
+| ---: | ---: | ---: | ---: |
+| 1 | 0.77831 | 0.77969 | +0.00139 |
+| 2 | 0.77765 | 0.77861 | +0.00096 |
+| 3 | 0.77723 | 0.77814 | +0.00091 |
+| 4 | 0.77484 | 0.77676 | +0.00191 |
+| 5 | 0.77799 | 0.77915 | +0.00116 |
+| 6 | 0.77795 | 0.77812 | +0.00016 |
+| **Mean** | **0.77733** | **0.77841** | **+0.00108** |
+
+The blend averages the two models' probabilities and their inner-CV thresholds with fixed equal weights. It improved all six paired folds and raised mean F₂ for legitimate players from **0.80747** to **0.80830** and for cheaters from **0.74719** to **0.74852**. On the first repeat, both models were wrong on **17,190** accounts; pruned alone missed **2,126**, and original alone missed **2,581**. Their predictions are partly complementary, though most errors overlap.
+
+Threshold tuning has little apparent headroom: selecting the best threshold *on each outer validation fold* would add only **0.00012** mean macro F₂ to the pruned model. That is an optimistic upper bound because it uses the validation labels. Descriptive slices show elevated error rates for legitimate players with 4–9 reports (**35.26%** versus **20.05%** overall false-positive rate) and cheaters with 17–29 reports (**59.32%** versus **23.55%** overall false-negative rate). Reports, friend-network size, and account age already dominate the model; these slices suggest hypotheses but do not establish that another engineered feature will help.
+
+**Decision:** Do not start a broad Task 1 feature or hyperparameter search now. The fixed blend's **+0.00108** gain is consistent but below the **+0.002** practical threshold set before this analysis for another research cycle. If time remains after Tasks 2–5, building one saved full-data 50/50 ensemble is a small, specific follow-up. Otherwise keep the 38-feature model as the Task 1 submission candidate and move to Task 2. No Test labels were used.

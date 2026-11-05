@@ -1,0 +1,23 @@
+{
+  "key": {
+    "seed": 42,
+    "outer": "first repeat of Round 3 3-fold CV",
+    "inner": "3-fold threshold CV",
+    "source": "t1_lgbm_original_tuned_v1",
+    "source_created_at": "2026-11-04T19:04:12+00:00",
+    "data_name": "eda_original_v1",
+    "data_created_at": "2026-11-04T18:16:38+00:00",
+    "selected_features": null
+  },
+  "rows": 90816,
+  "columns": [
+    "row_index",
+    "player_id",
+    "true",
+    "prob",
+    "pred",
+    "threshold",
+    "fold",
+    "model"
+  ]
+}
