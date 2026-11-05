@@ -13,18 +13,26 @@
 
 ## Round 1 models
 
-All five models use the same 80/20 split stratified by zero and positive-spending bands (`SEED=42`). Categorical codes (`primary_game`, `platform`, `seasonal_spending_pattern`, `segment`) are one-hot encoded. Numeric values use median imputation with missing indicators inside saved Pipelines. The two tree families use an absolute-error objective.
+All thirteen models use the same 80/20 split stratified by zero and positive-spending bands (`SEED=42`). Categorical codes (`primary_game`, `platform`, `seasonal_spending_pattern`, `segment`) are one-hot encoded. Numeric values use median imputation with missing indicators inside saved Pipelines. Linear, Ridge, and median QuantileRegressor also scale these transformed inputs using development rows only. HGB, LightGBM, and CatBoost use absolute-error objectives; Linear and Ridge use squared error. The five existing model artifacts were loaded unchanged when the expanded notebook was rerun. The eight new models were fitted on the same development rows, saved under distinct names, and evaluated on the same validation rows.
 
 | Model | Validation MAE (THB) | Zero-target MAE | Positive-target MAE |
 | --- | ---: | ---: | ---: |
-| LightGBM combined | **2,957.98** | 1,733.35 | 4,094.08 |
+| CatBoost combined | **2,928.48** | 1,743.64 | 4,027.66 |
+| LightGBM combined | 2,957.98 | 1,733.35 | 4,094.08 |
 | HGB original | 2,959.57 | 1,733.18 | 4,097.30 |
 | LightGBM original | 2,960.34 | 1,741.54 | 4,091.02 |
 | HGB combined | 2,997.50 | 1,730.54 | 4,172.87 |
+| CatBoost original | 3,022.91 | 1,729.94 | 4,222.42 |
+| Quantile combined | 4,459.36 | 2,179.98 | 6,573.97 |
+| Quantile original | 4,463.87 | 2,184.80 | 6,578.19 |
+| Ridge combined | 5,708.35 | 3,882.67 | 7,402.06 |
+| Linear combined | 5,709.54 | 3,885.78 | 7,401.47 |
+| Ridge original | 5,711.05 | 3,890.49 | 7,400.00 |
+| Linear original | 5,712.37 | 3,893.27 | 7,399.97 |
 | Global median | 10,431.34 | 78.61 | 20,035.67 |
 
-The 16 features improve LightGBM by only **฿2.36** MAE and worsen HGB by **฿37.93** at matched settings. The provisional leader, `t3_lgb_combined_v1`, beats `t3_hgb_original_v1` by only **฿1.59** on this holdout. Its permutation importance is dominated by `prev_month_spending` (MAE increase about **฿6,407**), `historical_spending` (**฿2,700**), and `segment` (**฿1,430**). This is model reliance, not causation.
+The 16 features improve CatBoost by **฿94.44** MAE, LightGBM by **฿2.36**, and worsen HGB by **฿37.93** at matched settings. The provisional leader, `t3_cat_combined_v1`, beats `t3_lgb_combined_v1` by **฿29.50** on this holdout. Linear and Ridge both do much worse on raw MAE; median QuantileRegressor is better than those squared-error baselines but still far behind the tree models. This is one holdout, not a stability result. QuantileRegressor used the full development set and was by far the slowest fit.
 
-The leader predicts median zero for actual spenders in the ฿1–1,000 band, while actual spending above ฿50,000 has MAE around **฿20,507**. Tree models can also output small negative amounts (the leader has **480** negative predictions among 20,800 validation rows). Before final prediction, explicitly handle nonnegative outputs and reassess the same validation metric. A later round can test a two-part spender/amount approach or targeted tail handling; this Round 1 does not claim those would help.
+CatBoost combined's permutation importance is dominated by `historical_spending` (MAE increase about **฿3,931**), `segment` (**฿3,027**), and `prev_month_spending` (**฿2,317**). This is model reliance, not causation. The leader predicts median zero for actual spenders in the ฿1–1,000 band, while actual spending above ฿50,000 has MAE around **฿20,024**. It produces **2,514** negative predictions among 20,800 validation rows. Clipping them to zero improves MAE from **฿2,928.48** to **฿2,927.55**; this is a diagnostic only, and the saved model still returns its raw predictions. Before final prediction, make any nonnegative postprocessing part of the saved inference path and reassess the same validation metric. A later round can test a two-part spender/amount approach or targeted tail handling; this Round 1 does not claim those would help.
 
-**Next:** Obtain the competition's exact NMAE denominator, then compute that metric without guessing. Check the small LightGBM–HGB difference on multiple development folds, examine spending bands, and test a nonnegative prediction step. Do not use competition Test for tuning or pseudo-labeling.
+**Next:** Obtain the competition's exact NMAE denominator, then compute that metric without guessing. Check the CatBoost–LightGBM gap on multiple development folds, examine spending bands, and test a saved nonnegative prediction step. Do not use competition Test for tuning or pseudo-labeling.
