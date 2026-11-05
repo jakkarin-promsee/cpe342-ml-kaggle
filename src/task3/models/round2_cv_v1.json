@@ -1,0 +1,1493 @@
+{
+  "name": "round2_cv_v1",
+  "task": "task3",
+  "card": "Five paired development folds; fold-local feature ranking and zero-target ablation",
+  "key": {
+    "seed": 42,
+    "folds": 5,
+    "top_counts": [
+      8,
+      16,
+      24
+    ],
+    "dataset": "eda_combined_v1",
+    "dataset_created_at": "2026-11-05T20:01:06+00:00",
+    "development_rows": 83200,
+    "catboost": "MAE, 500 trees, depth 6, learning rate 0.05, L2 3",
+    "lightgbm": "regression_l1, 400 trees, 31 leaves, learning rate 0.05",
+    "feature_ranking": "training-fold permutation MAE, 500 rows, 1 repeat"
+  },
+  "metric_note": "MAE_thb only; official NMAE denominator unavailable",
+  "fold_scores": [
+    {
+      "fold": 1,
+      "model": "cat_full",
+      "features": 48,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 2928.792479753607,
+      "MAE_clipped_zero": 2928.026166940266,
+      "MAE_zero": 1819.3176022996904,
+      "MAE_positive": 3958.064354018084,
+      "MAE_50k_plus": 19405.54194145819,
+      "negative_predictions": 2285
+    },
+    {
+      "fold": 1,
+      "model": "cat_top8",
+      "features": 8,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 3060.300274637223,
+      "MAE_clipped_zero": 3059.9139646010312,
+      "MAE_zero": 1796.7099759302919,
+      "MAE_positive": 4232.5466963291965,
+      "MAE_50k_plus": 20623.933369767616,
+      "negative_predictions": 439
+    },
+    {
+      "fold": 1,
+      "model": "cat_top16",
+      "features": 16,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 3017.971548500712,
+      "MAE_clipped_zero": 3017.40711661784,
+      "MAE_zero": 1814.8422575926813,
+      "MAE_positive": 4134.127637656355,
+      "MAE_50k_plus": 20267.115605837513,
+      "negative_predictions": 933
+    },
+    {
+      "fold": 1,
+      "model": "cat_top24",
+      "features": 24,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 2903.292499704499,
+      "MAE_clipped_zero": 2902.638823137365,
+      "MAE_zero": 1824.1825345533507,
+      "MAE_positive": 3904.394515567612,
+      "MAE_50k_plus": 19204.16905776863,
+      "negative_predictions": 2479
+    },
+    {
+      "fold": 1,
+      "model": "cat_positive_only",
+      "features": 48,
+      "train_rows": 34529,
+      "valid_rows": 16640,
+      "MAE_thb": 2896.2794888210324,
+      "MAE_clipped_zero": 2896.1537684569607,
+      "MAE_zero": 2206.7833053381455,
+      "MAE_positive": 3535.932574702747,
+      "MAE_50k_plus": 17853.1178931785,
+      "negative_predictions": 64
+    },
+    {
+      "fold": 1,
+      "model": "lgb_full",
+      "features": 48,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 2944.9726316924043,
+      "MAE_clipped_zero": 2944.7904493229958,
+      "MAE_zero": 1788.302555864788,
+      "MAE_positive": 4018.0280032433257,
+      "MAE_50k_plus": 19863.194670337845,
+      "negative_predictions": 285
+    },
+    {
+      "fold": 2,
+      "model": "cat_full",
+      "features": 48,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 3046.7128484894374,
+      "MAE_clipped_zero": 3045.74243729198,
+      "MAE_zero": 1845.1106069034433,
+      "MAE_positive": 4161.452277430661,
+      "MAE_50k_plus": 20768.186559328686,
+      "negative_predictions": 2812
+    },
+    {
+      "fold": 2,
+      "model": "cat_top8",
+      "features": 8,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 3212.755710313225,
+      "MAE_clipped_zero": 3212.247403057711,
+      "MAE_zero": 1812.3828094148873,
+      "MAE_positive": 4511.896835243007,
+      "MAE_50k_plus": 22587.34104393772,
+      "negative_predictions": 1148
+    },
+    {
+      "fold": 2,
+      "model": "cat_top16",
+      "features": 16,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 3155.1875655767253,
+      "MAE_clipped_zero": 3153.751619375319,
+      "MAE_zero": 1820.5212898192326,
+      "MAE_positive": 4393.371941881869,
+      "MAE_50k_plus": 21903.058301784866,
+      "negative_predictions": 2205
+    },
+    {
+      "fold": 2,
+      "model": "cat_top24",
+      "features": 24,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 3270.2725979421516,
+      "MAE_clipped_zero": 3269.450732548745,
+      "MAE_zero": 1805.5243962906575,
+      "MAE_positive": 4629.135387426068,
+      "MAE_50k_plus": 23016.44729260671,
+      "negative_predictions": 1622
+    },
+    {
+      "fold": 2,
+      "model": "cat_positive_only",
+      "features": 48,
+      "train_rows": 34529,
+      "valid_rows": 16640,
+      "MAE_thb": 3062.9149134066324,
+      "MAE_clipped_zero": 3062.728296240216,
+      "MAE_zero": 2242.2143951899343,
+      "MAE_positive": 3824.2876833185087,
+      "MAE_50k_plus": 19638.130361098993,
+      "negative_predictions": 89
+    },
+    {
+      "fold": 2,
+      "model": "lgb_full",
+      "features": 48,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 3067.060312085603,
+      "MAE_clipped_zero": 3066.914685587695,
+      "MAE_zero": 1813.5915562956172,
+      "MAE_positive": 4229.916868661856,
+      "MAE_50k_plus": 21261.339582977984,
+      "negative_predictions": 412
+    },
+    {
+      "fold": 3,
+      "model": "cat_full",
+      "features": 48,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 3001.397837092302,
+      "MAE_clipped_zero": 3000.3417470513227,
+      "MAE_zero": 1677.0035661389202,
+      "MAE_positive": 4229.757031755076,
+      "MAE_50k_plus": 20932.58631272797,
+      "negative_predictions": 2860
+    },
+    {
+      "fold": 3,
+      "model": "cat_top8",
+      "features": 8,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 3001.5677637095337,
+      "MAE_clipped_zero": 3000.6806111439364,
+      "MAE_zero": 1668.8031969220945,
+      "MAE_positive": 4237.6903035296455,
+      "MAE_50k_plus": 20879.325687104345,
+      "negative_predictions": 664
+    },
+    {
+      "fold": 3,
+      "model": "cat_top16",
+      "features": 16,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 2856.5740952275346,
+      "MAE_clipped_zero": 2855.4518007903293,
+      "MAE_zero": 1672.602075346898,
+      "MAE_positive": 3954.693400588853,
+      "MAE_50k_plus": 19488.73679708956,
+      "negative_predictions": 1702
+    },
+    {
+      "fold": 3,
+      "model": "cat_top24",
+      "features": 24,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 3000.7600090969195,
+      "MAE_clipped_zero": 2999.1368335056072,
+      "MAE_zero": 1674.2846855469197,
+      "MAE_positive": 4231.049354129335,
+      "MAE_50k_plus": 20820.07126872308,
+      "negative_predictions": 2084
+    },
+    {
+      "fold": 3,
+      "model": "cat_positive_only",
+      "features": 48,
+      "train_rows": 34528,
+      "valid_rows": 16640,
+      "MAE_thb": 2874.6127080590877,
+      "MAE_clipped_zero": 2874.3589025349024,
+      "MAE_zero": 2089.4380054497715,
+      "MAE_positive": 3602.852467562481,
+      "MAE_50k_plus": 18368.42288211773,
+      "negative_predictions": 77
+    },
+    {
+      "fold": 3,
+      "model": "lgb_full",
+      "features": 48,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 2931.8252566709916,
+      "MAE_clipped_zero": 2931.573272163295,
+      "MAE_zero": 1681.296346030806,
+      "MAE_positive": 4091.6752494308626,
+      "MAE_50k_plus": 20382.84301706162,
+      "negative_predictions": 394
+    },
+    {
+      "fold": 4,
+      "model": "cat_full",
+      "features": 48,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 3210.6055569507685,
+      "MAE_clipped_zero": 3209.6195034241105,
+      "MAE_zero": 1893.4079376059913,
+      "MAE_positive": 4432.584071282669,
+      "MAE_50k_plus": 22034.86917431474,
+      "negative_predictions": 1330
+    },
+    {
+      "fold": 4,
+      "model": "cat_top8",
+      "features": 8,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 3261.425781648015,
+      "MAE_clipped_zero": 3260.8750216940366,
+      "MAE_zero": 1874.7642590597707,
+      "MAE_positive": 4547.84671224193,
+      "MAE_50k_plus": 22681.022622224726,
+      "negative_predictions": 1057
+    },
+    {
+      "fold": 4,
+      "model": "cat_top16",
+      "features": 16,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 3037.5488250604867,
+      "MAE_clipped_zero": 3036.6522971722243,
+      "MAE_zero": 1917.272159390452,
+      "MAE_positive": 4076.8416353808802,
+      "MAE_50k_plus": 20354.894002221776,
+      "negative_predictions": 2846
+    },
+    {
+      "fold": 4,
+      "model": "cat_top24",
+      "features": 24,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 3008.4537869923524,
+      "MAE_clipped_zero": 3007.247941479577,
+      "MAE_zero": 1918.5918665124861,
+      "MAE_positive": 4019.530508401385,
+      "MAE_50k_plus": 20098.58809398259,
+      "negative_predictions": 2236
+    },
+    {
+      "fold": 4,
+      "model": "cat_positive_only",
+      "features": 48,
+      "train_rows": 34529,
+      "valid_rows": 16640,
+      "MAE_thb": 3007.209425250502,
+      "MAE_clipped_zero": 3007.06702468941,
+      "MAE_zero": 2307.021510939083,
+      "MAE_positive": 3656.781345756277,
+      "MAE_50k_plus": 18844.179047531332,
+      "negative_predictions": 67
+    },
+    {
+      "fold": 4,
+      "model": "lgb_full",
+      "features": 48,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 3079.80340236022,
+      "MAE_clipped_zero": 3079.6059958534024,
+      "MAE_zero": 1903.874214857338,
+      "MAE_positive": 4170.725660646025,
+      "MAE_50k_plus": 21010.331168629724,
+      "negative_predictions": 343
+    },
+    {
+      "fold": 5,
+      "model": "cat_full",
+      "features": 48,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 3110.426008444464,
+      "MAE_clipped_zero": 3109.207457855765,
+      "MAE_zero": 1935.463661251655,
+      "MAE_positive": 4200.451318490805,
+      "MAE_50k_plus": 20688.9852131408,
+      "negative_predictions": 2134
+    },
+    {
+      "fold": 5,
+      "model": "cat_top8",
+      "features": 8,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 3209.132782183638,
+      "MAE_clipped_zero": 3208.776101123673,
+      "MAE_zero": 1903.2358498060169,
+      "MAE_positive": 4420.627526678541,
+      "MAE_50k_plus": 21655.217724496782,
+      "negative_predictions": 1576
+    },
+    {
+      "fold": 5,
+      "model": "cat_top16",
+      "features": 16,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 3129.8938963018545,
+      "MAE_clipped_zero": 3128.749404027752,
+      "MAE_zero": 1926.4803340961287,
+      "MAE_positive": 4246.313707022829,
+      "MAE_50k_plus": 20899.716053909513,
+      "negative_predictions": 1013
+    },
+    {
+      "fold": 5,
+      "model": "cat_top24",
+      "features": 24,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 3008.197945101106,
+      "MAE_clipped_zero": 3007.046211943063,
+      "MAE_zero": 1956.1912758593899,
+      "MAE_positive": 3984.1559394578785,
+      "MAE_50k_plus": 19707.948647441972,
+      "negative_predictions": 2251
+    },
+    {
+      "fold": 5,
+      "model": "cat_positive_only",
+      "features": 48,
+      "train_rows": 34529,
+      "valid_rows": 16640,
+      "MAE_thb": 3053.292870573073,
+      "MAE_clipped_zero": 3053.1732530696504,
+      "MAE_zero": 2363.2396852857555,
+      "MAE_positive": 3693.4626930685363,
+      "MAE_50k_plus": 18906.340242831226,
+      "negative_predictions": 92
+    },
+    {
+      "fold": 5,
+      "model": "lgb_full",
+      "features": 48,
+      "train_rows": 66560,
+      "valid_rows": 16640,
+      "MAE_thb": 3056.644943116408,
+      "MAE_clipped_zero": 3056.367365302244,
+      "MAE_zero": 1945.8415668920302,
+      "MAE_positive": 4087.149280095649,
+      "MAE_50k_plus": 20370.12735629815,
+      "negative_predictions": 431
+    }
+  ],
+  "summary": [
+    {
+      "model": "cat_positive_only",
+      "mean_MAE": 2978.8618812220657,
+      "std_MAE": 88.17058648931126,
+      "mean_clipped_MAE": 2978.696248998228,
+      "mean_zero_MAE": 2241.739380440538,
+      "mean_positive_MAE": 3662.6633528817097,
+      "mean_50k_plus_MAE": 18722.038085351556,
+      "mean_negative_predictions": 77.8
+    },
+    {
+      "model": "lgb_full",
+      "mean_MAE": 3016.0613091851255,
+      "std_MAE": 71.51974673662109,
+      "mean_clipped_MAE": 3015.850353645926,
+      "mean_zero_MAE": 1826.5812479881158,
+      "mean_positive_MAE": 4119.499012415543,
+      "mean_50k_plus_MAE": 20577.567159061065,
+      "mean_negative_predictions": 373.0
+    },
+    {
+      "model": "cat_top24",
+      "mean_MAE": 3038.1953677674055,
+      "std_MAE": 137.15359788352953,
+      "mean_clipped_MAE": 3037.1041085228712,
+      "mean_zero_MAE": 1835.7549517525608,
+      "mean_positive_MAE": 4153.6531409964555,
+      "mean_50k_plus_MAE": 20569.4448721046,
+      "mean_negative_predictions": 2134.4
+    },
+    {
+      "model": "cat_top16",
+      "mean_MAE": 3039.4351861334626,
+      "std_MAE": 117.7750146019307,
+      "mean_clipped_MAE": 3038.402447596693,
+      "mean_zero_MAE": 1830.3436232490785,
+      "mean_positive_MAE": 4161.069664506157,
+      "mean_50k_plus_MAE": 20582.704152168644,
+      "mean_negative_predictions": 1739.8
+    },
+    {
+      "model": "cat_full",
+      "mean_MAE": 3059.586946146116,
+      "std_MAE": 107.2964797961633,
+      "mean_clipped_MAE": 3058.587462512689,
+      "mean_zero_MAE": 1834.06067483994,
+      "mean_positive_MAE": 4196.46181059546,
+      "mean_50k_plus_MAE": 20766.033840194075,
+      "mean_negative_predictions": 2284.2
+    },
+    {
+      "model": "cat_top8",
+      "mean_MAE": 3149.0364624983267,
+      "std_MAE": 111.71861684532126,
+      "mean_clipped_MAE": 3148.498620324078,
+      "mean_zero_MAE": 1811.1792182266122,
+      "mean_positive_MAE": 4390.121614804464,
+      "mean_50k_plus_MAE": 21685.368089506235,
+      "mean_negative_predictions": 976.8
+    }
+  ],
+  "feature_top8_frequency": [
+    {
+      "feature": "historical_spending",
+      "top8_fold_count": 5
+    },
+    {
+      "feature": "segment",
+      "top8_fold_count": 5
+    },
+    {
+      "feature": "prev_month_spending",
+      "top8_fold_count": 5
+    },
+    {
+      "feature": "days_since_last_purchase",
+      "top8_fold_count": 5
+    },
+    {
+      "feature": "discount_value_interaction",
+      "top8_fold_count": 5
+    },
+    {
+      "feature": "vip_status",
+      "top8_fold_count": 5
+    },
+    {
+      "feature": "is_premium_member",
+      "top8_fold_count": 4
+    },
+    {
+      "feature": "games_played",
+      "top8_fold_count": 2
+    },
+    {
+      "feature": "purchase_value_proxy",
+      "top8_fold_count": 2
+    },
+    {
+      "feature": "seasonal_spending_pattern",
+      "top8_fold_count": 1
+    },
+    {
+      "feature": "event_participation_rate",
+      "top8_fold_count": 1
+    }
+  ],
+  "feature_rankings": {
+    "1": [
+      {
+        "feature": "historical_spending",
+        "MAE_increase": 3864.8031536214935
+      },
+      {
+        "feature": "segment",
+        "MAE_increase": 3637.7108091942478
+      },
+      {
+        "feature": "prev_month_spending",
+        "MAE_increase": 2692.2366884010485
+      },
+      {
+        "feature": "days_since_last_purchase",
+        "MAE_increase": 459.82000624583134
+      },
+      {
+        "feature": "discount_value_interaction",
+        "MAE_increase": 419.6963721111297
+      },
+      {
+        "feature": "vip_status",
+        "MAE_increase": 371.31193448990234
+      },
+      {
+        "feature": "games_played",
+        "MAE_increase": 310.392230871586
+      },
+      {
+        "feature": "purchase_value_proxy",
+        "MAE_increase": 255.23195959592977
+      },
+      {
+        "feature": "is_premium_member",
+        "MAE_increase": 196.3866149258174
+      },
+      {
+        "feature": "seasonal_spending_pattern",
+        "MAE_increase": 184.96736305230024
+      },
+      {
+        "feature": "total_transactions",
+        "MAE_increase": 141.1529722431319
+      },
+      {
+        "feature": "purchase_frequency",
+        "MAE_increase": 81.79061505629033
+      },
+      {
+        "feature": "login_purchase_recency_gap",
+        "MAE_increase": 30.80044567354298
+      },
+      {
+        "feature": "purchase_recency_over_age",
+        "MAE_increase": 21.231802112618425
+      },
+      {
+        "feature": "cross_game_activity",
+        "MAE_increase": 19.704298455771095
+      },
+      {
+        "feature": "avg_transaction_value",
+        "MAE_increase": 19.147574308048206
+      },
+      {
+        "feature": "historical_spend_per_account_month",
+        "MAE_increase": 10.702444550922337
+      },
+      {
+        "feature": "historical_spend_per_transaction",
+        "MAE_increase": 9.393363385464454
+      },
+      {
+        "feature": "days_since_last_login",
+        "MAE_increase": 8.537968411903876
+      },
+      {
+        "feature": "cross_game_activity_per_session",
+        "MAE_increase": 8.509890217173961
+      },
+      {
+        "feature": "discount_rate_used",
+        "MAE_increase": 4.975221437350228
+      },
+      {
+        "feature": "sessions_per_week",
+        "MAE_increase": 3.6051032635841693
+      },
+      {
+        "feature": "tournament_participation",
+        "MAE_increase": 3.546937812730448
+      },
+      {
+        "feature": "daily_login_streak",
+        "MAE_increase": 3.541138323728319
+      },
+      {
+        "feature": "account_age_days",
+        "MAE_increase": 3.109409998004139
+      },
+      {
+        "feature": "total_playtime_hours",
+        "MAE_increase": 2.5142016007957864
+      },
+      {
+        "feature": "achievement_count",
+        "MAE_increase": 2.3977402446471388
+      },
+      {
+        "feature": "primary_game",
+        "MAE_increase": 1.8445161319009458
+      },
+      {
+        "feature": "discount_purchase_share",
+        "MAE_increase": 1.6786326366823232
+      },
+      {
+        "feature": "achievements_per_play_hour",
+        "MAE_increase": 1.40717054012066
+      },
+      {
+        "feature": "event_social_interaction",
+        "MAE_increase": 0.7621210710099149
+      },
+      {
+        "feature": "play_hours_per_account_day",
+        "MAE_increase": 0.6592852909029716
+      },
+      {
+        "feature": "friend_count",
+        "MAE_increase": 0.23450264106168106
+      },
+      {
+        "feature": "achievement_completion_rate",
+        "MAE_increase": 0.16133319539085278
+      },
+      {
+        "feature": "guild_membership",
+        "MAE_increase": 0.11186607165109308
+      },
+      {
+        "feature": "avg_session_length",
+        "MAE_increase": 0.019239022110014048
+      },
+      {
+        "feature": "owns_limited_edition",
+        "MAE_increase": 0.0
+      },
+      {
+        "feature": "social_interactions_per_session",
+        "MAE_increase": -0.027669731372043316
+      },
+      {
+        "feature": "platform",
+        "MAE_increase": -0.13747326859038367
+      },
+      {
+        "feature": "transactions_per_account_month",
+        "MAE_increase": -0.13957218370569535
+      },
+      {
+        "feature": "session_hours_proxy_per_week",
+        "MAE_increase": -0.6638788341392683
+      },
+      {
+        "feature": "source_missing_count",
+        "MAE_increase": -1.0408353087573232
+      },
+      {
+        "feature": "payment_methods_used",
+        "MAE_increase": -1.3648373673036076
+      },
+      {
+        "feature": "social_interactions",
+        "MAE_increase": -2.358166884289858
+      },
+      {
+        "feature": "competitive_rank",
+        "MAE_increase": -2.6467484825420797
+      },
+      {
+        "feature": "purchases_on_discount",
+        "MAE_increase": -3.7121700995671745
+      },
+      {
+        "feature": "event_participation_rate",
+        "MAE_increase": -21.27489755928036
+      },
+      {
+        "feature": "recent_to_historical_spend",
+        "MAE_increase": -44.98248205191794
+      }
+    ],
+    "2": [
+      {
+        "feature": "historical_spending",
+        "MAE_increase": 3587.8281474274836
+      },
+      {
+        "feature": "prev_month_spending",
+        "MAE_increase": 3021.4932549434016
+      },
+      {
+        "feature": "segment",
+        "MAE_increase": 2895.935543362687
+      },
+      {
+        "feature": "is_premium_member",
+        "MAE_increase": 259.1026226220497
+      },
+      {
+        "feature": "discount_value_interaction",
+        "MAE_increase": 231.7007991724372
+      },
+      {
+        "feature": "seasonal_spending_pattern",
+        "MAE_increase": 227.65149182124014
+      },
+      {
+        "feature": "days_since_last_purchase",
+        "MAE_increase": 215.47993579187187
+      },
+      {
+        "feature": "vip_status",
+        "MAE_increase": 210.27450485025201
+      },
+      {
+        "feature": "event_participation_rate",
+        "MAE_increase": 95.49942659762564
+      },
+      {
+        "feature": "purchase_value_proxy",
+        "MAE_increase": 68.29785358976551
+      },
+      {
+        "feature": "historical_spend_per_transaction",
+        "MAE_increase": 40.686431256280684
+      },
+      {
+        "feature": "recent_to_historical_spend",
+        "MAE_increase": 40.53301978792797
+      },
+      {
+        "feature": "purchase_recency_over_age",
+        "MAE_increase": 36.276102962423465
+      },
+      {
+        "feature": "total_transactions",
+        "MAE_increase": 24.89054916016721
+      },
+      {
+        "feature": "historical_spend_per_account_month",
+        "MAE_increase": 21.26280979532021
+      },
+      {
+        "feature": "purchases_on_discount",
+        "MAE_increase": 13.33503845511541
+      },
+      {
+        "feature": "event_social_interaction",
+        "MAE_increase": 7.606879821072653
+      },
+      {
+        "feature": "transactions_per_account_month",
+        "MAE_increase": 6.754175595136076
+      },
+      {
+        "feature": "login_purchase_recency_gap",
+        "MAE_increase": 5.953303440454874
+      },
+      {
+        "feature": "source_missing_count",
+        "MAE_increase": 5.605218884952137
+      },
+      {
+        "feature": "sessions_per_week",
+        "MAE_increase": 3.9767702686026496
+      },
+      {
+        "feature": "play_hours_per_account_day",
+        "MAE_increase": 3.1092074715547824
+      },
+      {
+        "feature": "days_since_last_login",
+        "MAE_increase": 2.4640281447686903
+      },
+      {
+        "feature": "achievements_per_play_hour",
+        "MAE_increase": 2.3045883206941653
+      },
+      {
+        "feature": "avg_transaction_value",
+        "MAE_increase": 1.9367248892140196
+      },
+      {
+        "feature": "games_played",
+        "MAE_increase": 1.3049725221312656
+      },
+      {
+        "feature": "friend_count",
+        "MAE_increase": 0.8286399385524419
+      },
+      {
+        "feature": "social_interactions_per_session",
+        "MAE_increase": 0.6379057564126924
+      },
+      {
+        "feature": "discount_purchase_share",
+        "MAE_increase": 0.5432574519691116
+      },
+      {
+        "feature": "payment_methods_used",
+        "MAE_increase": 0.3172338979111373
+      },
+      {
+        "feature": "tournament_participation",
+        "MAE_increase": 0.19965000660386067
+      },
+      {
+        "feature": "achievement_completion_rate",
+        "MAE_increase": 0.197605043686508
+      },
+      {
+        "feature": "platform",
+        "MAE_increase": 0.1637998689466258
+      },
+      {
+        "feature": "account_age_days",
+        "MAE_increase": 0.1026019879436717
+      },
+      {
+        "feature": "owns_limited_edition",
+        "MAE_increase": 0.0
+      },
+      {
+        "feature": "guild_membership",
+        "MAE_increase": -0.004697275398484635
+      },
+      {
+        "feature": "discount_rate_used",
+        "MAE_increase": -0.7455947790799655
+      },
+      {
+        "feature": "competitive_rank",
+        "MAE_increase": -0.9183005589043205
+      },
+      {
+        "feature": "social_interactions",
+        "MAE_increase": -1.4516692541728844
+      },
+      {
+        "feature": "purchase_frequency",
+        "MAE_increase": -1.4565751654286032
+      },
+      {
+        "feature": "avg_session_length",
+        "MAE_increase": -1.6792484077000154
+      },
+      {
+        "feature": "daily_login_streak",
+        "MAE_increase": -1.7028909650066453
+      },
+      {
+        "feature": "session_hours_proxy_per_week",
+        "MAE_increase": -2.135803114018927
+      },
+      {
+        "feature": "primary_game",
+        "MAE_increase": -2.6636518417553816
+      },
+      {
+        "feature": "total_playtime_hours",
+        "MAE_increase": -3.298172179496305
+      },
+      {
+        "feature": "achievement_count",
+        "MAE_increase": -3.3237350938379677
+      },
+      {
+        "feature": "cross_game_activity",
+        "MAE_increase": -11.371783605648034
+      },
+      {
+        "feature": "cross_game_activity_per_session",
+        "MAE_increase": -12.709521137790944
+      }
+    ],
+    "3": [
+      {
+        "feature": "historical_spending",
+        "MAE_increase": 3999.251820061857
+      },
+      {
+        "feature": "segment",
+        "MAE_increase": 2721.620987889268
+      },
+      {
+        "feature": "prev_month_spending",
+        "MAE_increase": 2419.8757443027353
+      },
+      {
+        "feature": "vip_status",
+        "MAE_increase": 484.93258821942436
+      },
+      {
+        "feature": "discount_value_interaction",
+        "MAE_increase": 244.9662759974358
+      },
+      {
+        "feature": "days_since_last_purchase",
+        "MAE_increase": 221.61215813302624
+      },
+      {
+        "feature": "is_premium_member",
+        "MAE_increase": 179.63063135133916
+      },
+      {
+        "feature": "games_played",
+        "MAE_increase": 134.19602474687053
+      },
+      {
+        "feature": "event_participation_rate",
+        "MAE_increase": 90.72196791279248
+      },
+      {
+        "feature": "purchase_value_proxy",
+        "MAE_increase": 47.51971254109685
+      },
+      {
+        "feature": "recent_to_historical_spend",
+        "MAE_increase": 24.74979917580913
+      },
+      {
+        "feature": "seasonal_spending_pattern",
+        "MAE_increase": 19.552789008939726
+      },
+      {
+        "feature": "avg_transaction_value",
+        "MAE_increase": 18.71651674013401
+      },
+      {
+        "feature": "purchase_frequency",
+        "MAE_increase": 14.894121627547065
+      },
+      {
+        "feature": "login_purchase_recency_gap",
+        "MAE_increase": 14.702005186817587
+      },
+      {
+        "feature": "historical_spend_per_account_month",
+        "MAE_increase": 14.375606524942668
+      },
+      {
+        "feature": "historical_spend_per_transaction",
+        "MAE_increase": 13.83651368897199
+      },
+      {
+        "feature": "cross_game_activity",
+        "MAE_increase": 3.003960007938531
+      },
+      {
+        "feature": "event_social_interaction",
+        "MAE_increase": 2.9765409807405376
+      },
+      {
+        "feature": "cross_game_activity_per_session",
+        "MAE_increase": 2.265924408366118
+      },
+      {
+        "feature": "total_playtime_hours",
+        "MAE_increase": 1.5743388033483825
+      },
+      {
+        "feature": "days_since_last_login",
+        "MAE_increase": 1.514021135782059
+      },
+      {
+        "feature": "transactions_per_account_month",
+        "MAE_increase": 0.6853504986265762
+      },
+      {
+        "feature": "daily_login_streak",
+        "MAE_increase": 0.6582868083341964
+      },
+      {
+        "feature": "friend_count",
+        "MAE_increase": 0.39996305220438444
+      },
+      {
+        "feature": "achievement_count",
+        "MAE_increase": 0.3682673313592204
+      },
+      {
+        "feature": "platform",
+        "MAE_increase": 0.3434530146205361
+      },
+      {
+        "feature": "guild_membership",
+        "MAE_increase": 0.2435042188681109
+      },
+      {
+        "feature": "social_interactions_per_session",
+        "MAE_increase": 0.20522518242751175
+      },
+      {
+        "feature": "sessions_per_week",
+        "MAE_increase": 0.19745862250056234
+      },
+      {
+        "feature": "competitive_rank",
+        "MAE_increase": 0.17581938593821178
+      },
+      {
+        "feature": "social_interactions",
+        "MAE_increase": 0.06586316358925615
+      },
+      {
+        "feature": "tournament_participation",
+        "MAE_increase": 0.010927191370228684
+      },
+      {
+        "feature": "session_hours_proxy_per_week",
+        "MAE_increase": 0.006019217328685045
+      },
+      {
+        "feature": "owns_limited_edition",
+        "MAE_increase": 0.0
+      },
+      {
+        "feature": "discount_purchase_share",
+        "MAE_increase": -0.10854676924645901
+      },
+      {
+        "feature": "achievement_completion_rate",
+        "MAE_increase": -0.5679399640607699
+      },
+      {
+        "feature": "play_hours_per_account_day",
+        "MAE_increase": -0.7221861845728199
+      },
+      {
+        "feature": "source_missing_count",
+        "MAE_increase": -0.8590531160907631
+      },
+      {
+        "feature": "avg_session_length",
+        "MAE_increase": -1.534352620298705
+      },
+      {
+        "feature": "primary_game",
+        "MAE_increase": -1.6296073864464233
+      },
+      {
+        "feature": "achievements_per_play_hour",
+        "MAE_increase": -1.9793399128279816
+      },
+      {
+        "feature": "discount_rate_used",
+        "MAE_increase": -2.251671840983363
+      },
+      {
+        "feature": "account_age_days",
+        "MAE_increase": -3.113491131149658
+      },
+      {
+        "feature": "purchase_recency_over_age",
+        "MAE_increase": -3.551527065245864
+      },
+      {
+        "feature": "payment_methods_used",
+        "MAE_increase": -5.0812942596494395
+      },
+      {
+        "feature": "purchases_on_discount",
+        "MAE_increase": -10.27740572556877
+      },
+      {
+        "feature": "total_transactions",
+        "MAE_increase": -15.488026009628811
+      }
+    ],
+    "4": [
+      {
+        "feature": "historical_spending",
+        "MAE_increase": 4476.883332779751
+      },
+      {
+        "feature": "segment",
+        "MAE_increase": 3173.6636992225162
+      },
+      {
+        "feature": "prev_month_spending",
+        "MAE_increase": 2546.3408889169464
+      },
+      {
+        "feature": "vip_status",
+        "MAE_increase": 353.24105276016417
+      },
+      {
+        "feature": "is_premium_member",
+        "MAE_increase": 346.6693378273885
+      },
+      {
+        "feature": "days_since_last_purchase",
+        "MAE_increase": 323.5851746199196
+      },
+      {
+        "feature": "discount_value_interaction",
+        "MAE_increase": 323.0622885953162
+      },
+      {
+        "feature": "purchase_value_proxy",
+        "MAE_increase": 178.83725152255874
+      },
+      {
+        "feature": "historical_spend_per_account_month",
+        "MAE_increase": 162.4218095288461
+      },
+      {
+        "feature": "games_played",
+        "MAE_increase": 139.0813399717881
+      },
+      {
+        "feature": "recent_to_historical_spend",
+        "MAE_increase": 139.00288338561904
+      },
+      {
+        "feature": "purchase_frequency",
+        "MAE_increase": 123.91759581383985
+      },
+      {
+        "feature": "seasonal_spending_pattern",
+        "MAE_increase": 83.49180591391496
+      },
+      {
+        "feature": "event_participation_rate",
+        "MAE_increase": 72.52554968101776
+      },
+      {
+        "feature": "historical_spend_per_transaction",
+        "MAE_increase": 33.5004534523805
+      },
+      {
+        "feature": "login_purchase_recency_gap",
+        "MAE_increase": 26.248664836849002
+      },
+      {
+        "feature": "avg_transaction_value",
+        "MAE_increase": 16.874686702634335
+      },
+      {
+        "feature": "purchase_recency_over_age",
+        "MAE_increase": 4.569912884480345
+      },
+      {
+        "feature": "purchases_on_discount",
+        "MAE_increase": 3.217427841915651
+      },
+      {
+        "feature": "play_hours_per_account_day",
+        "MAE_increase": 2.9487403279745195
+      },
+      {
+        "feature": "achievement_completion_rate",
+        "MAE_increase": 1.6930935103055162
+      },
+      {
+        "feature": "source_missing_count",
+        "MAE_increase": 1.6593298695170233
+      },
+      {
+        "feature": "daily_login_streak",
+        "MAE_increase": 1.6467367168952478
+      },
+      {
+        "feature": "total_playtime_hours",
+        "MAE_increase": 1.1907993043564602
+      },
+      {
+        "feature": "competitive_rank",
+        "MAE_increase": 0.7644562524787943
+      },
+      {
+        "feature": "days_since_last_login",
+        "MAE_increase": 0.5282779079648208
+      },
+      {
+        "feature": "friend_count",
+        "MAE_increase": 0.5095282154920824
+      },
+      {
+        "feature": "avg_session_length",
+        "MAE_increase": 0.44433549713767206
+      },
+      {
+        "feature": "transactions_per_account_month",
+        "MAE_increase": 0.339877974454339
+      },
+      {
+        "feature": "session_hours_proxy_per_week",
+        "MAE_increase": 0.18399504650096787
+      },
+      {
+        "feature": "payment_methods_used",
+        "MAE_increase": 0.13298989417489793
+      },
+      {
+        "feature": "platform",
+        "MAE_increase": 0.07793711825252103
+      },
+      {
+        "feature": "social_interactions",
+        "MAE_increase": 0.018548385535268608
+      },
+      {
+        "feature": "guild_membership",
+        "MAE_increase": 0.002534458654736227
+      },
+      {
+        "feature": "owns_limited_edition",
+        "MAE_increase": 0.0
+      },
+      {
+        "feature": "tournament_participation",
+        "MAE_increase": -0.009157589822279988
+      },
+      {
+        "feature": "total_transactions",
+        "MAE_increase": -0.058337139731975185
+      },
+      {
+        "feature": "achievement_count",
+        "MAE_increase": -0.15049568490894671
+      },
+      {
+        "feature": "event_social_interaction",
+        "MAE_increase": -0.4353915390656766
+      },
+      {
+        "feature": "primary_game",
+        "MAE_increase": -0.4405648272263534
+      },
+      {
+        "feature": "sessions_per_week",
+        "MAE_increase": -0.8111502492829459
+      },
+      {
+        "feature": "discount_purchase_share",
+        "MAE_increase": -0.9704144225206619
+      },
+      {
+        "feature": "discount_rate_used",
+        "MAE_increase": -1.5183983745605474
+      },
+      {
+        "feature": "achievements_per_play_hour",
+        "MAE_increase": -1.6661387955705322
+      },
+      {
+        "feature": "cross_game_activity_per_session",
+        "MAE_increase": -1.7347740581690232
+      },
+      {
+        "feature": "account_age_days",
+        "MAE_increase": -2.065696607826794
+      },
+      {
+        "feature": "social_interactions_per_session",
+        "MAE_increase": -5.106879829330865
+      },
+      {
+        "feature": "cross_game_activity",
+        "MAE_increase": -8.686398691839258
+      }
+    ],
+    "5": [
+      {
+        "feature": "historical_spending",
+        "MAE_increase": 5631.601179703374
+      },
+      {
+        "feature": "segment",
+        "MAE_increase": 3995.349930748799
+      },
+      {
+        "feature": "prev_month_spending",
+        "MAE_increase": 2965.9361700502914
+      },
+      {
+        "feature": "vip_status",
+        "MAE_increase": 560.8911492336961
+      },
+      {
+        "feature": "discount_value_interaction",
+        "MAE_increase": 500.2629812105615
+      },
+      {
+        "feature": "days_since_last_purchase",
+        "MAE_increase": 453.5674591520874
+      },
+      {
+        "feature": "is_premium_member",
+        "MAE_increase": 270.2861307991475
+      },
+      {
+        "feature": "event_participation_rate",
+        "MAE_increase": 161.50401467494476
+      },
+      {
+        "feature": "games_played",
+        "MAE_increase": 151.05916858117598
+      },
+      {
+        "feature": "seasonal_spending_pattern",
+        "MAE_increase": 108.19707432808946
+      },
+      {
+        "feature": "avg_transaction_value",
+        "MAE_increase": 67.26514212141274
+      },
+      {
+        "feature": "login_purchase_recency_gap",
+        "MAE_increase": 49.21519121453639
+      },
+      {
+        "feature": "historical_spend_per_account_month",
+        "MAE_increase": 48.398078638061634
+      },
+      {
+        "feature": "purchase_value_proxy",
+        "MAE_increase": 38.827533098611184
+      },
+      {
+        "feature": "purchase_frequency",
+        "MAE_increase": 23.654959099345433
+      },
+      {
+        "feature": "total_transactions",
+        "MAE_increase": 17.025498543240246
+      },
+      {
+        "feature": "purchase_recency_over_age",
+        "MAE_increase": 4.945792178052216
+      },
+      {
+        "feature": "purchases_on_discount",
+        "MAE_increase": 4.073103926503791
+      },
+      {
+        "feature": "social_interactions",
+        "MAE_increase": 3.697808333026387
+      },
+      {
+        "feature": "historical_spend_per_transaction",
+        "MAE_increase": 3.4531861067330283
+      },
+      {
+        "feature": "cross_game_activity",
+        "MAE_increase": 2.4712246691769906
+      },
+      {
+        "feature": "daily_login_streak",
+        "MAE_increase": 2.007683191309752
+      },
+      {
+        "feature": "source_missing_count",
+        "MAE_increase": 1.8874210379758551
+      },
+      {
+        "feature": "sessions_per_week",
+        "MAE_increase": 1.821697242740811
+      },
+      {
+        "feature": "account_age_days",
+        "MAE_increase": 1.7683413663653482
+      },
+      {
+        "feature": "achievement_count",
+        "MAE_increase": 1.5004094987593817
+      },
+      {
+        "feature": "competitive_rank",
+        "MAE_increase": 1.3665881116571654
+      },
+      {
+        "feature": "discount_purchase_share",
+        "MAE_increase": 1.346216428284606
+      },
+      {
+        "feature": "transactions_per_account_month",
+        "MAE_increase": 0.9498891753551106
+      },
+      {
+        "feature": "achievement_completion_rate",
+        "MAE_increase": 0.5998543039504511
+      },
+      {
+        "feature": "achievements_per_play_hour",
+        "MAE_increase": 0.5697429406613992
+      },
+      {
+        "feature": "session_hours_proxy_per_week",
+        "MAE_increase": 0.5366093606539835
+      },
+      {
+        "feature": "days_since_last_login",
+        "MAE_increase": 0.2979109435641476
+      },
+      {
+        "feature": "total_playtime_hours",
+        "MAE_increase": 0.2745110196406131
+      },
+      {
+        "feature": "social_interactions_per_session",
+        "MAE_increase": 0.2287438216303599
+      },
+      {
+        "feature": "guild_membership",
+        "MAE_increase": 0.19963033248859574
+      },
+      {
+        "feature": "event_social_interaction",
+        "MAE_increase": 0.17371182564011178
+      },
+      {
+        "feature": "platform",
+        "MAE_increase": 0.16557247790524343
+      },
+      {
+        "feature": "avg_session_length",
+        "MAE_increase": 0.11014290322555098
+      },
+      {
+        "feature": "tournament_participation",
+        "MAE_increase": 0.030656045035357238
+      },
+      {
+        "feature": "owns_limited_edition",
+        "MAE_increase": 0.0
+      },
+      {
+        "feature": "primary_game",
+        "MAE_increase": -0.117641447621736
+      },
+      {
+        "feature": "payment_methods_used",
+        "MAE_increase": -0.5432046801415709
+      },
+      {
+        "feature": "friend_count",
+        "MAE_increase": -0.945936130377504
+      },
+      {
+        "feature": "play_hours_per_account_day",
+        "MAE_increase": -1.9817973270678522
+      },
+      {
+        "feature": "discount_rate_used",
+        "MAE_increase": -3.5639270783526626
+      },
+      {
+        "feature": "cross_game_activity_per_session",
+        "MAE_increase": -3.628436772725763
+      },
+      {
+        "feature": "recent_to_historical_spend",
+        "MAE_increase": -49.95812022604787
+      }
+    ]
+  }
+}
