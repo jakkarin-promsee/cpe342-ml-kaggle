@@ -1,0 +1,18 @@
+{
+  "name": "t1_round3_full_v1",
+  "task": "task1",
+  "created_at": "2026-11-05T16:12:02+00:00",
+  "card": {
+    "source": "t1_lgbm_combined_pruned_cv6_full_v1",
+    "selection": "Highest mean macro F2 in Round 3 outer CV"
+  },
+  "model_name": "t1_lgbm_combined_pruned_cv6_full_v1",
+  "model_card_path": "task1/save/t1_lgbm_combined_pruned_cv6_full_v1.json",
+  "data_name": "eda_combined_v1",
+  "submission_path": "task1/submission/t1_round3_full_v1.csv",
+  "rows": 25889,
+  "columns": [
+    "id",
+    "task1"
+  ]
+}

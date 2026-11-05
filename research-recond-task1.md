@@ -196,3 +196,18 @@ The top two models differ by only **0.00085** macro F₂ on this holdout. Becaus
 | 2   | win_rate                       | -0.0030       | 0.0022 | original   |
 
 ![[Pasted image 20261105211352.png]]
+
+## Round 3: stability and feature ablation
+
+Compared three finalists on the same **3-fold × 2-repeat** outer CV splits. For each outer training fold, a separate 3-fold CV selected the decision threshold; the outer fold was used only for scoring. The model families and settings had already been shortlisted using the earlier holdout, so these CV means are exploratory rather than a new untouched validation estimate.
+
+| Model | Features | Mean macro F₂ | Fold std | Threshold range |
+| --- | ---: | ---: | ---: | ---: |
+| LightGBM combined, pruned | 38 | **0.77733** | 0.00127 | 0.375–0.400 |
+| LightGBM combined | 45 | 0.77679 | 0.00130 | 0.375–0.400 |
+| LightGBM original | 31 | 0.77676 | 0.00051 | 0.375–0.400 |
+| HGB combined | 45 | 0.77536 | 0.00110 | 0.350–0.400 |
+
+The pruned variant drops `account_age_days_missing`, `reports_received_missing`, `avg_session_length_min_missing`, `aiming_smoothness_missing`, `aim_precision_observed`, `missing_feature_count`, and `map_knowledge`, chosen from the low end of the previous winner's permutation-importance ranking. Its paired gain over full LightGBM combined averaged **0.00054** macro F₂ and occurred in 4 of 6 folds. This is a small exploratory gain, not strong evidence that all seven features are harmful.
+
+The highest-mean procedure was retrained on all **90,816 labeled rows** with inner-CV threshold tuning. It was saved as `t1_lgbm_combined_pruned_cv6_full_v1` with threshold **0.400**. The `macro_F2_outer_cv6` evaluation card records the six-fold procedure estimate (**0.77733**), not a validation score measured on that full-data model. `src/task1/submission/t1_round3_full_v1.csv` contains 25,889 predictions and a predicted cheater rate of **38.41%**. Test was used only for prediction and format checks.
