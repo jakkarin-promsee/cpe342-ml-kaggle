@@ -1,0 +1,208 @@
+{
+  "card": "Five paired development folds: original CatBoost and HGB, plus fold-local CatBoost pruning. Validation holdout and Test excluded.",
+  "config": {
+    "data_name": "eda_original_v1",
+    "data_created_at": "2026-11-05T17:37:12+00:00",
+    "seed": 42,
+    "folds": 5,
+    "prune_count": 8,
+    "split": "stratified 80% development; 20% holdout excluded from CV",
+    "split_signature": "5b81fcadf578988e067e684c33ae08364c78bf4666f4215aed05dc70d8925dba",
+    "catboost": {
+      "iterations": 400,
+      "depth": 6,
+      "learning_rate": 0.05,
+      "l2_leaf_reg": 3.0,
+      "loss_function": "MultiClass"
+    },
+    "hgb": {
+      "max_iter": 180,
+      "learning_rate": 0.08,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 40,
+      "early_stopping": true
+    }
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "train_rows": 66560,
+      "validation_rows": 16640,
+      "pruned_columns": [
+        "device_type",
+        "language",
+        "platform",
+        "player_type_tag",
+        "region",
+        "skill_tier",
+        "account_status",
+        "payment_method"
+      ],
+      "cat_full": {
+        "macro_F1": 0.7497298685845794,
+        "F1_casual": 0.8220697708363742,
+        "F1_grinder": 0.7379679144385026,
+        "F1_social": 0.7122823239328093,
+        "F1_whale": 0.7265994651306316
+      },
+      "cat_pruned": {
+        "macro_F1": 0.7499609686750954,
+        "F1_casual": 0.8228596452813663,
+        "F1_grinder": 0.738360814742968,
+        "F1_social": 0.7140873322018207,
+        "F1_whale": 0.7245360824742269
+      },
+      "hgb_full": {
+        "macro_F1": 0.7450442685025438,
+        "F1_casual": 0.8170588235294117,
+        "F1_grinder": 0.7339627208908255,
+        "F1_social": 0.7115325787702661,
+        "F1_whale": 0.7176229508196721
+      }
+    },
+    {
+      "fold": 2,
+      "train_rows": 66560,
+      "validation_rows": 16640,
+      "pruned_columns": [
+        "account_status",
+        "device_type",
+        "language",
+        "payment_method",
+        "platform",
+        "player_type_tag",
+        "preferred_game_mode",
+        "responds_to_discounts"
+      ],
+      "cat_full": {
+        "macro_F1": 0.7509804847129328,
+        "F1_casual": 0.8192981181428468,
+        "F1_grinder": 0.7315526283693133,
+        "F1_social": 0.712997512437811,
+        "F1_whale": 0.7400736799017601
+      },
+      "cat_pruned": {
+        "macro_F1": 0.7505921726051503,
+        "F1_casual": 0.8191373686118159,
+        "F1_grinder": 0.7318026380068393,
+        "F1_social": 0.709717672749961,
+        "F1_whale": 0.7417110110519852
+      },
+      "hgb_full": {
+        "macro_F1": 0.744611329768816,
+        "F1_casual": 0.8135593220338984,
+        "F1_grinder": 0.7248387489351344,
+        "F1_social": 0.709836571076164,
+        "F1_whale": 0.7302106770300675
+      }
+    },
+    {
+      "fold": 3,
+      "train_rows": 66560,
+      "validation_rows": 16640,
+      "pruned_columns": [
+        "device_type",
+        "language",
+        "player_type_tag",
+        "preferred_game_mode",
+        "region",
+        "responds_to_discounts",
+        "skill_tier",
+        "account_status"
+      ],
+      "cat_full": {
+        "macro_F1": 0.753060958505088,
+        "F1_casual": 0.8218859138533178,
+        "F1_grinder": 0.7432267512814255,
+        "F1_social": 0.7109399075500771,
+        "F1_whale": 0.7361912613355317
+      },
+      "cat_pruned": {
+        "macro_F1": 0.7523970056027259,
+        "F1_casual": 0.8218440954043048,
+        "F1_grinder": 0.7431840311587147,
+        "F1_social": 0.7098069498069498,
+        "F1_whale": 0.7347529460409344
+      },
+      "hgb_full": {
+        "macro_F1": 0.7483634524609482,
+        "F1_casual": 0.8182218956649523,
+        "F1_grinder": 0.7359727957250425,
+        "F1_social": 0.7089381207028266,
+        "F1_whale": 0.7303209977509711
+      }
+    },
+    {
+      "fold": 4,
+      "train_rows": 66560,
+      "validation_rows": 16640,
+      "pruned_columns": [
+        "device_type",
+        "language",
+        "payment_method",
+        "platform",
+        "player_type_tag",
+        "skill_tier",
+        "account_status",
+        "item_type_preference_social"
+      ],
+      "cat_full": {
+        "macro_F1": 0.7511113203146064,
+        "F1_casual": 0.8245983862760776,
+        "F1_grinder": 0.7461214672279014,
+        "F1_social": 0.7103211724352978,
+        "F1_whale": 0.723404255319149
+      },
+      "cat_pruned": {
+        "macro_F1": 0.7511463659004142,
+        "F1_casual": 0.8237433621881137,
+        "F1_grinder": 0.7465093885411651,
+        "F1_social": 0.7082683307332294,
+        "F1_whale": 0.7260643821391485
+      },
+      "hgb_full": {
+        "macro_F1": 0.7447443236027238,
+        "F1_casual": 0.8212638207512631,
+        "F1_grinder": 0.7413090385998562,
+        "F1_social": 0.7027443724946038,
+        "F1_whale": 0.713660062565172
+      }
+    },
+    {
+      "fold": 5,
+      "train_rows": 66560,
+      "validation_rows": 16640,
+      "pruned_columns": [
+        "account_status",
+        "device_type",
+        "language",
+        "payment_method",
+        "platform",
+        "preferred_game_mode",
+        "responds_to_discounts",
+        "skill_tier"
+      ],
+      "cat_full": {
+        "macro_F1": 0.7457242114196833,
+        "F1_casual": 0.8177204176334106,
+        "F1_grinder": 0.737202199144777,
+        "F1_social": 0.6996576408341114,
+        "F1_whale": 0.7283165880664343
+      },
+      "cat_pruned": {
+        "macro_F1": 0.7458549829581763,
+        "F1_casual": 0.816127860515801,
+        "F1_grinder": 0.737381126554499,
+        "F1_social": 0.6993941276992388,
+        "F1_whale": 0.7305168170631665
+      },
+      "hgb_full": {
+        "macro_F1": 0.7403064211625618,
+        "F1_casual": 0.8157933362688977,
+        "F1_grinder": 0.7330657910738173,
+        "F1_social": 0.6975252062328139,
+        "F1_whale": 0.7148413510747186
+      }
+    }
+  ]
+}
