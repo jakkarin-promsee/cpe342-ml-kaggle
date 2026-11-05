@@ -36,3 +36,22 @@ The 16 features improve CatBoost by **฿94.44** MAE, LightGBM by **฿2.36**, a
 CatBoost combined's permutation importance is dominated by `historical_spending` (MAE increase about **฿3,931**), `segment` (**฿3,027**), and `prev_month_spending` (**฿2,317**). This is model reliance, not causation. The leader predicts median zero for actual spenders in the ฿1–1,000 band, while actual spending above ฿50,000 has MAE around **฿20,024**. It produces **2,514** negative predictions among 20,800 validation rows. Clipping them to zero improves MAE from **฿2,928.48** to **฿2,927.55**; this is a diagnostic only, and the saved model still returns its raw predictions. Before final prediction, make any nonnegative postprocessing part of the saved inference path and reassess the same validation metric. A later round can test a two-part spender/amount approach or targeted tail handling; this Round 1 does not claim those would help.
 
 **Next:** Obtain the competition's exact NMAE denominator, then compute that metric without guessing. Check the CatBoost–LightGBM gap on multiple development folds, examine spending bands, and test a saved nonnegative prediction step. Do not use competition Test for tuning or pseudo-labeling.
+
+## Round 2: paired development folds, zero targets, and feature stability
+
+`src/task3/models/build_model.ipynb` now uses **five stratified folds of the 83,200 development rows**. The original 20,800-row holdout and competition Test stay out of these fold fits. Each fold trains CatBoost with all 48 combined features, LightGBM with all 48, CatBoost with only positive-target training rows, and CatBoost with its fold-local top 8, 16, and 24 features. Feature ranking uses permutation MAE on 500 sampled **training-fold** rows only; validation labels never select features. The temporary fold results and feature rankings are in `src/task3/models/round2_cv_v1.json`. Completed fold caches make the notebook rerunnable without repeating fits.
+
+| Candidate | Mean fold MAE (THB) | Fold std | Mean MAE after clipping negatives |
+| --- | ---: | ---: | ---: |
+| CatBoost, positive targets only | **2,978.86** | 88.17 | 2,978.70 |
+| LightGBM, full features | 3,016.06 | 71.52 | 3,015.85 |
+| CatBoost, top 24 | 3,038.20 | 137.15 | 3,037.10 |
+| CatBoost, top 16 | 3,039.44 | 117.78 | 3,038.40 |
+| CatBoost, full features | 3,059.59 | 107.30 | 3,058.59 |
+| CatBoost, top 8 | 3,149.04 | 111.72 | 3,148.50 |
+
+Positive-only CatBoost beats full CatBoost on **4/5** paired folds by **฿80.73** mean MAE. Its positive-target MAE is **฿3,662.66** versus **฿4,196.46** for full CatBoost, while zero-target MAE worsens from **฿1,834.06** to **฿2,241.74**. The 20% holdout remains a useful check, though earlier rounds already used it for selection: a newly saved `t3_cat_combined_positive_only_v1` trained on **43,161** positive development rows scores **฿2,934.48**, versus **฿2,928.48** for full CatBoost and **฿2,957.98** for LightGBM. Its high-spend (฿50,000+) holdout MAE improves to **฿18,959.42** from **฿20,023.66**, but the aggregate holdout difference does not justify replacing the current submission model.
+
+LightGBM beats full CatBoost on **3/5** development folds and by **฿43.53** mean MAE, reversing their Round 1 holdout order. Top 24 features beat full CatBoost on 4/5 folds, but one fold loses **฿223.56**; top 8 lose all five folds. `historical_spending`, `segment`, `prev_month_spending`, `days_since_last_purchase`, `discount_value_interaction`, and `vip_status` appear in the top eight on every fold. This supports predictive stability of those inputs, not proof of their availability at inference; the source data has no row-level cutoff timestamps. Clipping negative full-CatBoost predictions improves each fold by roughly **฿0.8–1.2**, a small consistent gain.
+
+**Decision:** Keep `t3_cat_combined_v1` as the current holdout leader and submission source. Do not create a new EDA dataset or refit a final full-label model from this mixed evidence. The next targeted comparison is a zero-aware two-stage model or a fixed CatBoost/LightGBM blend, evaluated on the same development folds before any model change. All scores remain **MAE_thb**, not official NMAE; the denominator is absent from the supplied competition documents. Test was not used for fitting, selection, or probing.
