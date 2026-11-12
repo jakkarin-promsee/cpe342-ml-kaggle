@@ -21,7 +21,7 @@ IGNORE_NOTEBOOKS = {
 
 
 def notebook_order(path: Path) -> tuple[int, str]:
-    return (0 if path.stem.endswith("_original") else 1, path.name)
+    return (0 if "original" in path.stem.split("_") else 1, path.name)
 
 
 def notebook_plan(tasks: list[int], root: Path = ROOT) -> tuple[list[Path], list[str]]:
