@@ -1,13 +1,7 @@
 # Task 4 — Game Title Detection
 
-สถานะตามประกาศเปลี่ยน dataset วันที่ 12-11-2026: **แก้เฉพาะ `test.csv`** ไฟล์ raw ชุดปัจจุบันอยู่ในเครื่องแล้ว แต่ notebook EDA ยังอ่าน test เก่า
+The current `data/raw/test.csv` has `id,file_name,label` and uses `ANS...` IDs in a new order. `train.csv` has the same schema. The image files and train labels match the previous dataset; the old manifests and `v1` artifacts remain available.
 
-| ส่วน | ไฟล์/ชุดข้อมูล | สถานะ |
-| --- | --- | --- |
-| Raw train | `data/raw/train.csv`, `data/raw/train/` | มีแล้ว; ใช้เป็น raw ชุดปัจจุบัน |
-| Raw test เก่า | `data/raw/test-outdate-12-11-2026.csv` | Outdated; เก็บไว้สืบย้อนผลเดิม |
-| Raw test ใหม่ | `data/raw/test.csv`, `data/raw/test/` | มีแล้ว; ใช้เป็น raw ชุดปัจจุบัน |
-| Data card | `data/raw/datacard.txt` | มีแล้วพร้อม raw ชุดปัจจุบัน |
-| EDA เก่า | `data/eda/eda_original_v1.json`, `data/eda/eda_1_v1.json` พร้อม train/test Parquet | test split outdated; ตรวจ train split เทียบ manifest ปัจจุบันก่อนนำไปใช้ |
+Run `eda/build_eda_original_v2.ipynb` and `eda/build_eda_1_v2.ipynb` to create the refreshed EDA cards. They map `file_name` to the existing image features, verify SHA-256 for every current image, and preserve the new manifest IDs and order. `models/build_model_v2.ipynb` copies all 28 fitted candidates into new `r2` model artifacts linked to the `v2` EDA cards and checks each validation score. It does not retrain, because the train images and labels are unchanged.
 
-Notebook `eda/build_eda_original.ipynb`, `eda/build_eda_1.ipynb` ชี้ไปที่ `test-outdate-12-11-2026.csv` และ `models/build_model.ipynb` อ่าน EDA artifact ชุดเก่า ให้ข้ามทั้งสามไฟล์ในการรันชุดใหม่ Prediction/submission จาก test เก่าใช้แทนผลของ CSV ใหม่ไม่ได้ ต้องตรวจการจับคู่ภาพและสร้าง notebook กับ EDA/model/submission artifact ชื่อใหม่
+The old and new winners have identical validation scores, so `best_model(4)` still returns the older `r1` entry under the current tie rule. For predictions on the refreshed test manifest, explicitly select `model_name="t4_lgbm_31_tuned_features_r2"`.
