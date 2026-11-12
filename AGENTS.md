@@ -7,6 +7,11 @@ This repository is the **CPE342 Player Intelligence System** competition project
 - Before working on any EDA task, read `src/task1/eda/build_eda_1.ipynb` thoroughly as the best-case EDA example. Follow its approach to data checks, feature preparation, and artifact saving where applicable.
 - Before working on any model task, read `src/task1/models/build_model.ipynb` thoroughly as the best-case model example. Follow its approach to guarding expensive training, recording each model, evaluating results, and comparing models where applicable.
 
+## Research notes
+
+- Keep one concise research note per task at `docs/research-note-taskN.md` (Tasks 1–5). Update the relevant note when current EDA, model results, or conclusions change.
+- Base each note only on non-outdated notebooks. List every engineered feature name (or an exact naming pattern for generated families), the important model comparisons and their metrics, the strongest feature sets, key insights, and the next useful experiment. Distinguish holdout, cross-validation, and proxy scores; do not invent missing results.
+
 ## Core workflow
 
 1. A task's EDA notebook reads `src/taskN/data/raw/`, checks data quality and leakage, performs feature work, and calls `save_data` to create exactly one named dataset in `src/taskN/data/eda/`. It may instead start from an earlier saved EDA dataset only when repeating prior preparation is computationally costly; document that link in the card and keep EDA dependencies acyclic.
