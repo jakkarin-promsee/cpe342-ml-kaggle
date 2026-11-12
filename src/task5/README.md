@@ -1,13 +1,5 @@
 # Task 5 — Account Security Monitoring
 
-สถานะตามประกาศเปลี่ยน dataset วันที่ 12-11-2026: **เปลี่ยน dataset ทั้งชุด** ไฟล์ raw ใหม่อยู่ในเครื่องแล้ว แต่ notebook EDA ยังเป็นรุ่นเก่า
+The refreshed competition data is `data/raw/test.csv`. The old test file and all `v1` EDA and model artifacts remain available. There is no labeled train file.
 
-| ส่วน | ไฟล์/ชุดข้อมูล | สถานะ |
-| --- | --- | --- |
-| Raw เก่า | `data/raw/test-outdate-12-11-2026.csv` | Outdated; เก็บไว้สืบย้อนผลเดิม |
-| Raw ใหม่ | `data/raw/test.csv` | มีแล้ว; ใช้เป็น raw ชุดปัจจุบัน |
-| Raw train | ไม่มี `train.csv` ในชุดข้อมูลที่มีอยู่ | อย่าสร้างหรือใช้ test แทน train |
-| Data card | `data/raw/datacard.txt` | มีแล้วพร้อม raw ชุดปัจจุบัน |
-| EDA เก่า | `data/eda/eda_original_v1.json`, `data/eda/eda_1_v1.json` พร้อม test Parquet | Outdated สำหรับ dataset ใหม่ |
-
-Notebook `eda/build_eda_original.ipynb`, `eda/build_eda_1.ipynb` ชี้ไปที่ raw เก่า และ `models/build_model.ipynb` อ่าน EDA artifact ชุดเก่า ให้ข้ามทั้งสามไฟล์ในการรันชุดใหม่ EDA/model/submission เดิมอ้างอิง test ชุดเก่า ต้องยืนยัน workflow ของ Task 5 กับผู้จัดตามข้อกำหนดการแข่งขันก่อนสร้าง artifact ใหม่
+Run `eda/build_eda_original_v2.ipynb` and `eda/build_eda_1_v2.ipynb` to create test-only EDA cards. `models/build_model_v2.ipynb` follows the previously user-directed unsupervised workflow on the current Test data and saves distinct `v2` models. Its top-5% rank stability Jaccard is an unlabeled proxy, not competition macro F₃.
