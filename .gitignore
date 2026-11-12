@@ -6,4 +6,6 @@ __pycache__/
 src/task*/models/.cache/
 src/task*/data
 src/task*/save
-src/submission
+src/submission/*
+!src/submission/assemble.ipynb
+!src/submission/*.json

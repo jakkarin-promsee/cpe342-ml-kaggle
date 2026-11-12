@@ -1,0 +1,68 @@
+{
+  "name": "kaggle_t123_best_t45_ones_v1",
+  "created_at": "2026-11-05T23:01:17.770398+00:00",
+  "card": "Task 1 full-data CV-selected model, Task 2 best macro F1, Task 3 best MAE; Task 4/5 fixed to 1.",
+  "submission_path": "submission/kaggle_t123_best_t45_ones_v1.csv",
+  "format": "pipe-separated CSV",
+  "rows": 25889,
+  "columns": [
+    "id",
+    "task1",
+    "task2",
+    "task3",
+    "task4",
+    "task5"
+  ],
+  "sha256": "23a50a40fbf3e7b489ede224b381f4f89dbe2ece3dfc17c0550a98431650784b",
+  "sources": {
+    "task1": {
+      "model_name": "t1_lgbm_combined_pruned_cv6_full_v1",
+      "model_card_path": "task1/save/t1_lgbm_combined_pruned_cv6_full_v1.json",
+      "model_path": "task1/save/t1_lgbm_combined_pruned_cv6_full_v1.joblib",
+      "data_name": "eda_combined_v1",
+      "data_card_path": "task1/data/eda/eda_combined_v1.json",
+      "test_path": "task1/data/eda/eda_combined_v1-test.parquet",
+      "evaluation_path": "task1/save/t1_lgbm_combined_pruned_cv6_full_v1-evaluation.json",
+      "validation_metric": "macro_F2_outer_cv6",
+      "validation_score": 0.7773283287342686,
+      "test_rows": 25889,
+      "test_id_first": "P122189",
+      "test_id_last": "P103346"
+    },
+    "task2": {
+      "model_name": "t2_cat_original_no_noise_v1",
+      "model_card_path": "task2/save/t2_cat_original_no_noise_v1.json",
+      "model_path": "task2/save/t2_cat_original_no_noise_v1.joblib",
+      "data_name": "eda_original_v1",
+      "data_card_path": "task2/data/eda/eda_original_v1.json",
+      "test_path": "task2/data/eda/eda_original_v1-test.parquet",
+      "evaluation_path": "task2/save/t2_cat_original_no_noise_v1-evaluation.json",
+      "validation_metric": "macro_F1",
+      "validation_score": 0.7502530682443662,
+      "test_rows": 25889,
+      "test_id_first": "P105170",
+      "test_id_last": "P099615"
+    },
+    "task3": {
+      "model_name": "t3_cat_combined_v1",
+      "model_card_path": "task3/save/t3_cat_combined_v1.json",
+      "model_path": "task3/save/t3_cat_combined_v1.joblib",
+      "data_name": "eda_combined_v1",
+      "data_card_path": "task3/data/eda/eda_combined_v1.json",
+      "test_path": "task3/data/eda/eda_combined_v1-test.parquet",
+      "evaluation_path": "task3/save/t3_cat_combined_v1-evaluation.json",
+      "validation_metric": "MAE_thb",
+      "validation_score": 2928.4755787255513,
+      "test_rows": 25889,
+      "test_id_first": "P030374",
+      "test_id_last": "P038968"
+    }
+  },
+  "task2_input_adjustment": "Restore Parquet categorical nulls to None for the saved native categorical imputer; no model refit",
+  "task3_postprocessing": "max(raw_prediction, 0); based on held-out Round 1 MAE diagnostic",
+  "task4": "constant integer 1 placeholder requested by user; no Task 4 model used",
+  "task5": "constant integer 1 placeholder requested by user; no Task 5 model used",
+  "id_mapping": "ANS00001..ANS25889 mapped by raw Test row position in each Task; task player_id sets differ",
+  "sample_submission_check": "Official sample_submission.csv absent from repository; ID pattern taken from docs/kaggle-detial/data.md; verify mapping against actual sample before upload",
+  "competition_test_usage": "Prediction and format checks only; no Test labels or training"
+}
