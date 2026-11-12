@@ -13,42 +13,43 @@ def save_data(
     *,
     task: int | str,
     name: str,
-    train: pd.DataFrame,
     test: pd.DataFrame,
     card: str | dict[str, Any],
+    train: pd.DataFrame | None = None,
     format: str = "parquet",
     force: bool = False,
 ) -> dict[str, Any]:
-    """Write train/test plus name.json and split cards to taskN/data/eda.
+    """Write train/test, or Task 5 test-only, plus readable dataset cards.
 
     `card` may be one sentence or a small dict. `force` is for refining a new
     EDA artifact before it is relied upon; use a new name after that point.
     """
     checked_name(name)
     card = checked_card(card)
-    if not isinstance(train, pd.DataFrame) or not isinstance(test, pd.DataFrame):
-        raise TypeError("train and test must be pandas DataFrames")
+    if not isinstance(test, pd.DataFrame) or (train is not None and not isinstance(train, pd.DataFrame)):
+        raise TypeError("test and any supplied train must be pandas DataFrames")
+    if train is None and task_dir(task).name != "task5":
+        raise ValueError("train is required except for Task 5 test-only datasets")
     if format not in {"csv", "parquet"}:
         raise ValueError("format must be 'csv' or 'parquet'")
     folder = task_dir(task) / "data" / "eda"
-    train_path = folder / f"{name}-train.{format}"
     test_path = folder / f"{name}-test.{format}"
     master_path = folder / f"{name}.json"
-    train_card_path = folder / f"{name}-train.json"
     test_card_path = folder / f"{name}-test.json"
-    ensure_free([train_path, test_path, master_path, train_card_path, test_card_path], force)
+    split_items = []
+    if train is not None:
+        split_items.append(("train", train, folder / f"{name}-train.{format}", folder / f"{name}-train.json"))
+    split_items.append(("test", test, test_path, test_card_path))
+    ensure_free([master_path] + [path for _, _, data_path, card_path in split_items for path in (data_path, card_path)], force)
     folder.mkdir(parents=True, exist_ok=True)
 
     # Write data first and the master card last, so the master card marks completion.
     writer = "to_csv" if format == "csv" else "to_parquet"
     options = {"index": False}
-    getattr(train, writer)(train_path, **options)
-    getattr(test, writer)(test_path, **options)
+    for _, frame, path, _ in split_items:
+        getattr(frame, writer)(path, **options)
     splits = {}
-    for split, frame, path, card_path in [
-        ("train", train, train_path, train_card_path),
-        ("test", test, test_path, test_card_path),
-    ]:
+    for split, frame, path, card_path in split_items:
         detail = {
             "name": name,
             "split": split,

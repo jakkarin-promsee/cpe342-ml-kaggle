@@ -37,6 +37,8 @@ save_data(
 
 Use `format="csv"` for CSV instead of the default Parquet.
 
+Task 5 also supports a genuine test-only card: `save_data(task=5, name="eda_original_v1", test=test_df, card="Unlabeled Task 5 test")`. Its master card has only `splits.test`; no train split is invented. Other tasks still require `train`. Fitting on Task 5 Test conflicts with the repository's general competition rule unless explicitly directed. A test-only artifact does not provide offline F3 labels.
+
 ## Example: model notebook
 
 ```python
@@ -77,4 +79,4 @@ This reads the selected model and its linked EDA test file, then writes a pipe-s
 
 Kaggle's final submission needs all five task columns. Once each task has a prediction file, use `combine_submissions(name=..., sample_path=..., task_files={1: ..., 2: ..., 3: ..., 4: ..., 5: ...}, card=...)`. It checks every ID against the sample and writes `src/submission/<name>.csv`.
 
-The pipeline never uses test data in training or evaluation. Keep feature preparation fitted on Train/Validation only inside the notebooks or saved model pipeline.
+The standard workflow never uses test data in training or evaluation. Task 5 has a user-directed unsupervised exception in `src/task5/models/build_model.ipynb`; its Test-derived rank stability is only a proxy and cannot estimate macro F3. Keep fitted preprocessing inside each saved model pipeline.

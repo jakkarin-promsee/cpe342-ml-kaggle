@@ -216,6 +216,6 @@ card={
 ## ข้อจำกัดที่ต้องรู้
 
 - Task 3 ต้องส่ง `normalizer=` ให้ `evaluate_model` ตามนิยาม NMAE ของการแข่งขัน เช่น `evaluate_model(task=3, name="reg_v1", card="Validation 20%", y_true=y_valid, y_pred=valid_pred, normalizer=NMAE_DENOMINATOR)` โดย `NMAE_DENOMINATOR` ต้องมาจากกติกาจริง ยังไม่ควรเดาตัวหาร
-- Task 5 ไม่มี `train.csv` ตามคำอธิบายข้อมูล แต่ `save_data` เวอร์ชันนี้รับทั้ง `train` และ `test` จึงยังไม่มี workflow แบบเดียวกับ Task 1; อย่านำ Test ไปเป็น Train เพื่อให้ function รันผ่าน ควรเคลียร์กติกา/แหล่ง train ก่อน
+- Task 5 ไม่มี `train.csv`; `save_data(task=5, name="eda_original_v1", test=test_df, card="Task 5 test-only")` บันทึกเฉพาะ test split และ master card มี `splits.test` โดยไม่มี `splits.train` ห้ามส่ง Test เป็น `train` ปลอม การ fit ด้วย Test ขัดกับกติกาทั่วไปของ repository; ต้องได้รับคำสั่งที่ชัดเจนก่อนใช้ workflow นี้
 - ถ้ามี validation proxy สำหรับ Task 5 ให้บันทึกด้วย `evaluate_model(task=5, name="anomaly_v1", card="Validation proxy", score=proxy_score, metric_name="proxy_name", higher_is_better=True)` ซึ่งไม่ใช่ F₃ ของ leaderboard
 - `build_sample_submission` คาดว่า model ที่ save รับ feature columns จาก EDA test ได้โดยตรง หากมี preprocessing ต้อง save ไปพร้อมโมเดล หรือกำหนด `predict_fn=` ให้ครบ
