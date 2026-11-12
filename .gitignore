@@ -5,3 +5,5 @@ __pycache__/
 .obsidian/
 src/task*/models/.cache/
 src/task*/data
+src/task*/save
+src/submission
