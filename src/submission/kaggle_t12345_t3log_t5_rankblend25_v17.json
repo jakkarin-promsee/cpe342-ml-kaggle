@@ -1,0 +1,30 @@
+{
+  "name": "kaggle_t12345_t3log_t5_rankblend25_v17",
+  "date": "2026-11-14",
+  "slot": 5,
+  "source_submission": "submission/kaggle_t12345_t3_log_v13.csv",
+  "source_sha256": "a1a0260892735af3e4a04142f6ca768b12e99fe978c3cf139feba53040006bbe",
+  "changed_task": "task5",
+  "hypothesis": "Equal percentile-rank blend may improve anomaly ordering at the same 6531-alert budget",
+  "task5_source": "fixed equal percentile-rank blend of saved OCSVM and GMM anomaly scores",
+  "task5_orientation": "1 = anomaly",
+  "task5_alerts": 6531,
+  "changed_task5_rows_vs_slot1": 1084,
+  "rows": 25889,
+  "columns": [
+    "id",
+    "task1",
+    "task2",
+    "task3",
+    "task4",
+    "task5"
+  ],
+  "seed": 42,
+  "source_task5_csv_sha256": {
+    "v9_ocsvm25": "4d4d251d349dd1414a1db524d647b9187101d140f3ee220fffc724b340ad21f4",
+    "v10_ocsvm35": "227563ed095b2e210f31390840358c10c7d5e0ca951653827e80aed09737b913",
+    "v11_gmm25": "588aceae805088367ddf1766fc76d927603a4ff61b4472a236f91eb7442abecd"
+  },
+  "score_status": "unsubmitted",
+  "output_sha256": "d4b7c7b32c8c051a3d398819523ddfde4373699a7c2c2537b30ed912b519a9c8"
+}

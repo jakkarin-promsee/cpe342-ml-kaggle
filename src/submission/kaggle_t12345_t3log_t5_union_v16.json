@@ -1,0 +1,30 @@
+{
+  "name": "kaggle_t12345_t3log_t5_union_v16",
+  "date": "2026-11-14",
+  "slot": 4,
+  "source_submission": "submission/kaggle_t12345_t3_log_v13.csv",
+  "source_sha256": "a1a0260892735af3e4a04142f6ca768b12e99fe978c3cf139feba53040006bbe",
+  "changed_task": "task5",
+  "hypothesis": "OCSVM and GMM union may improve recall enough to offset more false alerts",
+  "task5_source": "fixed union of submitted v9 OCSVM and v11 GMM predictions",
+  "task5_orientation": "1 = anomaly",
+  "task5_alerts": 7685,
+  "changed_task5_rows_vs_slot1": 1154,
+  "rows": 25889,
+  "columns": [
+    "id",
+    "task1",
+    "task2",
+    "task3",
+    "task4",
+    "task5"
+  ],
+  "seed": 42,
+  "source_task5_csv_sha256": {
+    "v9_ocsvm25": "4d4d251d349dd1414a1db524d647b9187101d140f3ee220fffc724b340ad21f4",
+    "v10_ocsvm35": "227563ed095b2e210f31390840358c10c7d5e0ca951653827e80aed09737b913",
+    "v11_gmm25": "588aceae805088367ddf1766fc76d927603a4ff61b4472a236f91eb7442abecd"
+  },
+  "score_status": "unsubmitted",
+  "output_sha256": "f901f69b11b5cb065d1c20d9d1e67b543f1b389486fa00aeb279dcf2680fdf16"
+}

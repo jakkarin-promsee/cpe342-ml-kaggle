@@ -1,0 +1,30 @@
+{
+  "name": "kaggle_t12345_t3log_t5_ocsvm35_v14",
+  "date": "2026-11-14",
+  "slot": 2,
+  "source_submission": "submission/kaggle_t12345_t3_log_v13.csv",
+  "source_sha256": "a1a0260892735af3e4a04142f6ca768b12e99fe978c3cf139feba53040006bbe",
+  "changed_task": "task5",
+  "hypothesis": "Broader OCSVM alert budget may improve recall enough to raise the Task 5 metric",
+  "task5_source": "t5_r5_ocsvm_nu10_alert35_v5",
+  "task5_orientation": "1 = anomaly",
+  "task5_alerts": 9118,
+  "changed_task5_rows_vs_slot1": 2587,
+  "rows": 25889,
+  "columns": [
+    "id",
+    "task1",
+    "task2",
+    "task3",
+    "task4",
+    "task5"
+  ],
+  "seed": 42,
+  "source_task5_csv_sha256": {
+    "v9_ocsvm25": "4d4d251d349dd1414a1db524d647b9187101d140f3ee220fffc724b340ad21f4",
+    "v10_ocsvm35": "227563ed095b2e210f31390840358c10c7d5e0ca951653827e80aed09737b913",
+    "v11_gmm25": "588aceae805088367ddf1766fc76d927603a4ff61b4472a236f91eb7442abecd"
+  },
+  "score_status": "unsubmitted",
+  "output_sha256": "a549968b215f71c00fc89c9ce1f366a7b0a1295aaa688bf56774ad40daaf9bd3"
+}
