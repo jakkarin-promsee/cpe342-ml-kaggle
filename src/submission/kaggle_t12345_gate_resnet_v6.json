@@ -1,0 +1,87 @@
+{
+  "name": "kaggle_t12345_gate_resnet_v6",
+  "created_at": "2026-11-12T22:23:12.207659+00:00",
+  "card": "Task 3 zero-aware blend and Task 4 geometry ResNet18; Tasks 1/2/5 copied from verified v5",
+  "submission_path": "submission/kaggle_t12345_gate_resnet_v6.csv",
+  "format": "comma-separated CSV",
+  "rows": 25889,
+  "columns": [
+    "id",
+    "task1",
+    "task2",
+    "task3",
+    "task4",
+    "task5"
+  ],
+  "sha256": "08aaf747ed08161f99049e561bb6d1229e68a3de4fd1a0afea79b3aeee1a632e",
+  "base_submission": "kaggle_t12345_current_v5",
+  "base_sha256": "c9fb803446cb5ef66fe05f5c8ac319afb351ba7cecac64e8f3b52b7afaa9aa47",
+  "changed_tasks": [
+    3,
+    4
+  ],
+  "sources": {
+    "task1": {
+      "model_name": "t1_lgbm_combined_pruned_cv6_full_v1",
+      "model_card_path": "task1/save/t1_lgbm_combined_pruned_cv6_full_v1.json",
+      "model_path": "task1/save/t1_lgbm_combined_pruned_cv6_full_v1.joblib",
+      "data_name": "eda_combined_v1",
+      "data_card_path": "task1/data/eda/eda_combined_v1.json",
+      "test_path": "task1/data/eda/eda_combined_v1-test.parquet",
+      "evaluation_metric": "macro_F2_outer_cv6",
+      "evaluation_score": 0.7773283287342686,
+      "test_rows": 25889,
+      "test_id_first": "P122189",
+      "test_id_last": "P103346"
+    },
+    "task2": {
+      "model_name": "t2_cat_original_no_noise_v2",
+      "model_card_path": "task2/save/t2_cat_original_no_noise_v2.json",
+      "model_path": "task2/save/t2_cat_original_no_noise_v2.joblib",
+      "data_name": "eda_original_v2",
+      "data_card_path": "task2/data/eda/eda_original_v2.json",
+      "test_path": "task2/data/eda/eda_original_v2-test.parquet",
+      "evaluation_metric": "macro_F1",
+      "evaluation_score": 0.7504144211991189,
+      "test_rows": 25889,
+      "test_id_first": "P090473",
+      "test_id_last": "P121924"
+    },
+    "task3": {
+      "model_name": "t3_gate_blend_cv5_v2",
+      "model_card_path": "task3/save/t3_gate_blend_cv5_v2.json",
+      "model_path": "task3/save/t3_gate_blend_cv5_v2.joblib",
+      "data_name": "eda_combined_v1",
+      "data_card_path": "task3/data/eda/eda_combined_v1.json",
+      "test_path": "task3/data/eda/eda_combined_v1-test.parquet",
+      "evaluation_metric": "MAE_thb",
+      "evaluation_score": 2845.0992169223155
+    },
+    "task4": {
+      "model_name": "t4_resnet18_geometry_full_v2",
+      "model_card_path": "task4/save/t4_resnet18_geometry_full_v2.json",
+      "model_path": "task4/save/t4_resnet18_geometry_full_v2.pt",
+      "data_name": "eda_1_v2",
+      "data_card_path": "task4/data/eda/eda_1_v2.json",
+      "test_path": "task4/submission/t4_resnet18_geometry_full_v2.csv",
+      "evaluation_metric": "macro_F1_grouped_cv3",
+      "evaluation_score": 0.9544743099428752
+    },
+    "task5": {
+      "model_name": "t5_r2_ocsvm_nu10_engineered_v2",
+      "model_card_path": "task5/save/t5_r2_ocsvm_nu10_engineered_v2.json",
+      "model_path": "task5/save/t5_r2_ocsvm_nu10_engineered_v2.joblib",
+      "data_name": "eda_1_v2",
+      "data_card_path": "task5/data/eda/eda_1_v2.json",
+      "test_path": "task5/data/eda/eda_1_v2-test.parquet",
+      "evaluation_metric": "top5_rank_stability_jaccard",
+      "evaluation_score": 1.0,
+      "test_rows": 25889,
+      "test_id_first": "P024743",
+      "test_id_last": "P023755"
+    }
+  },
+  "task3_id_mapping": "unchanged Test row position, as in v5 assembly",
+  "task4_id_mapping": "current ANS IDs joined by ID",
+  "task5_metric_note": "rank stability is an unlabeled proxy, not macro F3"
+}
