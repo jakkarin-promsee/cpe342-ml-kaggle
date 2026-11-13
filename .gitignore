@@ -4,8 +4,12 @@ __pycache__/
 *.py[cod]
 .obsidian/
 src/task*/models/.cache/
-src/task*/data
-src/task*/save
+src/task*/data/
+src/task*/save/*
+!src/task*/save/evaluation_index.json
+src/task*/models/results/
+src/task*/submission/
 src/submission/*
 !src/submission/assemble.ipynb
+!src/submission/assemble_v2.ipynb
 !src/submission/*.json

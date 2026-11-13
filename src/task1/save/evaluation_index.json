@@ -1,0 +1,266 @@
+{
+  "task": "task1",
+  "evaluations": {
+    "t1_dummy_original_v1": {
+      "score": 0.45152047677261614,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T18:24:51+00:00",
+      "evaluation_path": "task1/save/t1_dummy_original_v1-evaluation.json",
+      "model_path": "task1/save/t1_dummy_original_v1.joblib"
+    },
+    "t1_logreg_original_v1": {
+      "score": 0.6773287198332478,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T18:24:52+00:00",
+      "evaluation_path": "task1/save/t1_logreg_original_v1-evaluation.json",
+      "model_path": "task1/save/t1_logreg_original_v1.joblib"
+    },
+    "t1_logreg_combined_v1": {
+      "score": 0.6765919911802389,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T18:24:54+00:00",
+      "evaluation_path": "task1/save/t1_logreg_combined_v1-evaluation.json",
+      "model_path": "task1/save/t1_logreg_combined_v1.joblib"
+    },
+    "t1_rf_original_v1": {
+      "score": 0.7415734749370442,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T18:25:03+00:00",
+      "evaluation_path": "task1/save/t1_rf_original_v1-evaluation.json",
+      "model_path": "task1/save/t1_rf_original_v1.joblib"
+    },
+    "t1_rf_combined_v1": {
+      "score": 0.7411726939979542,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T18:25:12+00:00",
+      "evaluation_path": "task1/save/t1_rf_combined_v1-evaluation.json",
+      "model_path": "task1/save/t1_rf_combined_v1.joblib"
+    },
+    "t1_hgb_original_v1": {
+      "score": 0.7528489531581468,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T18:25:17+00:00",
+      "evaluation_path": "task1/save/t1_hgb_original_v1-evaluation.json",
+      "model_path": "task1/save/t1_hgb_original_v1.joblib"
+    },
+    "t1_hgb_combined_v1": {
+      "score": 0.7525046032426264,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T18:25:21+00:00",
+      "evaluation_path": "task1/save/t1_hgb_combined_v1-evaluation.json",
+      "model_path": "task1/save/t1_hgb_combined_v1.joblib"
+    },
+    "t1_hgb_combined_tuned_v1": {
+      "score": 0.7528922339184155,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T18:26:50+00:00",
+      "evaluation_path": "task1/save/t1_hgb_combined_tuned_v1-evaluation.json",
+      "model_path": "task1/save/t1_hgb_combined_tuned_v1.joblib"
+    },
+    "t1_rf_combined_tuned_v1": {
+      "score": 0.7668032478729758,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T18:33:47+00:00",
+      "evaluation_path": "task1/save/t1_rf_combined_tuned_v1-evaluation.json",
+      "model_path": "task1/save/t1_rf_combined_tuned_v1.joblib"
+    },
+    "t1_hgb_combined_threshold_v1": {
+      "score": 0.7768378941296497,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T18:34:01+00:00",
+      "evaluation_path": "task1/save/t1_hgb_combined_threshold_v1-evaluation.json",
+      "model_path": "task1/save/t1_hgb_combined_threshold_v1.joblib"
+    },
+    "t1_hgb_original_matched_v1": {
+      "score": 0.7542478964980834,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T18:39:59+00:00",
+      "evaluation_path": "task1/save/t1_hgb_original_matched_v1-evaluation.json",
+      "model_path": "task1/save/t1_hgb_original_matched_v1.joblib"
+    },
+    "t1_rf_original_matched_v1": {
+      "score": 0.7708306622806085,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T18:41:13+00:00",
+      "evaluation_path": "task1/save/t1_rf_original_matched_v1-evaluation.json",
+      "model_path": "task1/save/t1_rf_original_matched_v1.joblib"
+    },
+    "t1_hgb_original_threshold_v1": {
+      "score": 0.7731716629569375,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T18:41:30+00:00",
+      "evaluation_path": "task1/save/t1_hgb_original_threshold_v1-evaluation.json",
+      "model_path": "task1/save/t1_hgb_original_threshold_v1.joblib"
+    },
+    "t1_lgbm_original_v1": {
+      "score": 0.754917541521801,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T19:01:12+00:00",
+      "evaluation_path": "task1/save/t1_lgbm_original_v1-evaluation.json",
+      "model_path": "task1/save/t1_lgbm_original_v1.joblib"
+    },
+    "t1_lgbm_combined_v1": {
+      "score": 0.7525203471670081,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T19:01:14+00:00",
+      "evaluation_path": "task1/save/t1_lgbm_combined_v1-evaluation.json",
+      "model_path": "task1/save/t1_lgbm_combined_v1.joblib"
+    },
+    "t1_xgb_original_v1": {
+      "score": 0.7458274815192394,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T19:01:17+00:00",
+      "evaluation_path": "task1/save/t1_xgb_original_v1-evaluation.json",
+      "model_path": "task1/save/t1_xgb_original_v1.joblib"
+    },
+    "t1_xgb_combined_v1": {
+      "score": 0.7491159341366448,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T19:01:20+00:00",
+      "evaluation_path": "task1/save/t1_xgb_combined_v1-evaluation.json",
+      "model_path": "task1/save/t1_xgb_combined_v1.joblib"
+    },
+    "t1_lgbm_original_tuned_v1": {
+      "score": 0.7576956840278908,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T19:04:12+00:00",
+      "evaluation_path": "task1/save/t1_lgbm_original_tuned_v1-evaluation.json",
+      "model_path": "task1/save/t1_lgbm_original_tuned_v1.joblib"
+    },
+    "t1_xgb_combined_tuned_v1": {
+      "score": 0.7551158671402705,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T19:05:41+00:00",
+      "evaluation_path": "task1/save/t1_xgb_combined_tuned_v1-evaluation.json",
+      "model_path": "task1/save/t1_xgb_combined_tuned_v1.joblib"
+    },
+    "t1_lgbm_original_threshold_v1": {
+      "score": 0.7776177310189365,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T19:05:56+00:00",
+      "evaluation_path": "task1/save/t1_lgbm_original_threshold_v1-evaluation.json",
+      "model_path": "task1/save/t1_lgbm_original_threshold_v1.joblib"
+    },
+    "t1_xgb_combined_threshold_v1": {
+      "score": 0.7752990297800588,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T19:06:42+00:00",
+      "evaluation_path": "task1/save/t1_xgb_combined_threshold_v1-evaluation.json",
+      "model_path": "task1/save/t1_xgb_combined_threshold_v1.joblib"
+    },
+    "t1_cat_original_v1": {
+      "score": 0.752155426948466,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T19:14:32+00:00",
+      "evaluation_path": "task1/save/t1_cat_original_v1-evaluation.json",
+      "model_path": "task1/save/t1_cat_original_v1.joblib"
+    },
+    "t1_cat_combined_v1": {
+      "score": 0.7535586514186495,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T19:14:42+00:00",
+      "evaluation_path": "task1/save/t1_cat_combined_v1-evaluation.json",
+      "model_path": "task1/save/t1_cat_combined_v1.joblib"
+    },
+    "t1_cat_combined_tuned_v1": {
+      "score": 0.7531495865844127,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T19:19:46+00:00",
+      "evaluation_path": "task1/save/t1_cat_combined_tuned_v1-evaluation.json",
+      "model_path": "task1/save/t1_cat_combined_tuned_v1.joblib"
+    },
+    "t1_cat_combined_threshold_v1": {
+      "score": 0.7731815012380969,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T19:20:07+00:00",
+      "evaluation_path": "task1/save/t1_cat_combined_threshold_v1-evaluation.json",
+      "model_path": "task1/save/t1_cat_combined_threshold_v1.joblib"
+    },
+    "t1_lgbm_combined_matched_v1": {
+      "score": 0.7567356338670945,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T19:22:35+00:00",
+      "evaluation_path": "task1/save/t1_lgbm_combined_matched_v1-evaluation.json",
+      "model_path": "task1/save/t1_lgbm_combined_matched_v1.joblib"
+    },
+    "t1_lgbm_combined_matched_threshold_v1": {
+      "score": 0.7784708863060661,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T19:22:57+00:00",
+      "evaluation_path": "task1/save/t1_lgbm_combined_matched_threshold_v1-evaluation.json",
+      "model_path": "task1/save/t1_lgbm_combined_matched_threshold_v1.joblib"
+    },
+    "t1_xgb_original_matched_v1": {
+      "score": 0.7564071175353058,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T19:23:10+00:00",
+      "evaluation_path": "task1/save/t1_xgb_original_matched_v1-evaluation.json",
+      "model_path": "task1/save/t1_xgb_original_matched_v1.joblib"
+    },
+    "t1_xgb_original_matched_threshold_v1": {
+      "score": 0.7741987759230932,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T19:23:54+00:00",
+      "evaluation_path": "task1/save/t1_xgb_original_matched_threshold_v1-evaluation.json",
+      "model_path": "task1/save/t1_xgb_original_matched_threshold_v1.joblib"
+    },
+    "t1_cat_original_matched_v1": {
+      "score": 0.7508581750187042,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T19:23:59+00:00",
+      "evaluation_path": "task1/save/t1_cat_original_matched_v1-evaluation.json",
+      "model_path": "task1/save/t1_cat_original_matched_v1.joblib"
+    },
+    "t1_cat_original_matched_threshold_v1": {
+      "score": 0.7726667306563728,
+      "metric": "macro_F2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-04T19:24:15+00:00",
+      "evaluation_path": "task1/save/t1_cat_original_matched_threshold_v1-evaluation.json",
+      "model_path": "task1/save/t1_cat_original_matched_threshold_v1.joblib"
+    },
+    "t1_lgbm_combined_pruned_cv6_full_v1": {
+      "score": 0.7773283287342686,
+      "metric": "macro_F2_outer_cv6",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T16:12:01+00:00",
+      "evaluation_path": "task1/save/t1_lgbm_combined_pruned_cv6_full_v1-evaluation.json",
+      "model_path": "task1/save/t1_lgbm_combined_pruned_cv6_full_v1.joblib"
+    }
+  },
+  "best_by_metric": {
+    "macro_F2": "t1_lgbm_combined_matched_threshold_v1",
+    "macro_F2_outer_cv6": "t1_lgbm_combined_pruned_cv6_full_v1"
+  },
+  "updated_at": "2026-11-05T16:12:01+00:00"
+}
