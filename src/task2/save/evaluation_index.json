@@ -408,10 +408,51 @@
       "evaluated_at": "2026-11-13T02:32:49+00:00",
       "evaluation_path": "task2/save/t2_cat_class_bias_cv5_v3-evaluation.json",
       "model_path": "task2/save/t2_cat_class_bias_cv5_v3.joblib"
+    },
+    "t2_cat_weighted_23_cv5_v4": {
+      "score": 0.7528493224569013,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-13T11:44:35+00:00",
+      "evaluation_path": "task2/save/t2_cat_weighted_23_cv5_v4-evaluation.json",
+      "model_path": "task2/save/t2_cat_weighted_23_cv5_v4.joblib"
+    },
+    "t2_cat_tier_cross_cv5_v5": {
+      "score": 0.7495771466435829,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-13T12:07:53+00:00",
+      "evaluation_path": "task2/save/t2_cat_tier_cross_cv5_v5-evaluation.json",
+      "model_path": "task2/save/t2_cat_tier_cross_cv5_v5.joblib"
+    },
+    "t2_cat_tuned_cv5_v6": {
+      "score": 0.7510954107114675,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-13T13:32:32+00:00",
+      "evaluation_path": "task2/save/t2_cat_tuned_cv5_v6-evaluation.json",
+      "model_path": "task2/save/t2_cat_tuned_cv5_v6.joblib"
+    },
+    "t2_cat_tuned_weighted_cv5_v7": {
+      "score": 0.7528947062270108,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-13T16:13:27+00:00",
+      "evaluation_path": "task2/save/t2_cat_tuned_weighted_cv5_v7-evaluation.json",
+      "model_path": "task2/save/t2_cat_tuned_weighted_cv5_v7.joblib"
+    },
+    "t2_cat_tuned_weighted_full_v8": {
+      "score": 0.7541563024643203,
+      "metric": "macro_F1_cv5_procedure",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-13T16:17:57+00:00",
+      "evaluation_path": "task2/save/t2_cat_tuned_weighted_full_v8-evaluation.json",
+      "model_path": "task2/save/t2_cat_tuned_weighted_full_v8.joblib"
     }
   },
   "best_by_metric": {
-    "macro_F1": "t2_cat_class_bias_cv5_v3"
+    "macro_F1": "t2_cat_tuned_weighted_cv5_v7",
+    "macro_F1_cv5_procedure": "t2_cat_tuned_weighted_full_v8"
   },
-  "updated_at": "2026-11-13T02:32:49+00:00"
+  "updated_at": "2026-11-13T16:17:57+00:00"
 }
