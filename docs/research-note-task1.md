@@ -8,6 +8,10 @@
 
 ## Models and results
 
+**Journey.** Round 1 used the same 20% holdout for majority, logistic regression, random forest, and HGB on original versus combined features. Macro F₂ rose from **0.45152** (majority) and **0.67733** (original logistic regression) to **0.74157** (original forest) and **0.75285** (original HGB). Small development-only searches gave **0.76680** for the tuned combined forest, but choosing an HGB decision threshold on development folds raised its holdout score to **0.77684**. Baseline engineered features alone did not help consistently.
+
+Round 2 compared LightGBM, XGBoost, and CatBoost on both feature sets, then tuned promising configurations and their thresholds. Their best thresholded holdout scores were **0.77847** (combined LightGBM), **0.77530** (combined XGBoost), and **0.77318** (combined CatBoost); original LightGBM scored **0.77762**. The small LightGBM feature-set gap after many holdout comparisons prompted Round 3: six paired outer folds comparing the finalists and a 38-feature ablation. Round 4 checked paired errors, a fixed 50/50 blend, and remaining threshold headroom before stopping broad search.
+
 | Comparison | Feature set | Macro F₂ |
 | --- | --- | ---: |
 | Thresholded HGB, best scikit-learn holdout | 45 combined | 0.77684 |

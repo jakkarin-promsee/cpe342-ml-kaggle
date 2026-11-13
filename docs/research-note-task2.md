@@ -10,6 +10,8 @@
 
 ## Models and results
 
+**Journey.** Round 1 held out the same 20% of rows and compared majority (**0.14127** macro F₁), logistic regression, random forest, and HGB. Dropping the three documented noise fields and a small HGB search did not beat original-feature logistic regression (**0.74749**). Round 2 compared LightGBM, XGBoost, and CatBoost with noise removed on both datasets; original-feature CatBoost became the holdout leader (**0.75041**). Round 3 removed the two tier fields one at a time and together because their availability at prediction time was unclear. Round 4 used five paired development folds to check CatBoost against HGB and fold-local feature pruning. The v3 follow-up inspected class errors and tested probability offsets without changing the feature set.
+
 | Model | Features | Holdout macro F₁ |
 | --- | --- | ---: |
 | CatBoost `t2_cat_original_no_noise_v2` | Original, excluding three noise columns | **0.75041** |

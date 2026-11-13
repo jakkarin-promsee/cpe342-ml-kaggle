@@ -8,6 +8,8 @@
 
 ## Models and results
 
+**Journey.** Round 1 compared a median dummy (**10,431.34 THB** holdout MAE), linear/ridge (**about 5,708–5,712**), median quantile regression (**about 4,459–4,464**), HGB (**2,959.57** original), LightGBM (**2,957.98** combined), and CatBoost on matched rows. Combined-feature CatBoost led that holdout at **2,928.48 THB** before clipping. Round 2 used five paired development folds: positive-only CatBoost improved mean fold MAE but slightly lost on the holdout; LightGBM beat full CatBoost on folds despite losing on the holdout. Fold-local top-24 feature selection improved four folds but lost badly on one; top-8 lost on every fold. Clipping negative predictions gave a small consistent gain. The v2 notebook then tested a fixed CatBoost/LightGBM blend, an occurrence gate plus positive amount model, their mixture, a different gate classifier, amount scaling, and positive-amount regressor swaps in that order.
+
 | Procedure | Five development folds, mean MAE | Original 20% holdout MAE |
 | --- | ---: | ---: |
 | Full combined-feature CatBoost, absolute-error objective | 3,059.59 | 2,928.48 raw; **2,927.55 clipped** |

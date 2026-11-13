@@ -1,6 +1,6 @@
 # Task 5 — Account Security Monitoring
 
-**Current sources:** `src/task5/eda/build_eda_original_v2.ipynb`, `build_eda_1_v2.ipynb`, and `src/task5/models/build_model_v2.ipynb` plus `build_model_v3.ipynb`. These notebooks contain **unlabeled Test only**. The user reports a lecturer clarification permitting unsupervised fitting on this Task 5 file because no labeled training set is supplied; the written rule in `docs/kaggle-detial/rule.md` still says Test cannot be used for fitting, so keep that exception explicit in any final report. No offline macro F₃ is available.
+**Current sources:** `src/task5/eda/build_eda_original_v2.ipynb`, `build_eda_1_v2.ipynb`, `src/task5/models/build_model_v2.ipynb` through `build_model_v6.ipynb`, and `rank_diagnostics_v1.ipynb`. The earlier v1 EDA/model notebooks used prior artifacts and are historical only. These notebooks contain **unlabeled Test only**. The user reports a lecturer clarification permitting unsupervised fitting on this Task 5 file because no labeled training set is supplied; the written rule in `docs/kaggle-detial/rule.md` still says Test cannot be used for fitting, so keep that exception explicit in any final report. No offline macro F₃ is available.
 
 ## EDA and features
 
@@ -12,6 +12,8 @@
 The four security inputs counted by `security_flag_count` are `password_changed`, `vpn_usage`, `suspicious_login_time`, and `mass_item_sale`; none is a confirmed anomaly label. Geographic displacement is descriptive because timestamps are absent.
 
 ## Models and results
+
+**Journey.** The v2 baseline notebook compared six detector families on raw versus engineered features, plus larger Isolation Forest subsamples, higher One-Class SVM `nu`, and more GMM components. Engineered `nu=0.10` One-Class SVM had the highest top-5% *stability* proxy (**1.000**), so its original 5% cutoff became the v6 submission baseline. A controlled label flip (v7) lowered the overall Kaggle score, confirming the original `1 = anomaly` orientation. Next, the same fitted ranking was tested at about 15% (v8), 25% (v9), and 35% (unscored v10) alerts. Overall score improved strongly from 5% to 15%, then only slightly to 25%. Offline ranking diagnostics showed GMM would select a different set; v11 matched v9's exact alert count and swapped only the ranking. Its lower overall score left v9 as the best *scored* submission. No step measured Task 5 F₃ directly.
 
 The notebooks compare Isolation Forest, Local Outlier Factor, RBF One-Class SVM, Gaussian Mixture, PCA reconstruction, and an empirical tail detector, plus parameter variants, on original versus engineered features. The score is **top-5% rank-stability Jaccard** between overlapping 12,000-row and 10,000-row fits, measured on a 4,000-row holdout. It measures repeatability, **not fraud detection quality or F₃**.
 
