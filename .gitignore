@@ -12,4 +12,7 @@ src/task*/submission/
 src/submission/*
 !src/submission/assemble.ipynb
 !src/submission/assemble_v2.ipynb
+!src/submission/assemble_task2_tuned_v12.ipynb
+!src/submission/assemble_task3_log_v13.ipynb
+!src/submission/assemble_submit_plan_20261114.ipynb
 !src/submission/*.json

@@ -11,6 +11,8 @@ This file records user-reported **overall** leaderboard scores. The competition 
 | `kaggle_t12345_t5_alert25_v9.csv` | **0.74593** | Same OCSVM ranking at about 25% alerts; 6,531 alerts | Overall score rose **0.00147** versus v8 and **0.01893** versus v6; the marginal gain is smaller than v6-to-v8. |
 | `kaggle_t12345_t5_alert35_v10.csv` | Pending | Same OCSVM ranking at about 35% alerts; 9,118 alerts | Prepared locally; adds 2,587 alerts beyond v9. No Kaggle score yet. |
 | `kaggle_t12345_t5_gmm_match_v9_v11.csv` | 0.74521 | GMM replaces OCSVM ranking at exactly 6,531 Task 5 alerts | Controlled family swap versus v9: 1,154 alerts added and 1,154 removed; overall score fell **0.00072**. |
+| `kaggle_t12345_t2_tuned_v12.csv` | Pending | Only Task 2 replaced with the full-Train tuned weighted CatBoost; 1,088 Task 2 labels changed, other task fields copied exactly from v9 | Local candidate only. Task 2 CV and reused holdout gains do not establish an overall Kaggle gain. |
+| `kaggle_t12345_t3_log_v13.csv` | Pending | Only Task 3 replaced with the full-Train log-positive-amount mixture; 25,587 Task 3 values changed, Tasks 1, 2, 4, and 5 copied exactly from v9 | Local candidate only. Its five-fold MAE improved by 80.95 THB; the Kaggle effect is unknown. |
 
 The pre-refresh v5 score was **0.60269** on a different dataset version. It is not a controlled comparison with the refreshed **0.66919** v5 score.
 

@@ -1,0 +1,16 @@
+{
+  "name": "kaggle_t12345_t3_log_v13",
+  "source_csv": "submission/kaggle_t12345_t5_alert25_v9.csv",
+  "source_sha256": "4d4d251d349dd1414a1db524d647b9187101d140f3ee220fffc724b340ad21f4",
+  "changed_task": "task3",
+  "changed_rows": 25587,
+  "task3_model_card": "task3/save/t3_log_positive_amount_full_v6.json",
+  "task3_evaluation_card": "task3/save/t3_log_positive_amount_full_v6-evaluation.json",
+  "task3_draft": "task3/submission/t3_log_positive_amount_full_v6.csv",
+  "task3_draft_sha256": "5d0142ab6420488fd3484732802b5f979642ee900abf6a9234af822c73abd9b2",
+  "seed": 42,
+  "rows": 25889,
+  "task3_id_mapping": "linked EDA Test row position to sample ANS row position, as in assemble_v2",
+  "score_status": "unsubmitted",
+  "output_sha256": "a1a0260892735af3e4a04142f6ca768b12e99fe978c3cf139feba53040006bbe"
+}

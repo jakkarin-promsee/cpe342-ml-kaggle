@@ -1,0 +1,84 @@
+{
+  "name": "kaggle_t12345_t2_tuned_v12",
+  "created_at": "2026-11-13T16:22:04.116703+00:00",
+  "card": "Full-Train tuned weighted Task 2 candidate; Tasks 1, 3, 4, 5 identical to scored v9",
+  "submission_path": "submission/kaggle_t12345_t2_tuned_v12.csv",
+  "format": "comma-separated CSV",
+  "rows": 25889,
+  "columns": [
+    "id",
+    "task1",
+    "task2",
+    "task3",
+    "task4",
+    "task5"
+  ],
+  "sha256": "13329cce19f043b225ed357c3fd7e3a7839f9e5f59d2df5492eb72dac3acd0a2",
+  "base_submission": "kaggle_t12345_t5_alert25_v9",
+  "base_sha256": "4d4d251d349dd1414a1db524d647b9187101d140f3ee220fffc724b340ad21f4",
+  "changed_tasks": [
+    2
+  ],
+  "task2_changed_rows": 1088,
+  "task2_id_mapping": "Saved EDA Test row position to sample ANS ID; raw Test order verified",
+  "tier_timing": "unverified",
+  "sources": {
+    "task1": {
+      "model_name": "t1_lgbm_combined_pruned_cv6_full_v1",
+      "model_card_path": "task1/save/t1_lgbm_combined_pruned_cv6_full_v1.json",
+      "model_path": "task1/save/t1_lgbm_combined_pruned_cv6_full_v1.joblib",
+      "data_name": "eda_combined_v1",
+      "data_card_path": "task1/data/eda/eda_combined_v1.json",
+      "test_path": "task1/data/eda/eda_combined_v1-test.parquet",
+      "evaluation_metric": "macro_F2_outer_cv6",
+      "evaluation_score": 0.7773283287342686,
+      "test_rows": 25889,
+      "test_id_first": "P122189",
+      "test_id_last": "P103346"
+    },
+    "task2": {
+      "model_name": "t2_cat_tuned_weighted_full_v8",
+      "model_card_path": "task2/save/t2_cat_tuned_weighted_full_v8.json",
+      "model_path": "task2/save/t2_cat_tuned_weighted_full_v8.joblib",
+      "data_name": "eda_original_v2",
+      "data_card_path": "task2/data/eda/eda_original_v2.json",
+      "test_path": "task2/data/eda/eda_original_v2-test.parquet",
+      "evaluation_metric": "macro_F1_cv5_procedure",
+      "evaluation_score": 0.7541563024643203,
+      "evaluation_note": "Five-fold development procedure estimate; full fit not directly scored",
+      "test_rows": 25889,
+      "test_id_first": "P090473",
+      "test_id_last": "P121924"
+    },
+    "task3": {
+      "model_name": "t3_gate_blend_cv5_v2",
+      "model_card_path": "task3/save/t3_gate_blend_cv5_v2.json",
+      "model_path": "task3/save/t3_gate_blend_cv5_v2.joblib",
+      "data_name": "eda_combined_v1",
+      "data_card_path": "task3/data/eda/eda_combined_v1.json",
+      "test_path": "task3/data/eda/eda_combined_v1-test.parquet",
+      "evaluation_metric": "MAE_thb",
+      "evaluation_score": 2845.0992169223155
+    },
+    "task4": {
+      "model_name": "t4_resnet18_geometry_full_v2",
+      "model_card_path": "task4/save/t4_resnet18_geometry_full_v2.json",
+      "model_path": "task4/save/t4_resnet18_geometry_full_v2.pt",
+      "data_name": "eda_1_v2",
+      "data_card_path": "task4/data/eda/eda_1_v2.json",
+      "test_path": "task4/submission/t4_resnet18_geometry_full_v2.csv",
+      "evaluation_metric": "macro_F1_grouped_cv3",
+      "evaluation_score": 0.9544743099428752
+    },
+    "task5": {
+      "model_name": "t5_r4_ocsvm_nu10_alert25_v4",
+      "model_card_path": "task5/save/t5_r4_ocsvm_nu10_alert25_v4.json",
+      "model_path": "task5/save/t5_r4_ocsvm_nu10_alert25_v4.joblib",
+      "data_name": "eda_1_v2",
+      "data_card_path": "task5/data/eda/eda_1_v2.json",
+      "test_path": "task5/data/eda/eda_1_v2-test.parquet",
+      "evaluation_metric": "top25_rank_stability_jaccard",
+      "evaluation_score": 0.9821605550049554
+    }
+  }
+}
