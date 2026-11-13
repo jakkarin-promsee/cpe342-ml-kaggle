@@ -1,0 +1,153 @@
+{
+  "task": "task3",
+  "evaluations": {
+    "t3_dummy_original_v1": {
+      "score": 10431.336216826923,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-05T20:03:27+00:00",
+      "evaluation_path": "task3/save/t3_dummy_original_v1-evaluation.json",
+      "model_path": "task3/save/t3_dummy_original_v1.joblib"
+    },
+    "t3_hgb_original_v1": {
+      "score": 2959.5678379611622,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-05T20:03:39+00:00",
+      "evaluation_path": "task3/save/t3_hgb_original_v1-evaluation.json",
+      "model_path": "task3/save/t3_hgb_original_v1.joblib"
+    },
+    "t3_hgb_combined_v1": {
+      "score": 2997.498027649249,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-05T20:03:47+00:00",
+      "evaluation_path": "task3/save/t3_hgb_combined_v1-evaluation.json",
+      "model_path": "task3/save/t3_hgb_combined_v1.joblib"
+    },
+    "t3_lgb_original_v1": {
+      "score": 2960.3353187604384,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-05T20:03:53+00:00",
+      "evaluation_path": "task3/save/t3_lgb_original_v1-evaluation.json",
+      "model_path": "task3/save/t3_lgb_original_v1.joblib"
+    },
+    "t3_lgb_combined_v1": {
+      "score": 2957.976633644441,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-05T20:03:59+00:00",
+      "evaluation_path": "task3/save/t3_lgb_combined_v1-evaluation.json",
+      "model_path": "task3/save/t3_lgb_combined_v1.joblib"
+    },
+    "t3_linear_original_v1": {
+      "score": 5712.369710691871,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-05T22:39:38+00:00",
+      "evaluation_path": "task3/save/t3_linear_original_v1-evaluation.json",
+      "model_path": "task3/save/t3_linear_original_v1.joblib"
+    },
+    "t3_linear_combined_v1": {
+      "score": 5709.542937719521,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-05T22:39:40+00:00",
+      "evaluation_path": "task3/save/t3_linear_combined_v1-evaluation.json",
+      "model_path": "task3/save/t3_linear_combined_v1.joblib"
+    },
+    "t3_ridge_original_v1": {
+      "score": 5711.046501505271,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-05T22:39:40+00:00",
+      "evaluation_path": "task3/save/t3_ridge_original_v1-evaluation.json",
+      "model_path": "task3/save/t3_ridge_original_v1.joblib"
+    },
+    "t3_ridge_combined_v1": {
+      "score": 5708.350821850732,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-05T22:39:41+00:00",
+      "evaluation_path": "task3/save/t3_ridge_combined_v1-evaluation.json",
+      "model_path": "task3/save/t3_ridge_combined_v1.joblib"
+    },
+    "t3_quantile_original_v1": {
+      "score": 4463.869530012651,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-05T22:46:51+00:00",
+      "evaluation_path": "task3/save/t3_quantile_original_v1-evaluation.json",
+      "model_path": "task3/save/t3_quantile_original_v1.joblib"
+    },
+    "t3_quantile_combined_v1": {
+      "score": 4459.362167758158,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-05T22:54:17+00:00",
+      "evaluation_path": "task3/save/t3_quantile_combined_v1-evaluation.json",
+      "model_path": "task3/save/t3_quantile_combined_v1.joblib"
+    },
+    "t3_cat_original_v1": {
+      "score": 3022.9119659877488,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-05T22:54:24+00:00",
+      "evaluation_path": "task3/save/t3_cat_original_v1-evaluation.json",
+      "model_path": "task3/save/t3_cat_original_v1.joblib"
+    },
+    "t3_cat_combined_v1": {
+      "score": 2928.4755787255513,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-05T22:54:33+00:00",
+      "evaluation_path": "task3/save/t3_cat_combined_v1-evaluation.json",
+      "model_path": "task3/save/t3_cat_combined_v1.joblib"
+    },
+    "t3_cat_combined_positive_only_v1": {
+      "score": 2934.484172517873,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-05T23:32:55+00:00",
+      "evaluation_path": "task3/save/t3_cat_combined_positive_only_v1-evaluation.json",
+      "model_path": "task3/save/t3_cat_combined_positive_only_v1.joblib"
+    },
+    "t3_cat_lgb_blend_cv5_v2": {
+      "score": 2907.1322454831306,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-12T22:16:49+00:00",
+      "evaluation_path": "task3/save/t3_cat_lgb_blend_cv5_v2-evaluation.json",
+      "model_path": "task3/save/t3_cat_lgb_blend_cv5_v2.joblib"
+    },
+    "t3_positive_gate_cv5_v2": {
+      "score": 2857.6355602959447,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-12T22:18:01+00:00",
+      "evaluation_path": "task3/save/t3_positive_gate_cv5_v2-evaluation.json",
+      "model_path": "task3/save/t3_positive_gate_cv5_v2.joblib"
+    },
+    "t3_gate_blend_cv5_v2": {
+      "score": 2845.0992169223155,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-12T22:20:37+00:00",
+      "evaluation_path": "task3/save/t3_gate_blend_cv5_v2-evaluation.json",
+      "model_path": "task3/save/t3_gate_blend_cv5_v2.joblib"
+    },
+    "t3_lgb_occurrence_gate_cv5_v2": {
+      "score": 2858.1099819721844,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-12T22:24:50+00:00",
+      "evaluation_path": "task3/save/t3_lgb_occurrence_gate_cv5_v2-evaluation.json",
+      "model_path": "task3/save/t3_lgb_occurrence_gate_cv5_v2.joblib"
+    }
+  },
+  "best_by_metric": {
+    "MAE_thb": "t3_gate_blend_cv5_v2"
+  },
+  "updated_at": "2026-11-12T22:24:50+00:00"
+}
