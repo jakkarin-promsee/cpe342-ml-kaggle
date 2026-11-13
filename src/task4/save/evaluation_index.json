@@ -1,0 +1,548 @@
+{
+  "task": "task4",
+  "evaluations": {
+    "t4_dummy_pixels_r1": {
+      "score": 0.11305138699408823,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:23:19+00:00",
+      "evaluation_path": "task4/save/t4_dummy_pixels_r1-evaluation.json",
+      "model_path": "task4/save/t4_dummy_pixels_r1.joblib"
+    },
+    "t4_logreg_pixels_r1": {
+      "score": 0.41191782637320473,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:23:43+00:00",
+      "evaluation_path": "task4/save/t4_logreg_pixels_r1-evaluation.json",
+      "model_path": "task4/save/t4_logreg_pixels_r1.joblib"
+    },
+    "t4_logreg_features_r1": {
+      "score": 0.7212769408318898,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:25:20+00:00",
+      "evaluation_path": "task4/save/t4_logreg_features_r1-evaluation.json",
+      "model_path": "task4/save/t4_logreg_features_r1.joblib"
+    },
+    "t4_svm_features_r1": {
+      "score": 0.6785890524392423,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:29:25+00:00",
+      "evaluation_path": "task4/save/t4_svm_features_r1-evaluation.json",
+      "model_path": "task4/save/t4_svm_features_r1.joblib"
+    },
+    "t4_extratrees_features_r1": {
+      "score": 0.6121911647542576,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:29:49+00:00",
+      "evaluation_path": "task4/save/t4_extratrees_features_r1-evaluation.json",
+      "model_path": "task4/save/t4_extratrees_features_r1.joblib"
+    },
+    "t4_hgb_features_r1": {
+      "score": 0.7104662670896069,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:30:12+00:00",
+      "evaluation_path": "task4/save/t4_hgb_features_r1-evaluation.json",
+      "model_path": "task4/save/t4_hgb_features_r1.joblib"
+    },
+    "t4_lgbm_15_features_r1": {
+      "score": 0.7291998920446892,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:30:54+00:00",
+      "evaluation_path": "task4/save/t4_lgbm_15_features_r1-evaluation.json",
+      "model_path": "task4/save/t4_lgbm_15_features_r1.joblib"
+    },
+    "t4_lgbm_31_features_r1": {
+      "score": 0.7626746703076881,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:32:51+00:00",
+      "evaluation_path": "task4/save/t4_lgbm_31_features_r1-evaluation.json",
+      "model_path": "task4/save/t4_lgbm_31_features_r1.joblib"
+    },
+    "t4_svm_pixels_r1": {
+      "score": 0.3327636820084069,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:40:03+00:00",
+      "evaluation_path": "task4/save/t4_svm_pixels_r1-evaluation.json",
+      "model_path": "task4/save/t4_svm_pixels_r1.joblib"
+    },
+    "t4_extratrees_pixels_r1": {
+      "score": 0.525701170597755,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:40:09+00:00",
+      "evaluation_path": "task4/save/t4_extratrees_pixels_r1-evaluation.json",
+      "model_path": "task4/save/t4_extratrees_pixels_r1.joblib"
+    },
+    "t4_hgb_pixels_r1": {
+      "score": 0.5248479140210022,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:40:15+00:00",
+      "evaluation_path": "task4/save/t4_hgb_pixels_r1-evaluation.json",
+      "model_path": "task4/save/t4_hgb_pixels_r1.joblib"
+    },
+    "t4_lgbm_15_pixels_r1": {
+      "score": 0.5354681063548039,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:40:25+00:00",
+      "evaluation_path": "task4/save/t4_lgbm_15_pixels_r1-evaluation.json",
+      "model_path": "task4/save/t4_lgbm_15_pixels_r1.joblib"
+    },
+    "t4_lgbm_31_pixels_r1": {
+      "score": 0.5893038866165066,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:40:39+00:00",
+      "evaluation_path": "task4/save/t4_lgbm_31_pixels_r1-evaluation.json",
+      "model_path": "task4/save/t4_lgbm_31_pixels_r1.joblib"
+    },
+    "t4_lgbm_tuned_pixels_r1": {
+      "score": 0.5907312338241659,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T06:06:43+00:00",
+      "evaluation_path": "task4/save/t4_lgbm_tuned_pixels_r1-evaluation.json",
+      "model_path": "task4/save/t4_lgbm_tuned_pixels_r1.joblib"
+    },
+    "t4_lgbm_tuned_features_r1": {
+      "score": 0.7626746703076881,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T06:17:18+00:00",
+      "evaluation_path": "task4/save/t4_lgbm_tuned_features_r1-evaluation.json",
+      "model_path": "task4/save/t4_lgbm_tuned_features_r1.joblib"
+    },
+    "t4_dummy_tuned_pixels_r1": {
+      "score": 0.20403838560419021,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T06:22:28+00:00",
+      "evaluation_path": "task4/save/t4_dummy_tuned_pixels_r1-evaluation.json",
+      "model_path": "task4/save/t4_dummy_tuned_pixels_r1.joblib"
+    },
+    "t4_logreg_tuned_pixels_r1": {
+      "score": 0.4329011448700575,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T06:23:12+00:00",
+      "evaluation_path": "task4/save/t4_logreg_tuned_pixels_r1-evaluation.json",
+      "model_path": "task4/save/t4_logreg_tuned_pixels_r1.joblib"
+    },
+    "t4_logreg_tuned_features_r1": {
+      "score": 0.7145699189950033,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T06:25:13+00:00",
+      "evaluation_path": "task4/save/t4_logreg_tuned_features_r1-evaluation.json",
+      "model_path": "task4/save/t4_logreg_tuned_features_r1.joblib"
+    },
+    "t4_svm_tuned_pixels_r1": {
+      "score": 0.35987354378762276,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T06:25:56+00:00",
+      "evaluation_path": "task4/save/t4_svm_tuned_pixels_r1-evaluation.json",
+      "model_path": "task4/save/t4_svm_tuned_pixels_r1.joblib"
+    },
+    "t4_svm_tuned_features_r1": {
+      "score": 0.6765507561452097,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T06:27:47+00:00",
+      "evaluation_path": "task4/save/t4_svm_tuned_features_r1-evaluation.json",
+      "model_path": "task4/save/t4_svm_tuned_features_r1.joblib"
+    },
+    "t4_extratrees_tuned_pixels_r1": {
+      "score": 0.4921318108034442,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T06:28:14+00:00",
+      "evaluation_path": "task4/save/t4_extratrees_tuned_pixels_r1-evaluation.json",
+      "model_path": "task4/save/t4_extratrees_tuned_pixels_r1.joblib"
+    },
+    "t4_extratrees_tuned_features_r1": {
+      "score": 0.5999914165261127,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T06:29:56+00:00",
+      "evaluation_path": "task4/save/t4_extratrees_tuned_features_r1-evaluation.json",
+      "model_path": "task4/save/t4_extratrees_tuned_features_r1.joblib"
+    },
+    "t4_hgb_tuned_pixels_r1": {
+      "score": 0.5748852994618694,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T06:31:16+00:00",
+      "evaluation_path": "task4/save/t4_hgb_tuned_pixels_r1-evaluation.json",
+      "model_path": "task4/save/t4_hgb_tuned_pixels_r1.joblib"
+    },
+    "t4_hgb_tuned_features_r1": {
+      "score": 0.752871040552886,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T06:35:16+00:00",
+      "evaluation_path": "task4/save/t4_hgb_tuned_features_r1-evaluation.json",
+      "model_path": "task4/save/t4_hgb_tuned_features_r1.joblib"
+    },
+    "t4_lgbm_15_tuned_pixels_r1": {
+      "score": 0.5464207801524182,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T06:36:21+00:00",
+      "evaluation_path": "task4/save/t4_lgbm_15_tuned_pixels_r1-evaluation.json",
+      "model_path": "task4/save/t4_lgbm_15_tuned_pixels_r1.joblib"
+    },
+    "t4_lgbm_15_tuned_features_r1": {
+      "score": 0.7427753812589513,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T06:40:12+00:00",
+      "evaluation_path": "task4/save/t4_lgbm_15_tuned_features_r1-evaluation.json",
+      "model_path": "task4/save/t4_lgbm_15_tuned_features_r1.joblib"
+    },
+    "t4_lgbm_31_tuned_pixels_r1": {
+      "score": 0.5896534631548933,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T06:41:58+00:00",
+      "evaluation_path": "task4/save/t4_lgbm_31_tuned_pixels_r1-evaluation.json",
+      "model_path": "task4/save/t4_lgbm_31_tuned_pixels_r1.joblib"
+    },
+    "t4_lgbm_31_tuned_features_r1": {
+      "score": 0.7716444859086071,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T06:48:08+00:00",
+      "evaluation_path": "task4/save/t4_lgbm_31_tuned_features_r1-evaluation.json",
+      "model_path": "task4/save/t4_lgbm_31_tuned_features_r1.joblib"
+    },
+    "t4_lgbm_31_tuned_features_r2": {
+      "score": 0.7716444859086071,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:02:04+00:00",
+      "evaluation_path": "task4/save/t4_lgbm_31_tuned_features_r2-evaluation.json",
+      "model_path": "task4/save/t4_lgbm_31_tuned_features_r2.joblib"
+    },
+    "t4_dummy_pixels_r2": {
+      "score": 0.11305138699408823,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:35:46+00:00",
+      "evaluation_path": "task4/save/t4_dummy_pixels_r2-evaluation.json",
+      "model_path": "task4/save/t4_dummy_pixels_r2.joblib"
+    },
+    "t4_dummy_tuned_pixels_r2": {
+      "score": 0.20403838560419021,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:35:46+00:00",
+      "evaluation_path": "task4/save/t4_dummy_tuned_pixels_r2-evaluation.json",
+      "model_path": "task4/save/t4_dummy_tuned_pixels_r2.joblib"
+    },
+    "t4_extratrees_features_r2": {
+      "score": 0.6121911647542576,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:35:48+00:00",
+      "evaluation_path": "task4/save/t4_extratrees_features_r2-evaluation.json",
+      "model_path": "task4/save/t4_extratrees_features_r2.joblib"
+    },
+    "t4_extratrees_pixels_r2": {
+      "score": 0.525701170597755,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:35:49+00:00",
+      "evaluation_path": "task4/save/t4_extratrees_pixels_r2-evaluation.json",
+      "model_path": "task4/save/t4_extratrees_pixels_r2.joblib"
+    },
+    "t4_extratrees_tuned_features_r2": {
+      "score": 0.5999914165261127,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:35:51+00:00",
+      "evaluation_path": "task4/save/t4_extratrees_tuned_features_r2-evaluation.json",
+      "model_path": "task4/save/t4_extratrees_tuned_features_r2.joblib"
+    },
+    "t4_extratrees_tuned_pixels_r2": {
+      "score": 0.4921318108034442,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:35:52+00:00",
+      "evaluation_path": "task4/save/t4_extratrees_tuned_pixels_r2-evaluation.json",
+      "model_path": "task4/save/t4_extratrees_tuned_pixels_r2.joblib"
+    },
+    "t4_hgb_features_r2": {
+      "score": 0.7104662670896069,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:35:56+00:00",
+      "evaluation_path": "task4/save/t4_hgb_features_r2-evaluation.json",
+      "model_path": "task4/save/t4_hgb_features_r2.joblib"
+    },
+    "t4_hgb_pixels_r2": {
+      "score": 0.5248479140210022,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:35:56+00:00",
+      "evaluation_path": "task4/save/t4_hgb_pixels_r2-evaluation.json",
+      "model_path": "task4/save/t4_hgb_pixels_r2.joblib"
+    },
+    "t4_hgb_tuned_features_r2": {
+      "score": 0.752871040552886,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:35:58+00:00",
+      "evaluation_path": "task4/save/t4_hgb_tuned_features_r2-evaluation.json",
+      "model_path": "task4/save/t4_hgb_tuned_features_r2.joblib"
+    },
+    "t4_hgb_tuned_pixels_r2": {
+      "score": 0.5748852994618694,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:35:58+00:00",
+      "evaluation_path": "task4/save/t4_hgb_tuned_pixels_r2-evaluation.json",
+      "model_path": "task4/save/t4_hgb_tuned_pixels_r2.joblib"
+    },
+    "t4_lgbm_15_features_r2": {
+      "score": 0.7291998920446892,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:35:59+00:00",
+      "evaluation_path": "task4/save/t4_lgbm_15_features_r2-evaluation.json",
+      "model_path": "task4/save/t4_lgbm_15_features_r2.joblib"
+    },
+    "t4_lgbm_15_pixels_r2": {
+      "score": 0.5354681063548039,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:35:59+00:00",
+      "evaluation_path": "task4/save/t4_lgbm_15_pixels_r2-evaluation.json",
+      "model_path": "task4/save/t4_lgbm_15_pixels_r2.joblib"
+    },
+    "t4_lgbm_15_tuned_features_r2": {
+      "score": 0.7427753812589513,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:36:00+00:00",
+      "evaluation_path": "task4/save/t4_lgbm_15_tuned_features_r2-evaluation.json",
+      "model_path": "task4/save/t4_lgbm_15_tuned_features_r2.joblib"
+    },
+    "t4_lgbm_15_tuned_pixels_r2": {
+      "score": 0.5464207801524182,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:36:01+00:00",
+      "evaluation_path": "task4/save/t4_lgbm_15_tuned_pixels_r2-evaluation.json",
+      "model_path": "task4/save/t4_lgbm_15_tuned_pixels_r2.joblib"
+    },
+    "t4_lgbm_31_features_r2": {
+      "score": 0.7626746703076881,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:36:01+00:00",
+      "evaluation_path": "task4/save/t4_lgbm_31_features_r2-evaluation.json",
+      "model_path": "task4/save/t4_lgbm_31_features_r2.joblib"
+    },
+    "t4_lgbm_31_pixels_r2": {
+      "score": 0.5893038866165066,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:36:02+00:00",
+      "evaluation_path": "task4/save/t4_lgbm_31_pixels_r2-evaluation.json",
+      "model_path": "task4/save/t4_lgbm_31_pixels_r2.joblib"
+    },
+    "t4_lgbm_31_tuned_pixels_r2": {
+      "score": 0.5896534631548933,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:36:02+00:00",
+      "evaluation_path": "task4/save/t4_lgbm_31_tuned_pixels_r2-evaluation.json",
+      "model_path": "task4/save/t4_lgbm_31_tuned_pixels_r2.joblib"
+    },
+    "t4_lgbm_tuned_features_r2": {
+      "score": 0.7626746703076881,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:36:03+00:00",
+      "evaluation_path": "task4/save/t4_lgbm_tuned_features_r2-evaluation.json",
+      "model_path": "task4/save/t4_lgbm_tuned_features_r2.joblib"
+    },
+    "t4_lgbm_tuned_pixels_r2": {
+      "score": 0.5907312338241659,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:36:04+00:00",
+      "evaluation_path": "task4/save/t4_lgbm_tuned_pixels_r2-evaluation.json",
+      "model_path": "task4/save/t4_lgbm_tuned_pixels_r2.joblib"
+    },
+    "t4_logreg_features_r2": {
+      "score": 0.7212769408318898,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:36:04+00:00",
+      "evaluation_path": "task4/save/t4_logreg_features_r2-evaluation.json",
+      "model_path": "task4/save/t4_logreg_features_r2.joblib"
+    },
+    "t4_logreg_pixels_r2": {
+      "score": 0.41191782637320473,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:36:05+00:00",
+      "evaluation_path": "task4/save/t4_logreg_pixels_r2-evaluation.json",
+      "model_path": "task4/save/t4_logreg_pixels_r2.joblib"
+    },
+    "t4_logreg_tuned_features_r2": {
+      "score": 0.7145699189950033,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:36:05+00:00",
+      "evaluation_path": "task4/save/t4_logreg_tuned_features_r2-evaluation.json",
+      "model_path": "task4/save/t4_logreg_tuned_features_r2.joblib"
+    },
+    "t4_logreg_tuned_pixels_r2": {
+      "score": 0.4329011448700575,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:36:06+00:00",
+      "evaluation_path": "task4/save/t4_logreg_tuned_pixels_r2-evaluation.json",
+      "model_path": "task4/save/t4_logreg_tuned_pixels_r2.joblib"
+    },
+    "t4_svm_features_r2": {
+      "score": 0.6785890524392423,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:36:06+00:00",
+      "evaluation_path": "task4/save/t4_svm_features_r2-evaluation.json",
+      "model_path": "task4/save/t4_svm_features_r2.joblib"
+    },
+    "t4_svm_pixels_r2": {
+      "score": 0.3327636820084069,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:36:07+00:00",
+      "evaluation_path": "task4/save/t4_svm_pixels_r2-evaluation.json",
+      "model_path": "task4/save/t4_svm_pixels_r2.joblib"
+    },
+    "t4_svm_tuned_features_r2": {
+      "score": 0.6765507561452097,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:36:08+00:00",
+      "evaluation_path": "task4/save/t4_svm_tuned_features_r2-evaluation.json",
+      "model_path": "task4/save/t4_svm_tuned_features_r2.joblib"
+    },
+    "t4_svm_tuned_pixels_r2": {
+      "score": 0.35987354378762276,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:36:08+00:00",
+      "evaluation_path": "task4/save/t4_svm_tuned_pixels_r2-evaluation.json",
+      "model_path": "task4/save/t4_svm_tuned_pixels_r2.joblib"
+    },
+    "t4_resnet18_frozen_v2": {
+      "score": 0.7072763408580363,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T19:10:02+00:00",
+      "evaluation_path": "task4/save/t4_resnet18_frozen_v2-evaluation.json",
+      "model_path": "task4/save/t4_resnet18_frozen_v2.pt"
+    },
+    "t4_resnet18_finetune_plain_v2": {
+      "score": 0.9463704342684993,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T19:25:56+00:00",
+      "evaluation_path": "task4/save/t4_resnet18_finetune_plain_v2-evaluation.json",
+      "model_path": "task4/save/t4_resnet18_finetune_plain_v2.pt"
+    },
+    "t4_resnet18_finetune_geometry_v2": {
+      "score": 0.9524649841895148,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T19:45:51+00:00",
+      "evaluation_path": "task4/save/t4_resnet18_finetune_geometry_v2-evaluation.json",
+      "model_path": "task4/save/t4_resnet18_finetune_geometry_v2.pt"
+    },
+    "t4_resnet18_finetune_geometry_noise_v2": {
+      "score": 0.9553263067458475,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T20:09:12+00:00",
+      "evaluation_path": "task4/save/t4_resnet18_finetune_geometry_noise_v2-evaluation.json",
+      "model_path": "task4/save/t4_resnet18_finetune_geometry_noise_v2.pt"
+    },
+    "t4_resnet18_finetune_full_rotation_v2": {
+      "score": 0.9493554422614766,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T20:29:11+00:00",
+      "evaluation_path": "task4/save/t4_resnet18_finetune_full_rotation_v2-evaluation.json",
+      "model_path": "task4/save/t4_resnet18_finetune_full_rotation_v2.pt"
+    },
+    "t4_lgbm_fold2_v2": {
+      "score": 0.7753189361432427,
+      "metric": "macro_F1_grouped_fold2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T20:34:09+00:00",
+      "evaluation_path": "task4/save/t4_lgbm_fold2_v2-evaluation.json",
+      "model_path": "task4/save/t4_lgbm_fold2_v2.joblib"
+    },
+    "t4_resnet18_finetune_plain_fold2_v2": {
+      "score": 0.949620803616499,
+      "metric": "macro_F1_grouped_fold2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T20:49:54+00:00",
+      "evaluation_path": "task4/save/t4_resnet18_finetune_plain_fold2_v2-evaluation.json",
+      "model_path": "task4/save/t4_resnet18_finetune_plain_fold2_v2.pt"
+    },
+    "t4_resnet18_finetune_geometry_fold2_v2": {
+      "score": 0.9552765801501646,
+      "metric": "macro_F1_grouped_fold2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T21:10:09+00:00",
+      "evaluation_path": "task4/save/t4_resnet18_finetune_geometry_fold2_v2-evaluation.json",
+      "model_path": "task4/save/t4_resnet18_finetune_geometry_fold2_v2.pt"
+    },
+    "t4_resnet18_finetune_geometry_noise_fold2_v2": {
+      "score": 0.9434598270697565,
+      "metric": "macro_F1_grouped_fold2",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T21:32:28+00:00",
+      "evaluation_path": "task4/save/t4_resnet18_finetune_geometry_noise_fold2_v2-evaluation.json",
+      "model_path": "task4/save/t4_resnet18_finetune_geometry_noise_fold2_v2.pt"
+    },
+    "t4_resnet18_geometry_fold3_v2": {
+      "score": 0.9556813654889463,
+      "metric": "macro_F1_grouped_fold3",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T21:50:53+00:00",
+      "evaluation_path": "task4/save/t4_resnet18_geometry_fold3_v2-evaluation.json",
+      "model_path": "task4/save/t4_resnet18_geometry_fold3_v2.pt"
+    },
+    "t4_resnet18_geometry_full_v2": {
+      "score": 0.9544743099428752,
+      "metric": "macro_F1_grouped_cv3",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T22:12:13+00:00",
+      "evaluation_path": "task4/save/t4_resnet18_geometry_full_v2-evaluation.json",
+      "model_path": "task4/save/t4_resnet18_geometry_full_v2.pt"
+    }
+  },
+  "best_by_metric": {
+    "macro_F1": "t4_resnet18_finetune_geometry_noise_v2",
+    "macro_F1_grouped_fold2": "t4_resnet18_finetune_geometry_fold2_v2",
+    "macro_F1_grouped_fold3": "t4_resnet18_geometry_fold3_v2",
+    "macro_F1_grouped_cv3": "t4_resnet18_geometry_full_v2"
+  },
+  "updated_at": "2026-11-12T22:12:13+00:00"
+}
