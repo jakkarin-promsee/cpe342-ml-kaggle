@@ -1,0 +1,332 @@
+{
+  "task": "task5",
+  "evaluations": {
+    "t5_r1_iforest_original_v1": {
+      "score": 0.48148148148148145,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:55:28+00:00",
+      "evaluation_path": "task5/save/t5_r1_iforest_original_v1-evaluation.json",
+      "model_path": "task5/save/t5_r1_iforest_original_v1.joblib"
+    },
+    "t5_r1_iforest_engineered_v1": {
+      "score": 0.8264840182648402,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:55:29+00:00",
+      "evaluation_path": "task5/save/t5_r1_iforest_engineered_v1-evaluation.json",
+      "model_path": "task5/save/t5_r1_iforest_engineered_v1.joblib"
+    },
+    "t5_r1_lof_original_v1": {
+      "score": 0.8604651162790697,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:55:33+00:00",
+      "evaluation_path": "task5/save/t5_r1_lof_original_v1-evaluation.json",
+      "model_path": "task5/save/t5_r1_lof_original_v1.joblib"
+    },
+    "t5_r1_lof_engineered_v1": {
+      "score": 0.8264840182648402,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:55:36+00:00",
+      "evaluation_path": "task5/save/t5_r1_lof_engineered_v1-evaluation.json",
+      "model_path": "task5/save/t5_r1_lof_engineered_v1.joblib"
+    },
+    "t5_r1_ocsvm_original_v1": {
+      "score": 0.9704433497536946,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:55:39+00:00",
+      "evaluation_path": "task5/save/t5_r1_ocsvm_original_v1-evaluation.json",
+      "model_path": "task5/save/t5_r1_ocsvm_original_v1.joblib"
+    },
+    "t5_r1_ocsvm_engineered_v1": {
+      "score": 0.9801980198019802,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:55:45+00:00",
+      "evaluation_path": "task5/save/t5_r1_ocsvm_engineered_v1-evaluation.json",
+      "model_path": "task5/save/t5_r1_ocsvm_engineered_v1.joblib"
+    },
+    "t5_r1_gmm_original_v1": {
+      "score": 0.9607843137254902,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:55:46+00:00",
+      "evaluation_path": "task5/save/t5_r1_gmm_original_v1-evaluation.json",
+      "model_path": "task5/save/t5_r1_gmm_original_v1.joblib"
+    },
+    "t5_r1_gmm_engineered_v1": {
+      "score": 0.9704433497536946,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:55:47+00:00",
+      "evaluation_path": "task5/save/t5_r1_gmm_engineered_v1-evaluation.json",
+      "model_path": "task5/save/t5_r1_gmm_engineered_v1.joblib"
+    },
+    "t5_r1_pca_original_v1": {
+      "score": 0.7543859649122807,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:55:47+00:00",
+      "evaluation_path": "task5/save/t5_r1_pca_original_v1-evaluation.json",
+      "model_path": "task5/save/t5_r1_pca_original_v1.joblib"
+    },
+    "t5_r1_pca_engineered_v1": {
+      "score": 0.8867924528301887,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:55:48+00:00",
+      "evaluation_path": "task5/save/t5_r1_pca_engineered_v1-evaluation.json",
+      "model_path": "task5/save/t5_r1_pca_engineered_v1.joblib"
+    },
+    "t5_r1_tail_original_v1": {
+      "score": 0.9512195121951219,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:55:49+00:00",
+      "evaluation_path": "task5/save/t5_r1_tail_original_v1-evaluation.json",
+      "model_path": "task5/save/t5_r1_tail_original_v1.joblib"
+    },
+    "t5_r1_tail_engineered_v1": {
+      "score": 0.941747572815534,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:55:51+00:00",
+      "evaluation_path": "task5/save/t5_r1_tail_engineered_v1-evaluation.json",
+      "model_path": "task5/save/t5_r1_tail_engineered_v1.joblib"
+    },
+    "t5_r1_iforest_ms512_original_v1": {
+      "score": 0.49812734082397003,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:55:52+00:00",
+      "evaluation_path": "task5/save/t5_r1_iforest_ms512_original_v1-evaluation.json",
+      "model_path": "task5/save/t5_r1_iforest_ms512_original_v1.joblib"
+    },
+    "t5_r1_iforest_ms512_engineered_v1": {
+      "score": 0.8018018018018018,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:55:54+00:00",
+      "evaluation_path": "task5/save/t5_r1_iforest_ms512_engineered_v1-evaluation.json",
+      "model_path": "task5/save/t5_r1_iforest_ms512_engineered_v1.joblib"
+    },
+    "t5_r1_ocsvm_nu10_original_v1": {
+      "score": 0.9900497512437811,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:56:01+00:00",
+      "evaluation_path": "task5/save/t5_r1_ocsvm_nu10_original_v1-evaluation.json",
+      "model_path": "task5/save/t5_r1_ocsvm_nu10_original_v1.joblib"
+    },
+    "t5_r1_ocsvm_nu10_engineered_v1": {
+      "score": 0.9900497512437811,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:56:12+00:00",
+      "evaluation_path": "task5/save/t5_r1_ocsvm_nu10_engineered_v1-evaluation.json",
+      "model_path": "task5/save/t5_r1_ocsvm_nu10_engineered_v1.joblib"
+    },
+    "t5_r1_gmm_k8_original_v1": {
+      "score": 0.8433179723502304,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:56:13+00:00",
+      "evaluation_path": "task5/save/t5_r1_gmm_k8_original_v1-evaluation.json",
+      "model_path": "task5/save/t5_r1_gmm_k8_original_v1.joblib"
+    },
+    "t5_r1_gmm_k8_engineered_v1": {
+      "score": 0.8099547511312217,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-06T05:56:16+00:00",
+      "evaluation_path": "task5/save/t5_r1_gmm_k8_engineered_v1-evaluation.json",
+      "model_path": "task5/save/t5_r1_gmm_k8_engineered_v1.joblib"
+    },
+    "t5_r2_iforest_original_v2": {
+      "score": 0.4925373134328358,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:02:24+00:00",
+      "evaluation_path": "task5/save/t5_r2_iforest_original_v2-evaluation.json",
+      "model_path": "task5/save/t5_r2_iforest_original_v2.joblib"
+    },
+    "t5_r2_iforest_engineered_v2": {
+      "score": 0.7699115044247787,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:02:26+00:00",
+      "evaluation_path": "task5/save/t5_r2_iforest_engineered_v2-evaluation.json",
+      "model_path": "task5/save/t5_r2_iforest_engineered_v2.joblib"
+    },
+    "t5_r2_lof_original_v2": {
+      "score": 0.8691588785046729,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:02:31+00:00",
+      "evaluation_path": "task5/save/t5_r2_lof_original_v2-evaluation.json",
+      "model_path": "task5/save/t5_r2_lof_original_v2.joblib"
+    },
+    "t5_r2_lof_engineered_v2": {
+      "score": 0.8604651162790697,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:02:35+00:00",
+      "evaluation_path": "task5/save/t5_r2_lof_engineered_v2-evaluation.json",
+      "model_path": "task5/save/t5_r2_lof_engineered_v2.joblib"
+    },
+    "t5_r2_ocsvm_original_v2": {
+      "score": 0.9801980198019802,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:02:42+00:00",
+      "evaluation_path": "task5/save/t5_r2_ocsvm_original_v2-evaluation.json",
+      "model_path": "task5/save/t5_r2_ocsvm_original_v2.joblib"
+    },
+    "t5_r2_ocsvm_engineered_v2": {
+      "score": 0.9900497512437811,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:02:51+00:00",
+      "evaluation_path": "task5/save/t5_r2_ocsvm_engineered_v2-evaluation.json",
+      "model_path": "task5/save/t5_r2_ocsvm_engineered_v2.joblib"
+    },
+    "t5_r2_gmm_original_v2": {
+      "score": 0.7167381974248928,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:02:53+00:00",
+      "evaluation_path": "task5/save/t5_r2_gmm_original_v2-evaluation.json",
+      "model_path": "task5/save/t5_r2_gmm_original_v2.joblib"
+    },
+    "t5_r2_gmm_engineered_v2": {
+      "score": 0.9801980198019802,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:02:54+00:00",
+      "evaluation_path": "task5/save/t5_r2_gmm_engineered_v2-evaluation.json",
+      "model_path": "task5/save/t5_r2_gmm_engineered_v2.joblib"
+    },
+    "t5_r2_pca_original_v2": {
+      "score": 0.8099547511312217,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:02:55+00:00",
+      "evaluation_path": "task5/save/t5_r2_pca_original_v2-evaluation.json",
+      "model_path": "task5/save/t5_r2_pca_original_v2.joblib"
+    },
+    "t5_r2_pca_engineered_v2": {
+      "score": 0.8779342723004695,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:02:56+00:00",
+      "evaluation_path": "task5/save/t5_r2_pca_engineered_v2-evaluation.json",
+      "model_path": "task5/save/t5_r2_pca_engineered_v2.joblib"
+    },
+    "t5_r2_tail_original_v2": {
+      "score": 0.8957345971563981,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:02:57+00:00",
+      "evaluation_path": "task5/save/t5_r2_tail_original_v2-evaluation.json",
+      "model_path": "task5/save/t5_r2_tail_original_v2.joblib"
+    },
+    "t5_r2_tail_engineered_v2": {
+      "score": 0.9607843137254902,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:03:00+00:00",
+      "evaluation_path": "task5/save/t5_r2_tail_engineered_v2-evaluation.json",
+      "model_path": "task5/save/t5_r2_tail_engineered_v2.joblib"
+    },
+    "t5_r2_iforest_ms512_original_v2": {
+      "score": 0.5209125475285171,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:03:03+00:00",
+      "evaluation_path": "task5/save/t5_r2_iforest_ms512_original_v2-evaluation.json",
+      "model_path": "task5/save/t5_r2_iforest_ms512_original_v2.joblib"
+    },
+    "t5_r2_iforest_ms512_engineered_v2": {
+      "score": 0.9047619047619048,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:03:06+00:00",
+      "evaluation_path": "task5/save/t5_r2_iforest_ms512_engineered_v2-evaluation.json",
+      "model_path": "task5/save/t5_r2_iforest_ms512_engineered_v2.joblib"
+    },
+    "t5_r2_ocsvm_nu10_original_v2": {
+      "score": 0.9900497512437811,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:03:18+00:00",
+      "evaluation_path": "task5/save/t5_r2_ocsvm_nu10_original_v2-evaluation.json",
+      "model_path": "task5/save/t5_r2_ocsvm_nu10_original_v2.joblib"
+    },
+    "t5_r2_ocsvm_nu10_engineered_v2": {
+      "score": 1.0,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:03:38+00:00",
+      "evaluation_path": "task5/save/t5_r2_ocsvm_nu10_engineered_v2-evaluation.json",
+      "model_path": "task5/save/t5_r2_ocsvm_nu10_engineered_v2.joblib"
+    },
+    "t5_r2_gmm_k8_original_v2": {
+      "score": 0.6,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:03:41+00:00",
+      "evaluation_path": "task5/save/t5_r2_gmm_k8_original_v2-evaluation.json",
+      "model_path": "task5/save/t5_r2_gmm_k8_original_v2.joblib"
+    },
+    "t5_r2_gmm_k8_engineered_v2": {
+      "score": 0.7857142857142857,
+      "metric": "top5_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:03:45+00:00",
+      "evaluation_path": "task5/save/t5_r2_gmm_k8_engineered_v2-evaluation.json",
+      "model_path": "task5/save/t5_r2_gmm_k8_engineered_v2.joblib"
+    },
+    "t5_r3_ocsvm_nu10_alert15_v3": {
+      "score": 0.9867549668874173,
+      "metric": "top15_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-13T02:48:48+00:00",
+      "evaluation_path": "task5/save/t5_r3_ocsvm_nu10_alert15_v3-evaluation.json",
+      "model_path": "task5/save/t5_r3_ocsvm_nu10_alert15_v3.joblib"
+    },
+    "t5_r4_ocsvm_nu10_alert25_v4": {
+      "score": 0.9821605550049554,
+      "metric": "top25_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-13T02:55:46+00:00",
+      "evaluation_path": "task5/save/t5_r4_ocsvm_nu10_alert25_v4-evaluation.json",
+      "model_path": "task5/save/t5_r4_ocsvm_nu10_alert25_v4.joblib"
+    },
+    "t5_r5_ocsvm_nu10_alert35_v5": {
+      "score": 0.9787985865724381,
+      "metric": "top35_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-13T03:01:32+00:00",
+      "evaluation_path": "task5/save/t5_r5_ocsvm_nu10_alert35_v5-evaluation.json",
+      "model_path": "task5/save/t5_r5_ocsvm_nu10_alert35_v5.joblib"
+    },
+    "t5_r6_gmm_match_v9_alerts_v6": {
+      "score": 0.9841269841269841,
+      "metric": "top25_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-13T03:16:02+00:00",
+      "evaluation_path": "task5/save/t5_r6_gmm_match_v9_alerts_v6-evaluation.json",
+      "model_path": "task5/save/t5_r6_gmm_match_v9_alerts_v6.joblib"
+    }
+  },
+  "best_by_metric": {
+    "top5_rank_stability_jaccard": "t5_r2_ocsvm_nu10_engineered_v2",
+    "top15_rank_stability_jaccard": "t5_r3_ocsvm_nu10_alert15_v3",
+    "top25_rank_stability_jaccard": "t5_r6_gmm_match_v9_alerts_v6",
+    "top35_rank_stability_jaccard": "t5_r5_ocsvm_nu10_alert35_v5"
+  },
+  "updated_at": "2026-11-13T03:16:02+00:00"
+}
