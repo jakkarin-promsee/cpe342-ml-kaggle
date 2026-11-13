@@ -144,10 +144,91 @@
       "evaluated_at": "2026-11-12T22:24:50+00:00",
       "evaluation_path": "task3/save/t3_lgb_occurrence_gate_cv5_v2-evaluation.json",
       "model_path": "task3/save/t3_lgb_occurrence_gate_cv5_v2.joblib"
+    },
+    "t3_plain_direct_cv5_v3": {
+      "score": 3039.079740099292,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-13T11:00:10+00:00",
+      "evaluation_path": "task3/save/t3_plain_direct_cv5_v3-evaluation.json",
+      "model_path": "task3/save/t3_plain_direct_cv5_v3.joblib"
+    },
+    "t3_residual_direct_cv5_v3": {
+      "score": 3219.5135583970737,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-13T11:02:02+00:00",
+      "evaluation_path": "task3/save/t3_residual_direct_cv5_v3-evaluation.json",
+      "model_path": "task3/save/t3_residual_direct_cv5_v3.joblib"
+    },
+    "t3_residual_hurdle_cv5_v3": {
+      "score": 3091.385904169266,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-13T11:04:47+00:00",
+      "evaluation_path": "task3/save/t3_residual_hurdle_cv5_v3-evaluation.json",
+      "model_path": "task3/save/t3_residual_hurdle_cv5_v3.joblib"
+    },
+    "t3_gate_persistence_cv5_v4": {
+      "score": 2845.083990290091,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-13T11:16:48+00:00",
+      "evaluation_path": "task3/save/t3_gate_persistence_cv5_v4-evaluation.json",
+      "model_path": "task3/save/t3_gate_persistence_cv5_v4.joblib"
+    },
+    "t3_amount_tail_cv5_v4": {
+      "score": 2852.169691125398,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-13T11:18:31+00:00",
+      "evaluation_path": "task3/save/t3_amount_tail_cv5_v4-evaluation.json",
+      "model_path": "task3/save/t3_amount_tail_cv5_v4.joblib"
+    },
+    "t3_weighted_gate_cv5_v4": {
+      "score": 2876.508415590337,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-13T11:24:30+00:00",
+      "evaluation_path": "task3/save/t3_weighted_gate_cv5_v4-evaluation.json",
+      "model_path": "task3/save/t3_weighted_gate_cv5_v4.joblib"
+    },
+    "t3_log_positive_amount_cv5_v5": {
+      "score": 2780.9410106141663,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-13T16:45:37+00:00",
+      "evaluation_path": "task3/save/t3_log_positive_amount_cv5_v5-evaluation.json",
+      "model_path": "task3/save/t3_log_positive_amount_cv5_v5.joblib"
+    },
+    "t3_log_positive_amount_full_v6": {
+      "score": 2814.9680123616345,
+      "metric": "MAE_thb_cv5_procedure",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-13T16:48:29+00:00",
+      "evaluation_path": "task3/save/t3_log_positive_amount_full_v6-evaluation.json",
+      "model_path": "task3/save/t3_log_positive_amount_full_v6.joblib"
+    },
+    "t3_log_rmse_amount_cv5_v7": {
+      "score": 2794.8357918637194,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-13T16:58:52+00:00",
+      "evaluation_path": "task3/save/t3_log_rmse_amount_cv5_v7-evaluation.json",
+      "model_path": "task3/save/t3_log_rmse_amount_cv5_v7.joblib"
+    },
+    "t3_log_amount_halfblend_cv5_v7": {
+      "score": 2777.25918468434,
+      "metric": "MAE_thb",
+      "higher_is_better": false,
+      "evaluated_at": "2026-11-13T16:58:53+00:00",
+      "evaluation_path": "task3/save/t3_log_amount_halfblend_cv5_v7-evaluation.json",
+      "model_path": "task3/save/t3_log_amount_halfblend_cv5_v7.joblib"
     }
   },
   "best_by_metric": {
-    "MAE_thb": "t3_gate_blend_cv5_v2"
+    "MAE_thb": "t3_log_amount_halfblend_cv5_v7",
+    "MAE_thb_cv5_procedure": "t3_log_positive_amount_full_v6"
   },
-  "updated_at": "2026-11-12T22:24:50+00:00"
+  "updated_at": "2026-11-13T16:58:53+00:00"
 }
