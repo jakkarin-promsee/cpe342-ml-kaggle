@@ -1,0 +1,936 @@
+
+==================== PAGE 1 ====================
+
+KMUTT  ·  CPE  ·  KAGGLE
+
+CPE 342 Machine Learning  (1/2026)
+
+Project Instruction
+
+“Now is the moment to apply what you’ve learned”
+
+From one decision tree to a random forest,
+
+from a single model to an ensemble of solutions.
+
+1
+
+
+==================== PAGE 2 ====================
+
+AGENDA
+
+Table of Content
+
+Introduction
+
+3
+
+Project Settings (Situation, Challenge, etc.)
+
+9–12
+
+1
+
+1
+
+Competition Enrollment
+
+4
+
+Instruction Structure & Competition Rules
+
+13
+
+2
+
+2
+
+Grading Criteria & Timeline
+
+5
+
+Task#1 – Task#5: The Five ML Tasks
+
+14–23
+
+3
+
+3
+
+Kaggle / Technical Report / Source Code
+
+6
+
+Submission Format
+
+24
+
+4
+
+4
+
+How Your Kaggle Score Converts to a Grade
+
+7
+
+Evaluation Metric & Kaggle Score Calculation
+
+25–26
+
+5
+
+5
+
+TA Contact
+
+8
+
+Baseline Model
+
+27
+
+6
+
+6
+
+2
+
+
+==================== PAGE 3 ====================
+
+INTRODUCTION
+
+Welcome to the ML Project Challenge!
+
+The project is designed to give you hands-on experience with real-world machine learning problems.
+
+What You'll Experience
+
+You'll Work in Groups of 5!
+
+🧑‍💻
+
+🧑‍💻
+
+🧑‍💻
+
+🧑‍💻
+
+🧑‍💻
+
+Real ML projects require teamwork — divide, learn, and build together.
+
+3
+
+
+==================== PAGE 4 ====================
+
+GETTING STARTED
+
+Competition Enrollment
+
+Team Register
+
+1
+
+Join Competition
+
+2
+
+Team Setup
+
+3
+
+Participation
+
+4
+
+4
+
+
+==================== PAGE 5 ====================
+
+ASSESSMENT
+
+Grading Criteria & Timeline
+
+Performance on Kaggle leaderboard
+
+70%
+
+Technical Report
+
+20%
+
+Source Code
+
+10%
+
+“The technical report and source code submission will be posted on LEB2”
+
+Timeline
+
+2 Nov
+
+Competition Release
+
+~ 4 weeks
+
+6 days
+
+24 Nov
+
+Kaggle Closes
+
+30 Nov
+
+Report & Source Code Due
+
+5
+
+
+==================== PAGE 6 ====================
+
+DELIVERABLES
+
+Submission Checklist
+
+1. Kaggle
+
+2. Technical Report
+
+3. Source Code
+
+6
+
+
+==================== PAGE 7 ====================
+
+ASSESSMENT
+
+How Your Kaggle Score Converts to a Grade
+
+Above Baseline (guarantee grade at α%)
+
+Grade% = α + [(100% − α) × Φ(t)]
+
+T-Score  t = (Your Score − μ) / σ
+μ = mean of scores above baseline   σ = std. dev. of scores above baseline
+Φ(t) = Standard Normal CDF (Z-table)
+
+Baseline — designed to be achievable by everyone
+
+Below Baseline
+
+Grade% = α × (Your Score / Baseline)
+
+Example grading shown uses α = 60%.
+
+Example Grading (α = 60%)
+
+Rank
+
+Score
+
+Grade%
+
+1
+
+0.650
+
+98.65
+
+2
+
+0.620
+
+97.51
+
+5
+
+0.520
+
+88.50
+
+8
+
+0.460
+
+79.61
+
+11
+
+0.410
+
+72.17
+
+14
+
+0.350
+
+65.45
+
+Baseline
+
+0.300
+
+—
+
+17
+
+0.280
+
+56.00
+
+19
+
+0.200
+
+40.00
+
+20
+
+0.150
+
+30.00
+
+7
+
+
+==================== PAGE 8 ====================
+
+SUPPORT
+
+Need a Hand? We're Here to Help!
+
+Your Teaching Assistants (TAs) are your first stop for questions, road bumps, and feedback. 
+We're excited to support your team!
+
+P’ Sun
+
+email: papit.vieng@kmutt.ac.th
+
+P’ Noinar
+
+email: phanita.siri@kmutt.ac.th
+
+8
+
+
+==================== PAGE 9 ====================
+
+TIME TO REVEAL THE PROJECT…
+
+Karena Player
+Intelligence
+System
+
+ML meets Game Industry
+
+Karena
+
+This isn't just about algorithms — it's about solving business problems with data.
+
+9
+
+
+==================== PAGE 10 ====================
+
+PROJECT SETTING
+
+Situation
+
+Your team consists of Machine Learning Engineers at Karena Thailand — a gaming platform company (similar to Garena) that develops and publishes multiple online games, for example PUBE Mobile, Free Fried, FiveN, Roblock, and 7 Knights.
+
+Publishing Games
+
+10
+
+
+==================== PAGE 11 ====================
+
+PROJECT SETTING
+
+The Challenge
+
+Karena needs an AI-powered Player Intelligence System to:
+
+🖥️
+
+Maintain
+
+game integrity across all platforms
+
+🎮
+
+Understand
+
+player behavior and preferences
+
+💰
+
+Optimize
+
+monetization strategies
+
+📈
+
+Improve
+
+player retention and lifetime value
+
+11
+
+
+==================== PAGE 12 ====================
+
+PROJECT SETTING
+
+Your Team's Mission
+
+Build a comprehensive ML pipeline with 5 tasks that feed into a final Player Lifetime Value (LTV) Prediction System to help the business make data-driven decisions.
+
+Task#1
+
+Task#2
+
+Task#3
+
+Task#4
+
+Task#5
+
+LTV Prediction System
+
+What You'll Build — 5 Interconnected Models
+
+Binary Classification
+
+1
+
+Multi-Class Classification
+
+2
+
+Regression
+
+3
+
+Image Classification
+
+4
+
+Anomaly Detection (Unsupervised)
+
+5
+
+12
+
+
+==================== PAGE 13 ====================
+
+BEFORE YOU START
+
+Instruction Structure & Competition Rules
+
+In Each Task Instruction
+
+Situation
+
+Dataset structure per task (Kaggle download):
+
+Mission
+
+Task Category
+
+Evaluation Metric
+
+Example Features
+
+Hints & Best Practices
+
+Competition Rules
+
+Data
+
+Use provided datasets only. Combine Train+Val for training. 
+No Test-set usage for training (no pseudo-labeling / fine-tuning).
+
+Model Development
+
+Task 4 allows pre-trained models; Tasks 1,2,3,5 train from scratch. Feature engineering & ensembling encouraged. 
+AutoML frameworks prohibited; hyperparameter tuning tools allowed.
+
+Collaboration
+
+Work only with your team. Concept discussion OK, but no sharing code or predictions. All members must contribute meaningfully.
+
+13
+
+
+==================== PAGE 14 ====================
+
+TASK 1
+
+Task 1: Anti-Cheat Pre-Filter
+
+Binary Classification
+
+Situation
+
+14
+
+
+==================== PAGE 15 ====================
+
+TASK 1
+
+Anti-Cheat Pre-Filter
+
+Your Task
+
+Build a binary classifier to automatically pre-filter reports and prioritize high-confidence suspicious accounts for manual review.
+
+ML Task
+
+Binary Classification
+
+Metric: F2
+
+F2 = 5 · (P·R) / (4P + R)
+
+Target: is_cheater (0=Legitimate, 1=Cheater)
+
+Features Example
+
+kill_death_ratio (float): kills-to-deaths ratio
+
+headshot_percentage (float): % kills that are headshots
+
+win_rate (float): overall win rate %
+
+accuracy_score (float): shot accuracy %
+
+reaction_time_ms (float): avg. reaction time (ms)
+
+33 features total (32 predictive + target)
+
+💡  Hints & Best Practices
+
+Handle missing values — impute or drop carefully
+
+Handle class imbalance: resampling, class weights, SMOTE
+
+Feature engineering — build interaction features
+
+Use cross-validation for reliable performance
+
+Try decision-threshold tuning
+
+Ensemble models for robustness
+
+15
+
+
+==================== PAGE 16 ====================
+
+TASK 2
+
+Task 2: Player Segment Classification
+
+Multi-Class Classification
+
+Situation
+
+16
+
+
+==================== PAGE 17 ====================
+
+TASK 2
+
+Player Segment Classification
+
+Your Task
+
+Classify each player into one of four behavioral segments to enable targeted marketing and personalized experiences.
+
+ML Task
+
+Multi-class Classification
+
+Metric: F1
+
+F1 = 2 · (P·R) / (P + R)
+
+Target: segment (0=Casual, 1=Grinder, 2=Social, 3=Whale)
+
+Features Example
+
+play_frequency (float): avg. days/week played
+
+avg_session_duration (float): avg. session length (min)
+
+total_spending_thb (float): lifetime spending
+
+avg_monthly_spending (float): average monthly spend
+
+friend_count (float): number of in-game friends
+
+45 features total (44 predictive + target)
+
+💡  Hints & Best Practices
+
+Leverage Task 1 tips — missing values & imbalance
+
+Use Stratified K-Fold to preserve class distribution
+
+Try XGBoost, LightGBM, or CatBoost
+
+Stack these models together for extra robustness
+
+Engineer interaction & ratio features
+
+17
+
+
+==================== PAGE 18 ====================
+
+TASK 3
+
+Task 3: Player Monthly Spending Prediction
+
+Regression
+
+Situation
+
+18
+
+
+==================== PAGE 19 ====================
+
+TASK 3
+
+Player Monthly Spending Prediction
+
+Your Task
+
+Predict how much (in THB) each player will spend on in-game currency and items in the next 30 days.
+
+ML Task
+
+Regression
+
+Metric: Normalized MAE
+
+NMAE = 1 / (1 + Σ|y−ŷ| / Σy)
+
+Target: spending_30d (continuous, THB)
+
+Features Example
+
+friend_count (float): number of in-game friends
+
+event_participation_rate (float): % limited-time events joined
+
+daily_login_streak (float): current login streak
+
+avg_session_length (float): avg. session duration (min)
+
+historical_spending (float): past spending
+
+33 features total (32 predictive + target)
+
+💡  Hints & Best Practices
+
+Zero-inflated data — try a two-stage model: 
+         (1) will spend? (2) how much?
+
+Feature engineering & log transformation of target
+
+Try XGBoost / LightGBM / CatBoost Regressors
+
+Ensemble / stacking for extra accuracy
+
+Watch for common mistakes in target scaling
+
+19
+
+
+==================== PAGE 20 ====================
+
+TASK 4
+
+Task 4: Game Title Detection
+
+Image Classification
+
+Situation
+
+20
+
+
+==================== PAGE 21 ====================
+
+TASK 4
+
+Game Title Detection
+
+Your Task
+
+Build an image classifier that identifies which Karena game is being played from a single screenshot.
+
+ML Task
+
+Image Classification (Multi-Class)
+
+Metric: F1 (Macro)
+
+F1 = 2 · (P·R) / (P + R)
+
+Target: game_title (5 classes)
+
+Features Example
+
+Gameplay screenshots (144p, centered crop to 230x120)
+
+Sources: live streams, submissions, forums, tickets
+
+Variety: different maps, phases, weather, UI states
+
+5 classes: 7-11K, fiveN, freefried, pube, roblock
+
+Pre-trained models allowed for this task
+
+💡  Hints & Best Practices
+
+Review image classification basics & data augmentation
+
+Watch for class imbalance in images
+
+Try VGG16/VGG19, Vision Transformer (ViT), Swin Transformer
+
+Use cross-validation for CNNs; ensemble methods help
+
+You may need a GPU — Colab/Kaggle offer free T4 GPUs
+
+Kaggle: ~30 GPU hrs/week; Colab: dynamic, no fixed limit
+
+21
+
+
+==================== PAGE 22 ====================
+
+TASK 5
+
+Task 5: Account Security Monitoring
+
+Anomaly Detection
+
+Situation
+
+22
+
+
+==================== PAGE 23 ====================
+
+TASK 5
+
+Account Security Monitoring
+
+Your Task
+
+Build an unsupervised anomaly detection model to flag accounts with unusual behavior, using techniques like Isolation Forest or Autoencoders — without relying on labeled training data.
+
+ML Task
+
+Anomaly Detection (Unsupervised)
+
+Metric: F3
+
+F3 = 10 · (P·R) / (9P + R)
+
+Target: is_anomaly (0=Normal, 1=Anomalous)
+
+Features Example
+
+login_count_1/2/3/4 (float): logins per time period
+
+login_lat/lon_1/2/3/4 (float): login coordinates
+
+location_changes_1/2/3/4 (float): significant location changes
+
+device_count_1/2/3/4 (float): unique devices used
+
+33 features total (32 predictive + target)
+
+Note: no labeled training set provided — test.csv only
+
+💡  Hints & Best Practices
+
+Try Isolation Forest, One-Class SVM, or Auto-Encoder
+
+Even unsupervised models can be ensembled
+
+Read up on soft vs. hard voting techniques
+
+Tune contamination / threshold carefully
+
+23
+
+
+==================== PAGE 24 ====================
+
+SUBMISSION
+
+Submission Format
+
+Fill your answer in sample_submission.csv
+
+id
+task1
+task2
+task3
+task4
+task5
+ANS00001
+0
+2
+0
+freefried
+1
+ANS00002
+1
+3
+10000
+fiveN
+0
+ANS00003
+…
+…
+…
+…
+…
+ANS25889
+…
+…
+…
+…
+…
+
+25,889 rows × 6 columns
+
+One prediction column per task — fill every row for every task.
+
+24
+
+
+==================== PAGE 25 ====================
+
+EVALUATION
+
+Evaluation Metrics
+
+F1
+
+F1 = 2 · (P·R)/(P+R)
+
+F2
+
+F2 = 5 · (P·R)/(4P+R)
+
+F3
+
+F3 = 10 · (P·R)/(9P+R)
+
+1 / (1 + Σ|y−ŷ| / Σy)
+
+NMAE
+
+Applied: Task 2, Task 4
+
+Applied: Task 1
+
+Applied: Task 5
+
+Applied: Task 3
+
+25
+
+
+==================== PAGE 26 ====================
+
+EVALUATION
+
+Kaggle Score Calculation
+
+Task1
+
+Task2
+
+Task3
+
+Task4
+
+Task5
+
+S1
+
+S2
+
+S3
+
+S4
+
+S5
+
+Weighted Score = ( w₁S₁ + w₂S₂ + w₃S₃ + w₄S₄ + w₅S₅ ) / Σwi
+
+range: [0, 1]
+
+🏃  Leaderboard
+
+Each task is evaluated independently by its own metric, then combined into one weighted score that ranks your team on the Kaggle leaderboard.
+
+26
+
+
+==================== PAGE 27 ====================
+
+BASELINE
+
+Baseline Model
+
+We built the first baseline using only the models we covered in class.
+
+Weighted Score (Public) = 0.68
+
+Ground Baseline
+
+Logistic Regression
+
+Random Forest
+
+CNN
+
+Isolation Forest
+
+The challenge baseline selects a model and leverages techniques from the hints provided in this instruction slide.
+
+Weighted Score (Public) = 0.75
+
+Challenge Baseline
+
+To go beyond the baseline, try experimenting with cutting-edge models and techniques. We encourage you and your team to explore and experiment with new ideas!
+
+27
+
+
+==================== PAGE 28 ====================
+
+let’s get our hands dirty!
+
+“Good luck!” – Aj & TA
+
+28

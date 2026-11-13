@@ -1,6 +1,6 @@
 # Project working instructions
 
-This repository is the **CPE342 Player Intelligence System** competition project. Work in the existing notebook-first MLOps style. Read `src/pipeline/README.md` for callable examples and `docs/kaggle-detial/` for the competition description, data layout, and rules before changing task logic.
+This repository is the **CPE342 Player Intelligence System** competition project. Work in the existing notebook-first MLOps style. Read `src/pipeline/README.md` for callable examples and `docs/kaggle-detial/` for the competition description, data layout, rules, and extracted instruction-slide hints before changing task logic. The slide text is at `docs/kaggle-detial/hint_canva_extracted.txt`; compare its suggestions with the current research notes before starting an experiment. Treat slide examples as hypotheses, not proof that a technique improves this dataset or that Kaggle uses an undocumented implementation detail.
 
 ## Reference notebooks
 
