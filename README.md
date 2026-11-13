@@ -16,6 +16,16 @@ kaggle auth login
 python src/load-raw-dataset.py --competition <slug>
 ```
 
+The requirement files are cumulative. Install the highest tier needed for the work; each higher tier includes the one below it:
+
+| Tier | Install command | Adds |
+| --- | --- | --- |
+| Core | `python -m pip install -r requirements.txt` | Data handling, pipeline, notebooks, plots, and Kaggle CLI |
+| Models | `python -m pip install -r requirements-model.txt` | CatBoost, LightGBM, XGBoost, Pillow, and scikit-image |
+| This machine's CUDA | `python -m pip install -r requirements-cuda.txt` | Matching PyTorch and torchvision CUDA 12.8 wheels for Task 4 image training |
+
+`requirements-cuda.txt` records the tested CUDA build on this machine. Teammates with another GPU, CUDA setup, or CPU should install the model tier and choose a compatible PyTorch/torchvision build from the [official PyTorch installation options](https://pytorch.org/get-started/previous-versions/) for their environment. Task 4 image EDA uses Pillow and scikit-image from the model tier; its ResNet18 notebook additionally needs PyTorch.
+
 The loader unpacks each task's CSV files and `datacard.txt` into `src/taskN/data/raw/`, Task 4 images into `src/task4/data/raw/train/` and `test/`, and `sample_submission.csv` into `src/submission/`. Task 5 has only `test.csv` in the provided data description; the loader does not create a training file. The loader refuses to replace existing raw files. Its `--force` option is for an intentional replacement of a current download, never a normal experiment rerun.
 
 ## 2. How to rerun previous experiments

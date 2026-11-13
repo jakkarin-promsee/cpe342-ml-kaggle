@@ -1,0 +1,6 @@
+# Python 3.11. Full model stack plus the tested CUDA 12.8 PyTorch wheels.
+# Use another compatible PyTorch build instead on a different CUDA or CPU setup.
+--extra-index-url https://download.pytorch.org/whl/cu128
+-r requirements-model.txt
+torch==2.11.0+cu128
+torchvision==0.26.0+cu128

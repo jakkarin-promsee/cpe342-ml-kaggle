@@ -1,0 +1,7 @@
+# Python 3.11. Core plus task-specific model and image-feature libraries.
+-r requirements.txt
+catboost==1.2.10
+lightgbm==4.7.0
+xgboost==3.2.0
+pillow==13.0.0
+scikit-image==0.26.0

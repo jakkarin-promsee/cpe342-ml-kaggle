@@ -1,15 +1,12 @@
-# Python 3.11; dependencies used by the current notebooks and pipeline.
+# Python 3.11. Core data, pipeline, notebook, and Kaggle tooling.
 numpy==2.4.6
 pandas==3.1.1
+scipy==1.17.1
 scikit-learn==1.8.0
-scikit-image==0.26.0
 joblib==1.6.0
 pyarrow==26.0.1
 matplotlib==3.11.2
 seaborn==0.13.2
-catboost==1.2.10
-lightgbm==4.7.0
-xgboost==3.2.0
 jupyterlab==4.6.5
 ipykernel==7.4.0
 kaggle==2.2.5
