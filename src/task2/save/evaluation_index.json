@@ -1,0 +1,417 @@
+{
+  "task": "task2",
+  "evaluations": {
+    "t2_dummy_original_v1": {
+      "score": 0.1412184772484217,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T17:41:40+00:00",
+      "evaluation_path": "task2/save/t2_dummy_original_v1-evaluation.json",
+      "model_path": "task2/save/t2_dummy_original_v1.joblib"
+    },
+    "t2_logreg_original_v1": {
+      "score": 0.7437583583779943,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T17:41:44+00:00",
+      "evaluation_path": "task2/save/t2_logreg_original_v1-evaluation.json",
+      "model_path": "task2/save/t2_logreg_original_v1.joblib"
+    },
+    "t2_rf_original_v1": {
+      "score": 0.7293337502759399,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T17:41:56+00:00",
+      "evaluation_path": "task2/save/t2_rf_original_v1-evaluation.json",
+      "model_path": "task2/save/t2_rf_original_v1.joblib"
+    },
+    "t2_hgb_original_v1": {
+      "score": 0.7465431323365401,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T17:42:15+00:00",
+      "evaluation_path": "task2/save/t2_hgb_original_v1-evaluation.json",
+      "model_path": "task2/save/t2_hgb_original_v1.joblib"
+    },
+    "t2_hgb_no_noise_v1": {
+      "score": 0.7494435405173425,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T17:42:28+00:00",
+      "evaluation_path": "task2/save/t2_hgb_no_noise_v1-evaluation.json",
+      "model_path": "task2/save/t2_hgb_no_noise_v1.joblib"
+    },
+    "t2_hgb_no_noise_tuned_v1": {
+      "score": 0.7455491395979751,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T17:46:19+00:00",
+      "evaluation_path": "task2/save/t2_hgb_no_noise_tuned_v1-evaluation.json",
+      "model_path": "task2/save/t2_hgb_no_noise_tuned_v1.joblib"
+    },
+    "t2_logreg_combined_v1": {
+      "score": 0.7435538207425391,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T18:11:56+00:00",
+      "evaluation_path": "task2/save/t2_logreg_combined_v1-evaluation.json",
+      "model_path": "task2/save/t2_logreg_combined_v1.joblib"
+    },
+    "t2_rf_combined_v1": {
+      "score": 0.7295592765427796,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T18:12:07+00:00",
+      "evaluation_path": "task2/save/t2_rf_combined_v1-evaluation.json",
+      "model_path": "task2/save/t2_rf_combined_v1.joblib"
+    },
+    "t2_hgb_combined_v1": {
+      "score": 0.7455936361913618,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T18:12:26+00:00",
+      "evaluation_path": "task2/save/t2_hgb_combined_v1-evaluation.json",
+      "model_path": "task2/save/t2_hgb_combined_v1.joblib"
+    },
+    "t2_hgb_combined_no_noise_v1": {
+      "score": 0.748078133619662,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T18:12:42+00:00",
+      "evaluation_path": "task2/save/t2_hgb_combined_no_noise_v1-evaluation.json",
+      "model_path": "task2/save/t2_hgb_combined_no_noise_v1.joblib"
+    },
+    "t2_hgb_combined_no_noise_tuned_v1": {
+      "score": 0.7463560621600711,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T18:16:25+00:00",
+      "evaluation_path": "task2/save/t2_hgb_combined_no_noise_tuned_v1-evaluation.json",
+      "model_path": "task2/save/t2_hgb_combined_no_noise_tuned_v1.joblib"
+    },
+    "t2_lgb_original_no_noise_v1": {
+      "score": 0.7485122438093454,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T18:31:28+00:00",
+      "evaluation_path": "task2/save/t2_lgb_original_no_noise_v1-evaluation.json",
+      "model_path": "task2/save/t2_lgb_original_no_noise_v1.joblib"
+    },
+    "t2_lgb_combined_no_noise_v1": {
+      "score": 0.7468480167004972,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T18:31:45+00:00",
+      "evaluation_path": "task2/save/t2_lgb_combined_no_noise_v1-evaluation.json",
+      "model_path": "task2/save/t2_lgb_combined_no_noise_v1.joblib"
+    },
+    "t2_cat_original_no_noise_v1": {
+      "score": 0.7502530682443662,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T18:35:25+00:00",
+      "evaluation_path": "task2/save/t2_cat_original_no_noise_v1-evaluation.json",
+      "model_path": "task2/save/t2_cat_original_no_noise_v1.joblib"
+    },
+    "t2_cat_combined_no_noise_v1": {
+      "score": 0.7492324205091074,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T18:39:09+00:00",
+      "evaluation_path": "task2/save/t2_cat_combined_no_noise_v1-evaluation.json",
+      "model_path": "task2/save/t2_cat_combined_no_noise_v1.joblib"
+    },
+    "t2_xgb_original_no_noise_v1": {
+      "score": 0.748050346279211,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T18:39:30+00:00",
+      "evaluation_path": "task2/save/t2_xgb_original_no_noise_v1-evaluation.json",
+      "model_path": "task2/save/t2_xgb_original_no_noise_v1.joblib"
+    },
+    "t2_xgb_combined_no_noise_v1": {
+      "score": 0.7467855929306697,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T18:39:55+00:00",
+      "evaluation_path": "task2/save/t2_xgb_combined_no_noise_v1-evaluation.json",
+      "model_path": "task2/save/t2_xgb_combined_no_noise_v1.joblib"
+    },
+    "t2_hgb_no_loyalty_v1": {
+      "score": 0.6483894468972882,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T18:51:23+00:00",
+      "evaluation_path": "task2/save/t2_hgb_no_loyalty_v1-evaluation.json",
+      "model_path": "task2/save/t2_hgb_no_loyalty_v1.joblib"
+    },
+    "t2_hgb_no_engagement_v1": {
+      "score": 0.7112505548225931,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T18:51:35+00:00",
+      "evaluation_path": "task2/save/t2_hgb_no_engagement_v1-evaluation.json",
+      "model_path": "task2/save/t2_hgb_no_engagement_v1.joblib"
+    },
+    "t2_hgb_no_tiers_v1": {
+      "score": 0.6126239832207439,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T18:51:53+00:00",
+      "evaluation_path": "task2/save/t2_hgb_no_tiers_v1-evaluation.json",
+      "model_path": "task2/save/t2_hgb_no_tiers_v1.joblib"
+    },
+    "t2_hgb_combined_no_tiers_v1": {
+      "score": 0.6125936994242771,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T18:52:11+00:00",
+      "evaluation_path": "task2/save/t2_hgb_combined_no_tiers_v1-evaluation.json",
+      "model_path": "task2/save/t2_hgb_combined_no_tiers_v1.joblib"
+    },
+    "t2_cat_no_loyalty_v1": {
+      "score": 0.6525528297570411,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T18:55:39+00:00",
+      "evaluation_path": "task2/save/t2_cat_no_loyalty_v1-evaluation.json",
+      "model_path": "task2/save/t2_cat_no_loyalty_v1.joblib"
+    },
+    "t2_cat_no_engagement_v1": {
+      "score": 0.7180926008628318,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T18:59:05+00:00",
+      "evaluation_path": "task2/save/t2_cat_no_engagement_v1-evaluation.json",
+      "model_path": "task2/save/t2_cat_no_engagement_v1.joblib"
+    },
+    "t2_cat_no_tiers_v1": {
+      "score": 0.6254384399631515,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T19:02:10+00:00",
+      "evaluation_path": "task2/save/t2_cat_no_tiers_v1-evaluation.json",
+      "model_path": "task2/save/t2_cat_no_tiers_v1.joblib"
+    },
+    "t2_cat_combined_no_tiers_v1": {
+      "score": 0.6221170901062945,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-05T19:05:20+00:00",
+      "evaluation_path": "task2/save/t2_cat_combined_no_tiers_v1-evaluation.json",
+      "model_path": "task2/save/t2_cat_combined_no_tiers_v1.joblib"
+    },
+    "t2_dummy_original_v2": {
+      "score": 0.14126797971784347,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:00:33+00:00",
+      "evaluation_path": "task2/save/t2_dummy_original_v2-evaluation.json",
+      "model_path": "task2/save/t2_dummy_original_v2.joblib"
+    },
+    "t2_logreg_original_v2": {
+      "score": 0.7474911311906268,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:00:37+00:00",
+      "evaluation_path": "task2/save/t2_logreg_original_v2-evaluation.json",
+      "model_path": "task2/save/t2_logreg_original_v2.joblib"
+    },
+    "t2_rf_original_v2": {
+      "score": 0.7273306421834348,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:00:46+00:00",
+      "evaluation_path": "task2/save/t2_rf_original_v2-evaluation.json",
+      "model_path": "task2/save/t2_rf_original_v2.joblib"
+    },
+    "t2_hgb_original_v2": {
+      "score": 0.7455993931756437,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:01:01+00:00",
+      "evaluation_path": "task2/save/t2_hgb_original_v2-evaluation.json",
+      "model_path": "task2/save/t2_hgb_original_v2.joblib"
+    },
+    "t2_hgb_no_noise_v2": {
+      "score": 0.7447393605378735,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:01:12+00:00",
+      "evaluation_path": "task2/save/t2_hgb_no_noise_v2-evaluation.json",
+      "model_path": "task2/save/t2_hgb_no_noise_v2.joblib"
+    },
+    "t2_hgb_no_noise_tuned_v2": {
+      "score": 0.7458915909123305,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:03:54+00:00",
+      "evaluation_path": "task2/save/t2_hgb_no_noise_tuned_v2-evaluation.json",
+      "model_path": "task2/save/t2_hgb_no_noise_tuned_v2.joblib"
+    },
+    "t2_logreg_combined_v2": {
+      "score": 0.7466613773342602,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:03:58+00:00",
+      "evaluation_path": "task2/save/t2_logreg_combined_v2-evaluation.json",
+      "model_path": "task2/save/t2_logreg_combined_v2.joblib"
+    },
+    "t2_rf_combined_v2": {
+      "score": 0.727864601365394,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:04:08+00:00",
+      "evaluation_path": "task2/save/t2_rf_combined_v2-evaluation.json",
+      "model_path": "task2/save/t2_rf_combined_v2.joblib"
+    },
+    "t2_hgb_combined_v2": {
+      "score": 0.7445969501324373,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:04:22+00:00",
+      "evaluation_path": "task2/save/t2_hgb_combined_v2-evaluation.json",
+      "model_path": "task2/save/t2_hgb_combined_v2.joblib"
+    },
+    "t2_hgb_combined_no_noise_v2": {
+      "score": 0.7440743359255328,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:04:33+00:00",
+      "evaluation_path": "task2/save/t2_hgb_combined_no_noise_v2-evaluation.json",
+      "model_path": "task2/save/t2_hgb_combined_no_noise_v2.joblib"
+    },
+    "t2_hgb_combined_no_noise_tuned_v2": {
+      "score": 0.7461235444850466,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:07:49+00:00",
+      "evaluation_path": "task2/save/t2_hgb_combined_no_noise_tuned_v2-evaluation.json",
+      "model_path": "task2/save/t2_hgb_combined_no_noise_tuned_v2.joblib"
+    },
+    "t2_lgb_original_no_noise_v2": {
+      "score": 0.7455792806019412,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:08:06+00:00",
+      "evaluation_path": "task2/save/t2_lgb_original_no_noise_v2-evaluation.json",
+      "model_path": "task2/save/t2_lgb_original_no_noise_v2.joblib"
+    },
+    "t2_lgb_combined_no_noise_v2": {
+      "score": 0.7448503385907581,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:08:20+00:00",
+      "evaluation_path": "task2/save/t2_lgb_combined_no_noise_v2-evaluation.json",
+      "model_path": "task2/save/t2_lgb_combined_no_noise_v2.joblib"
+    },
+    "t2_cat_original_no_noise_v2": {
+      "score": 0.7504144211991189,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:11:28+00:00",
+      "evaluation_path": "task2/save/t2_cat_original_no_noise_v2-evaluation.json",
+      "model_path": "task2/save/t2_cat_original_no_noise_v2.joblib"
+    },
+    "t2_cat_combined_no_noise_v2": {
+      "score": 0.7497569014101318,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:14:12+00:00",
+      "evaluation_path": "task2/save/t2_cat_combined_no_noise_v2-evaluation.json",
+      "model_path": "task2/save/t2_cat_combined_no_noise_v2.joblib"
+    },
+    "t2_xgb_original_no_noise_v2": {
+      "score": 0.7441635164807494,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:14:27+00:00",
+      "evaluation_path": "task2/save/t2_xgb_original_no_noise_v2-evaluation.json",
+      "model_path": "task2/save/t2_xgb_original_no_noise_v2.joblib"
+    },
+    "t2_xgb_combined_no_noise_v2": {
+      "score": 0.7438641130518912,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:14:45+00:00",
+      "evaluation_path": "task2/save/t2_xgb_combined_no_noise_v2-evaluation.json",
+      "model_path": "task2/save/t2_xgb_combined_no_noise_v2.joblib"
+    },
+    "t2_hgb_no_loyalty_v2": {
+      "score": 0.6482971660647912,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:15:03+00:00",
+      "evaluation_path": "task2/save/t2_hgb_no_loyalty_v2-evaluation.json",
+      "model_path": "task2/save/t2_hgb_no_loyalty_v2.joblib"
+    },
+    "t2_hgb_no_engagement_v2": {
+      "score": 0.7092373845560491,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:15:11+00:00",
+      "evaluation_path": "task2/save/t2_hgb_no_engagement_v2-evaluation.json",
+      "model_path": "task2/save/t2_hgb_no_engagement_v2.joblib"
+    },
+    "t2_hgb_no_tiers_v2": {
+      "score": 0.6155829725264643,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:15:21+00:00",
+      "evaluation_path": "task2/save/t2_hgb_no_tiers_v2-evaluation.json",
+      "model_path": "task2/save/t2_hgb_no_tiers_v2.joblib"
+    },
+    "t2_hgb_combined_no_tiers_v2": {
+      "score": 0.6152903676964158,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:15:32+00:00",
+      "evaluation_path": "task2/save/t2_hgb_combined_no_tiers_v2-evaluation.json",
+      "model_path": "task2/save/t2_hgb_combined_no_tiers_v2.joblib"
+    },
+    "t2_cat_no_loyalty_v2": {
+      "score": 0.6544303321096703,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:17:54+00:00",
+      "evaluation_path": "task2/save/t2_cat_no_loyalty_v2-evaluation.json",
+      "model_path": "task2/save/t2_cat_no_loyalty_v2.joblib"
+    },
+    "t2_cat_no_engagement_v2": {
+      "score": 0.7170371667437414,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:20:17+00:00",
+      "evaluation_path": "task2/save/t2_cat_no_engagement_v2-evaluation.json",
+      "model_path": "task2/save/t2_cat_no_engagement_v2.joblib"
+    },
+    "t2_cat_no_tiers_v2": {
+      "score": 0.6196020651673567,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:22:44+00:00",
+      "evaluation_path": "task2/save/t2_cat_no_tiers_v2-evaluation.json",
+      "model_path": "task2/save/t2_cat_no_tiers_v2.joblib"
+    },
+    "t2_cat_combined_no_tiers_v2": {
+      "score": 0.6189885569413938,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-12T17:25:10+00:00",
+      "evaluation_path": "task2/save/t2_cat_combined_no_tiers_v2-evaluation.json",
+      "model_path": "task2/save/t2_cat_combined_no_tiers_v2.joblib"
+    },
+    "t2_cat_class_bias_cv5_v3": {
+      "score": 0.7522162958586714,
+      "metric": "macro_F1",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-13T02:32:49+00:00",
+      "evaluation_path": "task2/save/t2_cat_class_bias_cv5_v3-evaluation.json",
+      "model_path": "task2/save/t2_cat_class_bias_cv5_v3.joblib"
+    }
+  },
+  "best_by_metric": {
+    "macro_F1": "t2_cat_class_bias_cv5_v3"
+  },
+  "updated_at": "2026-11-13T02:32:49+00:00"
+}
