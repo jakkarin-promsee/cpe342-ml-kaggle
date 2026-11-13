@@ -2,7 +2,7 @@
 
 This repository contains the notebook-first workflow for the five tasks in the Karena Thailand Player Intelligence Competition. Git shares code and documentation; each contributor downloads the competition data and creates local data, model, and submission artifacts. Read the [overview](docs/kaggle-detial/overview.md), [data layout](docs/kaggle-detial/data.md), and [rules](docs/kaggle-detial/rule.md) before running experiments.
 
-For results and next steps, see the concise research notes for [Task 1](docs/research-note-task1.md), [Task 2](docs/research-note-task2.md), [Task 3](docs/research-note-task3.md), [Task 4](docs/research-note-task4.md), and [Task 5](docs/research-note-task5.md).
+For results and next steps, see the concise research notes for [Task 1](docs/research-note-task1.md), [Task 2](docs/research-note-task2.md), [Task 3](docs/research-note-task3.md), [Task 4](docs/research-note-task4.md), and [Task 5](docs/research-note-task5.md). [The Kaggle score log](docs/kaggle-score-log.md) records user-reported overall scores and controlled Task 5 submission comparisons. The highest reported score is **0.74593** for v9; per-task scores and competition weights are unavailable.
 
 ## 1. How to load the dataset
 
@@ -20,7 +20,7 @@ The loader unpacks each task's CSV files and `datacard.txt` into `src/taskN/data
 
 ## 2. How to rerun previous experiments
 
-The `.gitignore` excludes `src/task*/data/`, `src/task*/save/`, and `src/submission/`. A fresh clone therefore has notebooks and pipeline code, but no local raw data, EDA artifacts, trained models, or submissions. Install the pinned dependencies and download the competition files first. Inspect the exact notebook order:
+The `.gitignore` excludes task data, trained model files, fold-prediction caches, per-task submission files, and combined submission CSVs. It keeps `src/task*/save/evaluation_index.json` and combined submission JSON lineage cards for inspection. Those indexes and cards can refer to local artifacts that a fresh clone does not contain. Install the pinned dependencies and download the competition files first. Inspect the exact notebook order:
 
 ```powershell
 python src/re-run-all-ipynb.py --dry-run
@@ -55,7 +55,7 @@ Each stage reads a saved artifact and writes the next one. Files and JSON cards 
 2. **Save through the pipeline.** Pass DataFrames to `save_data` and trained models to `save_model`; the helpers choose output paths. Every save or evaluation call needs a nonempty `card` explaining the artifact. The model card links to its dataset, and `evaluation_index.json` tracks the best model for each metric separately.
 3. **Treat names as permanent.** An existing data, model, evaluation, or submission artifact cannot be written again unless `force=True` is passed explicitly. Use `force=True` only while exploring an artifact that has not yet been used by a downstream result. Once used, create a new name for revisions.
 
-**Task 5:** The pipeline can save its genuine test-only dataset. The competition rules prohibit using Test for training-related work, so its permitted fitting workflow needs clarification from the organizers. A proxy without labeled validation data is not the competition macro F₃ score.
+**Task 5:** The pipeline can save its genuine test-only dataset. The user reports a lecturer clarification permitting unsupervised fitting on that file, while the written competition rule still prohibits Test fitting. The Task 5 notebooks document this exception. Their stability measures are unlabeled proxies, not competition macro F₃. See [the Task 5 README](src/task5/README.md) for the current experiment sequence.
 
 ## 4. Example notebook cells
 
