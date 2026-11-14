@@ -77,3 +77,15 @@ The two submitted CSVs have **25,889** identical IDs and identical Tasks 1–4. 
 | 1 | 1,154 | 5,377 |
 
 Thus **2,308 / 25,889 (8.91%)** rows disagree, while **5,377 / 6,531 (82.33%)** of each model's positive alerts overlap. Positive-set Jaccard is **0.6997**; each model swaps **17.67%** of its alert budget. The small overall score difference (**0.00072**) despite 2,308 changed labels says neither exclusive set has a large measured advantage in this leaderboard comparison. It does **not** show whether the 5,377 shared alerts are correct or how many anomalies lie among the 18,204 shared negatives; hidden labels or a Task 5 score are required for that distinction.
+
+## 14 November controlled Task 5 alert-budget result
+
+The full-Train Task 3 log-target model was first submitted in `kaggle_t12345_t3_log_v13.csv`, scoring **0.74686** overall versus **0.74593** for v9 while Task 5 remained exactly the same. This establishes v13 as the comparison base for the next Task 5 changes. The user then reported **0.74490** overall for `kaggle_t12345_t3log_t5_ocsvm35_v14.csv`. V14 keeps Tasks 1–4 identical to v13 and changes only the saved OCSVM Task 5 cutoff, raising alerts from **6,531 to 9,118** (25.23% to 35.22%). The controlled overall difference is **−0.00196**. Thus this broader alert budget hurt the public score with the new Task 3 base. It does not establish Task 5 F₃, precision, recall, or the optimal cutoff because Task 5 labels and per-task weights remain unavailable.
+
+The old-Task-3 35% draft v10 is still unsubmitted; its score cannot be inferred from v14 because their Task 3 columns differ. Do not turn the public leaderboard into a threshold or weight grid.
+
+## 14 November equal-rank blend result
+
+The user reported **0.74948** overall for `kaggle_t12345_t3log_t5_rankblend25_v17.csv`. V17 keeps Tasks 1–4 and the **6,531-alert** count exactly equal to v13, while replacing Task 5's OCSVM-only ranking with a prespecified 50/50 average of OCSVM and GMM anomaly-score percentile ranks. It swaps **542** alerts in and **542** out. The controlled overall difference is **+0.00262** versus v13's **0.74686**; v17 is now the highest reported submission. This supports the blended ranking at this alert budget, not a measured Task 5 F₃, precision, recall, or optimal blend weight. The earlier GMM-only v11 lost against OCSVM-only v9 at the same alert count, so the v17 gain should not be interpreted as GMM alone winning.
+
+The v15 consensus set is entirely contained in v17 and removes **1,154** of v17's alerts. The user reported **0.74595** overall for v15, **0.00353 below v17** and **0.00091 below v13**. V16's OCSVM/GMM union adds **1,173** alerts relative to v17 and removes **19**. It scored **0.74700**, **0.00248 below v17** and **0.00014 above v13**. Neither contraction to consensus nor expansion to union improved on the fixed-budget rank blend. These scores do not prove which removed or added accounts are true anomalies or reveal Task 5 F₃. All five planned 14 November candidates have reported scores; v17 remains the strongest. Do not adjust the blend weight or alert cutoff from these public scores.

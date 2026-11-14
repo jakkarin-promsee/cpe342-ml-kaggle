@@ -2,7 +2,7 @@
 
 This repository contains the notebook-first workflow for the five tasks in the Karena Thailand Player Intelligence Competition. Git shares code and documentation; each contributor downloads the competition data and creates local data, model, and submission artifacts. Read the [overview](docs/kaggle-detial/overview.md), [data layout](docs/kaggle-detial/data.md), [rules](docs/kaggle-detial/rule.md), and [extracted instruction-slide hints](docs/kaggle-detial/hint_canva_extracted.txt) before running experiments. The hints suggest experiments; the research notes record which ones have already been tested and whether they helped.
 
-For results and next steps, see the concise research notes for [Task 1](docs/research-note-task1.md), [Task 2](docs/research-note-task2.md), [Task 3](docs/research-note-task3.md), [Task 4](docs/research-note-task4.md), and [Task 5](docs/research-note-task5.md). [The Kaggle score log](docs/kaggle-score-log.md) records user-reported overall scores and controlled Task 5 submission comparisons. The highest reported score is **0.74593** for v9; per-task scores and competition weights are unavailable.
+For results and next steps, see the concise research notes for [Task 1](docs/research-note-task1.md), [Task 2](docs/research-note-task2.md), [Task 3](docs/research-note-task3.md), [Task 4](docs/research-note-task4.md), and [Task 5](docs/research-note-task5.md). [The Kaggle score log](docs/kaggle-score-log.md) records user-reported overall scores and controlled submission comparisons. The highest reported score is **0.74948** for v17; per-task scores and competition weights are unavailable.
 
 ## 1. How to load the dataset
 

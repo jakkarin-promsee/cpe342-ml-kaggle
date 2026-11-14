@@ -1,14 +1,14 @@
 # Submit slots for 14/11/2026
 
-All five CSVs are prepared locally in `src/submission/`. **None has been uploaded.** The scored reference is `kaggle_t12345_t5_alert25_v9.csv` at overall public score **0.74593**. Record public scores below after submitting; they are overall scores, not per-task metrics or Task 5 F₃.
+All five CSVs are prepared locally in `src/submission/` and **all have been uploaded and scored**. The previous reference `kaggle_t12345_t5_alert25_v9.csv` scored **0.74593** overall. The table keeps the original planned slot labels; the actual submission order was v13, v14, v17, v16, v15. Scores below are overall public scores, not per-task metrics or Task 5 F₃.
 
 | Slot | CSV to upload | Single change and hypothesis | Task 5 alerts | Public score |
 | --- | --- | --- | ---: | --- |
-| 1 | [`kaggle_t12345_t3_log_v13.csv`](src/submission/kaggle_t12345_t3_log_v13.csv) | Replace Task 3 with the full-Train log-positive-amount model. Test whether its five-fold MAE improvement transfers to the leaderboard. | 6,531 | Pending |
-| 2 | [`kaggle_t12345_t3log_t5_ocsvm35_v14.csv`](src/submission/kaggle_t12345_t3log_t5_ocsvm35_v14.csv) | Keep Tasks 1–4 from slot 1; widen the same OCSVM ranking from 25% to 35% alerts. Hypothesis: recall gain outweighs extra false alerts. | 9,118 | Pending |
-| 3 | [`kaggle_t12345_t3log_t5_consensus_v15.csv`](src/submission/kaggle_t12345_t3log_t5_consensus_v15.csv) | Keep Tasks 1–4 from slot 1; alert only on the OCSVM ∩ GMM set. Hypothesis: model agreement improves precision enough to offset lower alert volume. | 5,377 | Pending |
-| 4 | [`kaggle_t12345_t3log_t5_union_v16.csv`](src/submission/kaggle_t12345_t3log_t5_union_v16.csv) | Keep Tasks 1–4 from slot 1; alert on the OCSVM ∪ GMM set. Hypothesis: complementary coverage improves recall enough to offset extra alerts. | 7,685 | Pending |
-| 5 | [`kaggle_t12345_t3log_t5_rankblend25_v17.csv`](src/submission/kaggle_t12345_t3log_t5_rankblend25_v17.csv) | Keep Tasks 1–4 from slot 1; average OCSVM and GMM anomaly-score percentile ranks 50/50 and retain exactly 6,531 alerts. Hypothesis: combined ordering improves detection at the same alert budget. | 6,531 | Pending |
+| 1 | [`kaggle_t12345_t3_log_v13.csv`](src/submission/kaggle_t12345_t3_log_v13.csv) | Replace Task 3 with the full-Train log-positive-amount model. Five-fold MAE improved, and the overall score rose **0.00093** versus v9. | 6,531 | **0.74686** |
+| 2 | [`kaggle_t12345_t3log_t5_ocsvm35_v14.csv`](src/submission/kaggle_t12345_t3log_t5_ocsvm35_v14.csv) | Keep Tasks 1–4 from slot 1; widen the same OCSVM ranking from 25% to 35% alerts. The overall score fell **0.00196** versus slot 1. | 9,118 | 0.74490 |
+| 3 | [`kaggle_t12345_t3log_t5_consensus_v15.csv`](src/submission/kaggle_t12345_t3log_t5_consensus_v15.csv) | Keep Tasks 1–4 from slot 1; alert only on the OCSVM ∩ GMM set. Overall score fell **0.00353** versus v17. | 5,377 | 0.74595 |
+| 4 | [`kaggle_t12345_t3log_t5_union_v16.csv`](src/submission/kaggle_t12345_t3log_t5_union_v16.csv) | Keep Tasks 1–4 from slot 1; alert on the OCSVM ∪ GMM set. Overall score fell **0.00248** versus v17. | 7,685 | 0.74700 |
+| 5 | [`kaggle_t12345_t3log_t5_rankblend25_v17.csv`](src/submission/kaggle_t12345_t3log_t5_rankblend25_v17.csv) | Keep Tasks 1–4 from slot 1; average OCSVM and GMM anomaly-score percentile ranks 50/50 and retain exactly 6,531 alerts. Overall score rose **0.00262** versus slot 1. | 6,531 | **0.74948** |
 
 ## Frozen fields
 
@@ -20,8 +20,11 @@ All five CSVs are prepared locally in `src/submission/`. **None has been uploade
 
 ## Comparison rule
 
-- Compare **slot 1 against scored v9** to isolate the Task 3 change. Slot 1 also freezes the Task 5 reference for this day's tests.
-- Compare **each of slots 2–5 against slot 1** to isolate its Task 5 decision rule. Do not compare these directly with old v10/v11 scores because those files still used the old Task 3 column.
+- **Slot 1 versus v9:** **+0.00093** overall, with only Task 3 changed. Slot 1 freezes the Task 5 reference for the remaining tests.
+- **Slot 2 versus slot 1:** **−0.00196** overall, with only the Task 5 alert budget changed. Compare any later slot with slot 1 to isolate its Task 5 decision rule. Do not compare these directly with old v10/v11 scores because those files still used the old Task 3 column.
+- **V17 versus slot 1:** **+0.00262** overall, at the same Task 5 alert count with 542 alerts added and 542 removed. V17 is the highest user-reported result.
+- **V16 versus v17:** **−0.00248** overall; the union alerts 7,685 accounts versus v17's 6,531.
+- **V15 versus v17:** **−0.00353** overall; the consensus keeps 5,377 alerts, removing 1,154 from v17. The five planned candidates are now all scored; v17 remains the best.
 - Record each overall score and difference in `docs/kaggle-score-log.md`. Without per-task labels or weights, a difference in overall score is evidence for that controlled submission comparison, not a measured F₃ or recovered Test labels.
 - These five rules were fixed before today's scores. Do not tune more cutoffs or blend weights from the same public leaderboard feedback.
 
