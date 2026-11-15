@@ -25,15 +25,15 @@ Each task note summarizes its data checks, engineered features, model comparison
 
 ## Blind-spot hypotheses
 
-The [overall blind-spot analysis](ิblind-spot-hypothesis/task-overall-p-note.md) examines whether the prediction objective, available signals, and validation population match the competition task. Its task-specific notes propose checks and next experiments; treat them as hypotheses rather than established improvements.
+The [overall blind-spot analysis](blind-spot-hypothesis/task-overall-p-note.md) examines whether the prediction objective, available signals, and validation population match the competition task. Its task-specific notes propose checks and next experiments; treat them as hypotheses rather than established improvements.
 
 | Task | Blind-spot note |
 | --- | --- |
-| Task 1: Anti-Cheat Pre-Filter | [Task 1 hypotheses](ิblind-spot-hypothesis/task-1-p-note.md) |
-| Task 2: Player Segment Classification | [Task 2 hypotheses](ิblind-spot-hypothesis/task-2-p-note.md) |
-| Task 3: Monthly Spending Prediction | [Task 3 hypotheses](ิblind-spot-hypothesis/task-3-p-note.md) |
-| Task 4: Game Title Detection | [Task 4 hypotheses](ิblind-spot-hypothesis/task-4-p-note.md) |
-| Task 5: Account Security Monitoring | [Task 5 hypotheses](ิblind-spot-hypothesis/task-5-p-note.md) |
+| Task 1: Anti-Cheat Pre-Filter | [Task 1 hypotheses](blind-spot-hypothesis/task-1-p-note.md) |
+| Task 2: Player Segment Classification | [Task 2 hypotheses](blind-spot-hypothesis/task-2-p-note.md) |
+| Task 3: Monthly Spending Prediction | [Task 3 hypotheses](blind-spot-hypothesis/task-3-p-note.md) |
+| Task 4: Game Title Detection | [Task 4 hypotheses](blind-spot-hypothesis/task-4-p-note.md) |
+| Task 5: Account Security Monitoring | [Task 5 hypotheses](blind-spot-hypothesis/task-5-p-note.md) |
 
 The [Kaggle leaderboard experiment log](kaggle-score-log.md) records user-reported overall scores, submission changes, and controlled comparisons. It does not provide per-task scores or hidden labels. For runnable pipeline examples and the artifact contract, see the [pipeline README](../src/pipeline/README.md).
 
