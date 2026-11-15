@@ -24,3 +24,5 @@ Each task note summarizes its data checks, engineered features, model comparison
 | Task 5: Account Security Monitoring | [Task 5 research note](research-note-task5.md) |
 
 The [Kaggle leaderboard experiment log](kaggle-score-log.md) records user-reported overall scores, submission changes, and controlled comparisons. It does not provide per-task scores or hidden labels. For runnable pipeline examples and the artifact contract, see the [pipeline README](../src/pipeline/README.md).
+
+The [selected-model leakage audit](leakage-audit-top-models.md) records the verified feature and split checks and the raw-feature timing uncertainties. The [submission plan](../submit-plan.md) records the completed Task 5 Tail/LOF and Tail-based behavior comparisons.
