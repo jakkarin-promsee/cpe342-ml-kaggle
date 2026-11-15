@@ -320,13 +320,29 @@
       "evaluated_at": "2026-11-13T03:16:02+00:00",
       "evaluation_path": "task5/save/t5_r6_gmm_match_v9_alerts_v6-evaluation.json",
       "model_path": "task5/save/t5_r6_gmm_match_v9_alerts_v6.joblib"
+    },
+    "t5_peer_change_v3": {
+      "score": 0.8587360594795539,
+      "metric": "top25_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-14T19:22:28+00:00",
+      "evaluation_path": "task5/save/t5_peer_change_v3-evaluation.json",
+      "model_path": "task5/save/t5_peer_change_v3.joblib"
+    },
+    "t5_bot_regular_v3": {
+      "score": 0.9940179461615155,
+      "metric": "top25_rank_stability_jaccard",
+      "higher_is_better": true,
+      "evaluated_at": "2026-11-14T19:22:28+00:00",
+      "evaluation_path": "task5/save/t5_bot_regular_v3-evaluation.json",
+      "model_path": "task5/save/t5_bot_regular_v3.joblib"
     }
   },
   "best_by_metric": {
     "top5_rank_stability_jaccard": "t5_r2_ocsvm_nu10_engineered_v2",
     "top15_rank_stability_jaccard": "t5_r3_ocsvm_nu10_alert15_v3",
-    "top25_rank_stability_jaccard": "t5_r6_gmm_match_v9_alerts_v6",
+    "top25_rank_stability_jaccard": "t5_bot_regular_v3",
     "top35_rank_stability_jaccard": "t5_r5_ocsvm_nu10_alert35_v5"
   },
-  "updated_at": "2026-11-13T03:16:02+00:00"
+  "updated_at": "2026-11-14T19:22:28+00:00"
 }
