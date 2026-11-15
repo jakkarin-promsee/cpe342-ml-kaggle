@@ -1,0 +1,27 @@
+{
+  "name": "kaggle_t12345_t5_tail_peer_v22",
+  "date_prepared": "2026-11-15",
+  "status": "prepared locally; not uploaded",
+  "base_submission": "kaggle_t12345_t5_tail_engineered_v20.csv",
+  "base_sha256": "2dd79b546af197688d3ff35211cc744c2e86a28360ea3a01343f743364c1505a",
+  "comparison_submission": "kaggle_t12345_t5_tail_engineered_v20.csv",
+  "changed_task": "task5",
+  "hypothesis": "H1: peer-relative change adds information to Empirical Tail",
+  "score_formula": "0.8*tail_rank + 0.2*peer_rank",
+  "alert_budget": 6531,
+  "alerts": 6531,
+  "swapped_in_vs_comparison": 783,
+  "swapped_out_vs_comparison": 783,
+  "task5_orientation": "1 = anomaly",
+  "rows": 25889,
+  "model_cards": [
+    "task5/save/t5_r2_tail_engineered_v2.json",
+    "task5/save/t5_peer_change_v3.json"
+  ],
+  "dataset_cards": [
+    "task5/data/eda/eda_1_v2.json",
+    "task5/data/eda/eda_behavior_views_v3.json"
+  ],
+  "seed": 42,
+  "output_sha256": "41a8a2eef3e488400b44653642f9cc579f67afa15f53e5d206a9dc618d368a89"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "kaggle_t12345_t5_peerchange_bot_v19",
+  "date_prepared": "2026-11-15",
+  "planned_slot_date": "2026-11-16",
+  "status": "prepared locally; not uploaded",
+  "base_submission": "kaggle_t12345_t3log_t5_rankblend25_v17.csv",
+  "base_sha256": "d4b7c7b32c8c051a3d398819523ddfde4373699a7c2c2537b30ed912b519a9c8",
+  "comparison_submission": "kaggle_t12345_t5_peerchange_v18.csv",
+  "changed_task": "task5",
+  "hypothesis": "H2: mechanical regularity adds to H1",
+  "score_formula": "0.8*h1_rank + 0.2*bot_rank",
+  "alert_budget": 6531,
+  "alerts": 6531,
+  "swapped_in_vs_comparison": 887,
+  "swapped_out_vs_comparison": 887,
+  "task5_orientation": "1 = anomaly",
+  "rows": 25889,
+  "model_cards": [
+    "task5/save/t5_r2_ocsvm_nu10_engineered_v2.json",
+    "task5/save/t5_r2_gmm_engineered_v2.json",
+    "task5/save/t5_peer_change_v3.json",
+    "task5/save/t5_bot_regular_v3.json"
+  ],
+  "dataset_cards": [
+    "task5/data/eda/eda_1_v2.json",
+    "task5/data/eda/eda_behavior_views_v3.json"
+  ],
+  "seed": 42,
+  "output_sha256": "c9793042d3942ad949d4a5be94c123fe0f50d61ed3ed4fd8af8a1e78e7b6ad97"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "kaggle_t12345_t5_lof_engineered_v21",
+  "date_prepared": "2026-11-15",
+  "planned_slot_date": "2026-11-16",
+  "status": "prepared locally; not uploaded",
+  "base_submission": "kaggle_t12345_t3log_t5_rankblend25_v17.csv",
+  "base_sha256": "d4b7c7b32c8c051a3d398819523ddfde4373699a7c2c2537b30ed912b519a9c8",
+  "comparison_submission": "kaggle_t12345_t3log_t5_rankblend25_v17.csv",
+  "changed_task": "task5",
+  "hypothesis": "Local Outlier Factor on v17's engineered features",
+  "score_formula": "saved model anomaly_score; select 6531 largest, row index breaks ties",
+  "alert_budget": 6531,
+  "alerts": 6531,
+  "swapped_in_vs_comparison": 1405,
+  "swapped_out_vs_comparison": 1405,
+  "task5_orientation": "1 = anomaly",
+  "rows": 25889,
+  "model_cards": [
+    "task5/save/t5_r2_lof_engineered_v2.json"
+  ],
+  "dataset_cards": [
+    "task5/data/eda/eda_1_v2.json"
+  ],
+  "seed": 42,
+  "output_sha256": "2bc372f7c2abaf71156166859dcf155aab4630f1d8ac8cb6b0f0e007616b7322"
+}

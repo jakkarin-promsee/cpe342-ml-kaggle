@@ -1,0 +1,28 @@
+{
+  "name": "kaggle_t12345_t5_tail_peer_bot_v23",
+  "date_prepared": "2026-11-15",
+  "status": "prepared locally; not uploaded",
+  "base_submission": "kaggle_t12345_t5_tail_engineered_v20.csv",
+  "base_sha256": "2dd79b546af197688d3ff35211cc744c2e86a28360ea3a01343f743364c1505a",
+  "comparison_submission": "kaggle_t12345_t5_tail_peer_v22.csv",
+  "changed_task": "task5",
+  "hypothesis": "H2: mechanical regularity adds information beyond Tail plus peer change",
+  "score_formula": "0.8*h1_rank + 0.2*bot_rank",
+  "alert_budget": 6531,
+  "alerts": 6531,
+  "swapped_in_vs_comparison": 974,
+  "swapped_out_vs_comparison": 974,
+  "task5_orientation": "1 = anomaly",
+  "rows": 25889,
+  "model_cards": [
+    "task5/save/t5_r2_tail_engineered_v2.json",
+    "task5/save/t5_peer_change_v3.json",
+    "task5/save/t5_bot_regular_v3.json"
+  ],
+  "dataset_cards": [
+    "task5/data/eda/eda_1_v2.json",
+    "task5/data/eda/eda_behavior_views_v3.json"
+  ],
+  "seed": 42,
+  "output_sha256": "538a09a07779b2ae46bf75606efb7e8f6135cb98318f2b5e3f42d1928de99682"
+}
