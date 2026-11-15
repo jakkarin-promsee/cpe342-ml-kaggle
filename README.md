@@ -2,7 +2,7 @@
 
 This repository contains the notebook-first workflow for the five tasks in the Karena Thailand Player Intelligence Competition. Git shares code and documentation; each contributor downloads the competition data and creates local data, model, and submission artifacts. Read the [overview](docs/kaggle-detial/overview.md), [data layout](docs/kaggle-detial/data.md), [rules](docs/kaggle-detial/rule.md), and [extracted instruction-slide hints](docs/kaggle-detial/hint_canva_extracted.txt) before running experiments. The hints suggest experiments; the research notes record which ones have already been tested and whether they helped.
 
-For results and next steps, see the concise research notes for [Task 1](docs/research-note-task1.md), [Task 2](docs/research-note-task2.md), [Task 3](docs/research-note-task3.md), [Task 4](docs/research-note-task4.md), and [Task 5](docs/research-note-task5.md). [The Kaggle score log](docs/kaggle-score-log.md) records user-reported overall scores and controlled submission comparisons. The highest reported score is **0.74948** for v17; per-task scores and competition weights are unavailable.
+For results and next steps, see the concise research notes for [Task 1](docs/research-note-task1.md), [Task 2](docs/research-note-task2.md), [Task 3](docs/research-note-task3.md), [Task 4](docs/research-note-task4.md), and [Task 5](docs/research-note-task5.md). [The Kaggle score log](docs/kaggle-score-log.md) records user-reported overall scores and controlled submission comparisons. The highest reported score is **0.75338** for v20 Empirical Tail; per-task scores and competition weights are unavailable.
 
 ## 1. How to load the dataset
 
@@ -65,7 +65,7 @@ Each stage reads a saved artifact and writes the next one. Files and JSON cards 
 2. **Save through the pipeline.** Pass DataFrames to `save_data` and trained models to `save_model`; the helpers choose output paths. Every save or evaluation call needs a nonempty `card` explaining the artifact. The model card links to its dataset, and `evaluation_index.json` tracks the best model for each metric separately.
 3. **Treat names as permanent.** An existing data, model, evaluation, or submission artifact cannot be written again unless `force=True` is passed explicitly. Use `force=True` only while exploring an artifact that has not yet been used by a downstream result. Once used, create a new name for revisions.
 
-**Task 5:** The pipeline can save its genuine test-only dataset. The user reports a lecturer clarification permitting unsupervised fitting on that file, while the written competition rule still prohibits Test fitting. The Task 5 notebooks document this exception. Their stability measures are unlabeled proxies, not competition macro F₃. See [the Task 5 README](src/task5/README.md) for the current experiment sequence.
+**Task 5:** The pipeline can save its genuine test-only dataset. The user reports a lecturer clarification permitting full use of that file for Task 5 modeling and analysis, while the written competition rule still prohibits Test fitting; the lecturer warned against harvesting leaderboard feedback through repeated submissions. The Task 5 stability measures are unlabeled proxies, not competition macro F₃. See [the Task 5 README](src/task5/README.md) for the current experiment sequence.
 
 ## 4. Example notebook cells
 
