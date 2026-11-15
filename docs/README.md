@@ -25,7 +25,7 @@ Each task note summarizes its data checks, engineered features, model comparison
 
 ## Blind-spot hypotheses
 
-The [overall blind-spot analysis](blind-spot-hypothesis/task-overall-p-note.md) examines whether the prediction objective, available signals, and validation population match the competition task. Its task-specific notes propose checks and next experiments; treat them as hypotheses rather than established improvements.
+The [blind-spot hypothesis guide](blind-spot-hypothesis/README.md) links the overall analysis and task-specific notes on whether the prediction objective, available signals, and validation population match the competition task. Treat the proposed checks and experiments as hypotheses rather than established improvements.
 
 | Task | Blind-spot note |
 | --- | --- |
